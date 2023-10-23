@@ -1,0 +1,352 @@
+[
+  {
+    "nombre": "Cancún",
+    "pais": "México",
+    "descripcion": "Cancún es famoso por sus hermosas playas de arena blanca y aguas cristalinas del Caribe.",
+    "imagen": "cancun.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Bali",
+    "pais": "Indonesia",
+    "descripcion": "Bali es conocida por sus playas tropicales, arrozales en terrazas y rica cultura hindú.",
+    "imagen": "bali.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Maldivas",
+    "pais": "Maldivas",
+    "descripcion": "Las Maldivas son un paraíso de islas tropicales con aguas color turquesa y arrecifes de coral espectaculares.",
+    "imagen": "maldivas.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Phuket",
+    "pais": "Tailandia",
+    "descripcion": "Phuket es famoso por sus playas exóticas, vida nocturna animada y actividades acuáticas emocionantes.",
+    "imagen": "phuket.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Hawaii",
+    "pais": "Estados Unidos",
+    "descripcion": "Hawaii es un archipiélago paradisíaco con playas de ensueño, volcanes activos y una cultura única.",
+    "imagen": "hawaii.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Isla Mauricio",
+    "pais": "Mauricio",
+    "descripcion": "Isla Mauricio es conocida por sus playas de arena blanca, aguas cristalinas y arrecifes de coral ideales para bucear.",
+    "imagen": "isla-mauricio.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Fiji",
+    "pais": "Fiyi",
+    "descripcion": "Fiyi es un paraíso insular con playas espectaculares, arrecifes de coral y una rica cultura polinesia.",
+    "imagen": "fiji.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Seychelles",
+    "pais": "Seychelles",
+    "descripcion": "Seychelles es un archipiélago en el océano Índico conocido por sus playas de arena blanca y aguas turquesas.",
+    "imagen": "seychelles.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Playa del Carmen",
+    "pais": "México",
+    "descripcion": "Playa del Carmen es un popular destino con playas hermosas, vida nocturna animada y una mezcla de culturas.",
+    "imagen": "playa-del-carmen.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Bahamas",
+    "pais": "Bahamas",
+    "descripcion": "Las Bahamas son un archipiélago caribeño conocido por sus playas de arena rosada y aguas cristalinas.",
+    "imagen": "bahamas.jpg",
+    "categoria": "Playas paradisíacas"
+  },
+  {
+    "nombre": "Torres del Paine",
+    "pais": "Chile",
+    "descripcion": "El Parque Nacional Torres del Paine es un paraíso para los amantes del trekking y la naturaleza.",
+    "imagen": "torres-del-paine.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Banff",
+    "pais": "Canadá",
+    "descripcion": "Banff es un destino de montaña perfecto para practicar senderismo, esquí y disfrutar de paisajes alpinos.",
+    "imagen": "banff.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Gran Cañón",
+    "pais": "Estados Unidos",
+    "descripcion": "El Gran Cañón es una maravilla natural con impresionantes formaciones rocosas y senderos asombrosos.",
+    "imagen": "gran-canon.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Monte Everest",
+    "pais": "Nepal",
+    "descripcion": "El Monte Everest es el pico más alto del mundo y atrae a los alpinistas más intrépidos.",
+    "imagen": "monte-everest.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Amazonia",
+    "pais": "Varios países sudamericanos",
+    "descripcion": "La Amazonia es el pulmón verde del planeta y alberga una increíble biodiversidad en su selva tropical.",
+    "imagen": "amazonia.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Alpes suizos",
+    "pais": "Suiza",
+    "descripcion": "Los Alpes suizos son un paraíso para los amantes del senderismo y los deportes de invierno.",
+    "imagen": "q",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Monte Kilimanjaro",
+    "pais": "Tanzania",
+    "descripcion": "El Monte Kilimanjaro es la montaña más alta de África y ofrece una experiencia de trekking única.",
+    "imagen": "monte-kilimanjaro.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Selva Amazónica",
+    "pais": "Brasil",
+    "descripcion": "La selva amazónica es una de las mayores reservas de biodiversidad del planeta y un lugar fascinante para explorar.",
+    "imagen": "selva-amazonica.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Patagonia Chilena",
+    "pais": "Chile",
+    "descripcion": "La Patagonia Chilena es un paraíso para los amantes de la naturaleza, con glaciares, fiordos y paisajes impresionantes.",
+    "imagen": "patagonia-chilena.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Parque Nacional de Yellowstone",
+    "pais": "Estados Unidos",
+    "descripcion": "Yellowstone es famoso por sus géiseres, vida silvestre y paisajes naturales impresionantes.",
+    "imagen": "yellowstone.jpg",
+    "categoria": "Naturaleza y aventura"
+  },
+  {
+    "nombre": "Tokio",
+    "pais": "Japón",
+    "descripcion": "Tokio es un paraíso para los amantes de la comida, con una amplia variedad de platos japoneses tradicionales y modernos.",
+    "imagen": "tokio.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Lyon",
+    "pais": "Francia",
+    "descripcion": "Lyon es conocida como la capital gastronómica de Francia, famosa por su cocina gourmet y bouchons tradicionales.",
+    "imagen": "lyon.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Bangkok",
+    "pais": "Tailandia",
+    "descripcion": "Bangkok es un paraíso para los amantes de la comida asiática, con platos callejeros, currys y mariscos frescos.",
+    "imagen": "bangkok.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Bologna",
+    "pais": "Italia",
+    "descripcion": "Bologna es la cuna de la pasta y la salsa boloñesa, ofreciendo auténtica comida italiana y deliciosa pasta fresca.",
+    "imagen": "bologna.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Ciudad de México",
+    "pais": "México",
+    "descripcion": "La Ciudad de México es famosa por su auténtica cocina mexicana, incluyendo tacos, tamales y mole.",
+    "imagen": "ciudad-mexico.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Barcelona",
+    "pais": "España",
+    "descripcion": "Barcelona es conocida por su variada oferta culinaria, desde tapas hasta paella y mariscos frescos.",
+    "imagen": "barcelona.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Oaxaca",
+    "pais": "México",
+    "descripcion": "Oaxaca es famosa por su comida tradicional mexicana, incluyendo tlayudas, mole y chapulines.",
+    "imagen": "oaxaca.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Seúl",
+    "pais": "Corea del Sur",
+    "descripcion": "Seúl es un paraíso para los amantes de la comida coreana, con platos como el bulgogi y el kimchi.",
+    "imagen": "seul.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Roma",
+    "pais": "Italia",
+    "descripcion": "Roma es conocida por su deliciosa comida italiana, incluyendo pasta, pizza, y gelato artesanal.",
+    "imagen": "roma.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Bangkok",
+    "pais": "Tailandia",
+    "descripcion": "Bangkok es un paraíso para los amantes de la comida asiática, con platos callejeros, currys y mariscos frescos.",
+    "imagen": "bangkok.jpg",
+    "categoria": "Destinos gastronómicos"
+  },
+  {
+    "nombre": "Dubái",
+    "pais": "Emiratos Árabes Unidos",
+    "descripcion": "Dubái es un paraíso del lujo y las compras, con impresionantes centros comerciales, hoteles de lujo y una arquitectura moderna.",
+    "imagen": "dubai.jpg",
+    "categoria": "Lujo"
+  },
+  {
+    "nombre": "París",
+    "pais": "Francia",
+    "descripcion": "París es sinónimo de elegancia y lujo, con tiendas de moda de alta costura y hoteles de prestigio.",
+    "imagen": "paris.jpg",
+    "categoria": "Lujo"
+  },
+  {
+    "nombre": "Nueva York",
+    "pais": "Estados Unidos",
+    "descripcion": "Nueva York es un paraíso para los amantes de las compras y el lujo, con tiendas de renombre y experiencias exclusivas.",
+    "imagen": "nueva-york.jpg",
+    "categoria": "Destinos de lujo y compras"
+  },
+  {
+    "nombre": "Milán",
+    "pais": "Italia",
+    "descripcion": "Milán es un centro de la moda y el lujo, con boutiques de diseñadores y una vibrante escena de compras.",
+    "imagen": "milan.jpg",
+    "categoria": "Lujo"
+  },
+  {
+    "nombre": "Londres",
+    "pais": "Reino Unido",
+    "descripcion": "Londres es una ciudad elegante y lujosa, con exclusivas tiendas, hoteles de alta gama y una rica historia.",
+    "imagen": "londres.jpg",
+    "categoria": "Destinos de lujo y compras"
+  },
+  {
+    "nombre": "Milán",
+    "pais": "Italia",
+    "descripcion": "Milán es un centro de la moda y el lujo, con boutiques de diseñadores y una vibrante escena de compras.",
+    "imagen": "milan.jpg",
+    "categoria": "Lujo"
+  },
+  {
+    "nombre": "Hong Kong",
+    "pais": "China",
+    "descripcion": "Hong Kong es un paraíso para las compras y el lujo, con una amplia gama de boutiques y centros comerciales de renombre.",
+    "imagen": "hong-kong.jpg",
+    "categoria": "Lujo"
+  },
+  {
+    "nombre": "Moscú",
+    "pais": "Rusia",
+    "descripcion": "Moscú es conocida por su elegancia y estilo, con tiendas de alta gama y una vida nocturna vibrante.",
+    "imagen": "moscu.jpg",
+    "categoria": "Lujo"
+  },
+  {
+    "nombre": "Singapur",
+    "pais": "Singapur",
+    "descripcion": "Singapur es un paraíso para las compras y el lujo, con centros comerciales de lujo y una arquitectura impresionante.",
+    "imagen": "singapur.jpg",
+    "categoria": "Lujo"
+  },
+  {
+    "nombre": "Los Ángeles",
+    "pais": "Estados Unidos",
+    "descripcion": "Los Ángeles es conocida por su estilo y glamour, con tiendas de diseño y una vida nocturna de alta gama.",
+    "imagen": "los-angeles.jpg",
+    "categoria": "Lujo"
+  },
+  {
+    "nombre": "Roma",
+    "pais": "Italia",
+    "descripcion": "Roma es una ciudad llena de historia y cultura, con monumentos antiguos, arte renacentista y una rica tradición.",
+    "imagen": "roma.jpg",
+    "categoria": "Históricos y culturales"
+  },
+  {
+    "nombre": "Atenas",
+    "pais": "Grecia",
+    "descripcion": "Atenas es el corazón de la antigua Grecia, con una rica herencia cultural y sitios arqueológicos impresionantes.",
+    "imagen": "atenas.jpg",
+    "categoria": "Históricos y Culturales"
+  },
+  {
+    "nombre": "El Cairo",
+    "pais": "Egipto",
+    "descripcion": "El Cairo es un tesoro histórico con pirámides, tumbas y un patrimonio cultural milenario.",
+    "imagen": "el-cairo.jpg",
+    "categoria": "Históricos y culturales"
+  },
+  {
+    "nombre": "Machu Picchu",
+    "pais": "Perú",
+    "descripcion": "Machu Picchu es una antigua ciudad inca en las montañas, con una historia fascinante y vistas impresionantes.",
+    "imagen": "machu-picchu.jpg",
+    "categoria": "Históricos y culturales"
+  },
+  {
+    "nombre": "Estambul",
+    "pais": "Turquía",
+    "descripcion": "Estambul es una ciudad que une Oriente y Occidente, con una rica historia y una arquitectura impresionante.",
+    "imagen": "estambul.jpg",
+    "categoria": "Históricos y culturales"
+  },
+  {
+    "nombre": "Agra",
+    "pais": "India",
+    "descripcion": "Agra es famosa por el Taj Mahal, una de las maravillas del mundo y un símbolo de amor eterno.",
+    "imagen": "agra.jpg",
+    "categoria": "Históricos y culturales"
+  },
+  {
+    "nombre": "Petra",
+    "pais": "Jordania",
+    "descripcion": "Petra es una antigua ciudad tallada en roca, famosa por su arquitectura y su rica historia.",
+    "imagen": "petra.jpg",
+    "categoria": "Históricos y culturales"
+  },
+  {
+    "nombre": "Kioto",
+    "pais": "Japón",
+    "descripcion": "Kioto es la cuna de la cultura japonesa, con templos, jardines y tradiciones milenarias.",
+    "imagen": "kioto.jpg",
+    "categoria": "Históricos y culturales"
+  },
+  {
+    "nombre": "Cartagena",
+    "pais": "Colombia",
+    "descripcion": "Cartagena es una ciudad colonial con una rica historia, arquitectura colorida y fuertes históricos.",
+    "imagen": "cartagena.jpg",
+    "categoria": "Históricos y culturales"
+  },
+  {
+    "nombre": "Jerusalén",
+    "pais": "Israel",
+    "descripcion": "Jerusalén es una ciudad sagrada para varias religiones, con sitios históricos y culturales de gran importancia.",
+    "imagen": "jerusalen.jpg",
+    "categoria": "Históricos y culturales"
+  }
+]

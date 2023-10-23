@@ -1,0 +1,55 @@
+<!-- resultados.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados de Búsqueda</title>
+    <link rel="stylesheet" href="./CSS/index.css" />
+  </head>
+
+  <body>
+    <div id="results-container" class="card-container"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Recuperar los resultados del sessionStorage
+        const resultados = JSON.parse(sessionStorage.getItem("resultados"));
+
+        // Verificar si hay resultados y mostrarlos en la página
+        if (resultados && resultados.length > 0) {
+          const resultsContainer = document.getElementById("results-container");
+
+          resultados.forEach((resultado) => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            const cardHTML = `
+            <div class="row">
+  <div class="col-6 col-md-6 col-lg-3">
+    <div class="media-1">
+      <a href="#" class="d-block mb-2"><img src="./img/${resultado.imagen}" alt="Image" class="img-fluid"></a>
+      <div class="">
+        <div>
+          <h3><a href="#">${resultado.nombre}</a></h3>
+          <p>${resultado.descripcion}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                `;
+
+            card.innerHTML = cardHTML;
+            resultsContainer.appendChild(card);
+          });
+        } else {
+          // Manejar el caso en que no hay resultados
+          const resultsContainer = document.getElementById("results-container");
+          resultsContainer.innerHTML = "<p>No se encontraron resultados.</p>";
+        }
+      });
+    </script>
+  </body>
+</html>

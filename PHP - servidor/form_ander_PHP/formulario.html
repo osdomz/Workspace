@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Formulario de Ejemplo</title>
+</head>
+
+<body>
+	<form style="color: red" action="gestio.php" method="post">
+		<label for="username">Usuario:</label>
+
+		<input type="text" name="username" required /><br /><br />
+
+		<label for="password">Contraseña:</label>
+
+		<input type="password" name="password" required /><br /><br />
+
+		<fieldset>
+			<legend>Seleccione una Operación:</legend>
+
+			<input type="radio" name="accion" value="Alta" />
+
+			<label for="alta">ALTA</label>
+
+			<input type="radio" name="accion" value="Baja" />
+
+			<label for="baja">BAJA</label>
+
+			<input type="radio" name="accion" value="Contraseña" />
+
+			<label for="cambio">CAMBIO DE CONTRASEÑA</label>
+
+			<input type="radio" name="accion" value="Lista" />
+
+			<label for="listado">LISTADO</label><br /><br />
+		</fieldset>
+
+		<input type="submit" name="submit" value="ENVIAR" />
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Margen izquierdo y derecho del contenido de la página */
+.page-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #6998ab;
+}
+
+/* Cambiar el color del texto del navbar a blanco */
+.navbar-nav .nav-link,
+.navbar-brand {
+  color: #e0e0e0;
+  /* Cambia #fff al color que desees */
+}
+
+/* Cambiar el color del texto del navbar en estado "hover" (cuando el mouse pasa sobre él) */
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+  /* Cambia #007bff al color que desees para el hover */
+}
+
+.content {
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #e0e0e0;
+
+}
+
+/* Estilo personalizado para el menú desplegable del login */
+.custom-login form {
+  width: auto;
+  /* Usar el ancho automático para adaptarse al contenido */
+  max-width: 100%;
+  /* Establecer un ancho máximo del 100% */
+  margin-left: 0;
+  /* Eliminar el margen izquierdo para ajustarse al borde izquierdo */
+  margin-right: 0;
+  /* Eliminar el margen derecho para ajustarse al borde derecho */
+  padding: 20px;
+  /* Aumentar el relleno para hacerlo más grande */
+}
+
+.home {
+  display: flex;
+  align-items:center;
+  
+}
+
+.title-container {
+  flex: 1;
+}
+.titulo-home{
+  font-size: 60px;
+  font-weight: 600;
+
+}
+.slogan-home{
+  font-size: 30px;
+  font-weight: 600;
+}
+.imagen-home {
+  margin-right: 70px;
+  height: 500px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+.card {
+  width: 280px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.card img {
+  height: 350px;
+  width: 100%;
+  
+  border-radius: 10px 10px 0 0;
+}
+
+.card .card-body {
+ 
+  border-radius: 0 0 10px 10px;
+}
+
+.card h3.card-title {
+  margin-top: 0;
+}
+
+.card p.card-text {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
