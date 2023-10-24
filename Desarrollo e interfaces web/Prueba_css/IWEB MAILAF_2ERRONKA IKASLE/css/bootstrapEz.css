@@ -1,0 +1,14 @@
+
+        body {
+            background-image: url('../img/fondoimages3.jpg');
+            font-family: Arial, sans-serif;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+     
+     
+       
+
