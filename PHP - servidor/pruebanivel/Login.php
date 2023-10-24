@@ -11,12 +11,12 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $erabiltzailea = $_POST['erab'];
-        $pasahitza = $_POST['ph']; 
+        $username = $_POST['erab'];
+        $contrasena = $_POST['ph'];
         
         $stmt = $pdo->prepare("SELECT * FROM jokalariak WHERE erabiltzailea = :erabiltzailea AND pasahitza = :pasahitza");
-        $stmt->bindParam(':erabiltzailea', $erabiltzailea, PDO::PARAM_STR);
-        $stmt->bindParam(':pasahitza', $pasahitza, PDO::PARAM_STR);
+        $stmt->bindParam(':erabiltzailea', $username, PDO::PARAM_STR);
+        $stmt->bindParam(':pasahitza', $contrasena, PDO::PARAM_STR);
         $stmt->execute();
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
         
