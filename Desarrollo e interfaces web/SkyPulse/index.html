@@ -1,107 +1,450 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SkyPulse</title>
-    <link rel="stylesheet" href="./CSS/index.css" />
-    <!-- Reemplaza "tucsspersonalizado.css" con la ruta de tu archivo CSS personalizado -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<link rel="stylesheet" href="css/libraries.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+	<title>SkyPulse</title>
 </head>
 
 <body>
-    <div class="page-container">
-        <div class="content">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">SkyPulse</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link ms-3" href="#">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link ms-3" href="#">Paquetes</a>
-                            </li>
-                            <li class="nav-item ms-3">
-                                <!-- Espacio entre el botón "Login" y el botón deshabilitado -->
-                                <a class="nav-link disabled" aria-disabled="true" id="mis-viajes-link">Mis viajes</a>
-                            </li>
-                            <li class="nav-item dropdown ms-5">
-                                <!-- Agregamos la clase 'dropdown' al elemento 'li' -->
-                                <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Login
-                                </a>
-                                <ul class="dropdown-menu custom-login" aria-labelledby="loginDropdown">
-                                    <!-- Menú desplegable para el login -->
-                                    <li>
-                                        <div class="forms-container">
-                                            <!-- Formulario de inicio de sesión -->
-                                            <form class="login-form">
-                                                <input type="text" placeholder="Nombre de usuario" />
-                                                <input type="password" placeholder="Contraseña" />
-                                                <button>Iniciar sesión</button>
-                                            </form>
 
-                                            <!-- Botón para mostrar el formulario de registro -->
-                                            <button id="show-registration-form">Registro</button>
+	<div class="global__header"></div>
 
-                                            <!-- Formulario de registro (inicialmente oculto) -->
-                                            <form class="registration-form" id="registration-form"
-                                                style="display: none">
-                                                <input type="text" placeholder="Nombre de usuario" />
-                                                <input type="password" placeholder="Contraseña" />
-                                                <input type="email" placeholder="Correo electrónico" />
-                                                <button>Registrarse</button>
-                                                <button id="return-to-login">
-                                                    Volver al inicio de sesión
-                                                </button>
-                                            </form>
 
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="home">
-                <div class="title-container">
-                    <h1 class="titulo-home">SkyPulse</h1>
-                    <p class="slogan-home">
-                        ¿A dónde quieres ir hoy?<br />
-                        ¡No te limites! Descubre el mundo<br />
-                        con nosotros;)
-                    </p>
-                    <form class="search-form">
-                        <input type="text" id="destino" placeholder="Buscar destino..." />
-                        <button type="submit" id="btn_buscar">Buscar</button>
-                    </form>
-                </div>
+	<div class="hero">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-7">
+					<div class="intro-wrap">
+						<h1 class="mb-5"><span class="d-block">Disfruta tu viaje </span> en <span
+								class="typed-words"></span></h1>
 
-                <div class="image-container">
-                    <img src="./img/paris.png" alt="Descripción de la imagen" class="imagen-home" />
-                </div>
-        </di>
-    </div>
-    </div>
+						<div class="row">
+							<div class="col-12">
+								<form class="form">
+									<div class="row mb-2">
+										<div class="col-12">
+											<select name="" id="buscadorDestinos" class="form-control custom-select">
+												<option value="">Destinos</option>
+												<option value="España">España</option>
+												<option value="Francia">Francia</option>
+												<option value="Italia">Italia</option>
+												<option value="EEUU">EEUU</option>
+												<option value="México">México</option>
+												<option value="Japón">Japón</option>
+												<option value="Australia">Australia</option>
+											</select>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+											<span class="warning-message d-none mt-3 fw-bold text-danger"><i class="bi bi-exclamation-circle-fill"></i> Debes seleccionar un destino</span>
 
-    <script src="./JS/index.js"></script>
+										</div>
+
+
+									</div>
+									<div class="row align-items-center">
+										<div class="col-sm-12 col-md-6 mb-3 mb-lg-0 col-lg-4 mt-3">
+											<input type="submit" class="btn btn-primary btn-block form-buscar" value="Buscar">
+										</div>
+
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="slides">
+						<img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid active">
+						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
+						<img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid">
+						<img src="images/hero-slider-4.jpg" alt="Image" class="img-fluid">
+						<img src="images/hero-slider-5.jpg" alt="Image" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="untree_co-section">
+		<div class="container">
+			<div class="row mb-5 justify-content-center">
+				<div class="col-lg-6 text-center">
+					<h2 class="section-title text-center mb-3">Servicios</h2>
+					<p>Sabemos que la planificación de un viaje puede ser abrumadora, pero con nuestra agencia, puedes
+						dejar todas tus preocupaciones atrás. Nuestro equipo de expertos en viajes está aquí para
+						encargarse de todos los detalles, desde la reserva de vuelos y alojamiento hasta la creación de
+						itinerarios personalizados.</p>
+				</div>
+			</div>
+			<div class="row align-items-stretch">
+				<div class="col-lg-4 order-lg-1">
+					<div class="h-100">
+						<div class="frame h-100">
+							<div class="feature-img-bg h-100"
+								style="background-image: url('images/hero-slider-1.jpg');"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
+
+					<div class="feature-1 d-md-flex">
+						<div class="align-self-center">
+							<i class="bi bi-airplane display-4"></i>
+							<h3 class="mt-3">Viajes a tu Estilo</h3>
+							<p class="mb-0">Personalizamos tus viajes. Ya sea relax en una isla o aventura extrema,
+								creamos experiencias que se adaptan.</p>
+						</div>
+					</div>
+
+					<div class="feature-1 ">
+						<div class="align-self-center">
+							<i class="bi bi-card-checklist display-4"></i>
+							<h3 class="mt-3">Garantía de Viaje</h3>
+							<p class="mb-0">Relájate y viaja con confianza. Nuestra agencia se encarga de todos los
+								detalles para que disfrutes al máximo.</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
+
+					<div class="feature-1 d-md-flex">
+						<div class="align-self-center">
+							<i class="bi bi-heart display-4"></i>
+							<h3 class="mt-3">Experiencia y Confianza</h3>
+							<p class="mb-0">Con décadas de experiencia, somos tu socio de viaje de confianza, listos
+								para hacer tus sueños realidad.</p>
+						</div>
+					</div>
+
+					<div class="feature-1 d-md-flex mh-4">
+						<div class="align-self-center">
+							<i class="bi bi-headset display-4"></i>
+							<h3 class="mt-3">Soporte 24/7</h3>
+							<p class="mb-0">Nuestro compromiso es estar disponible en cualquier momento del día o la
+								noche para atender tus necesidades de viaje. </p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="untree_co-section count-numbers py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					<div class="counter-wrap">
+						<div class="counter">
+							<span class="" data-number="9313">0</span>
+						</div>
+						<span class="caption">Nº de viajes</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					<div class="counter-wrap">
+						<div class="counter">
+							<span class="" data-number="8492">0</span>
+						</div>
+						<span class="caption">Nº de clientes</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					<div class="counter-wrap">
+						<div class="counter">
+							<span class="" data-number="100">0</span>
+						</div>
+						<span class="caption">Nº de trabajadores</span>
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3">
+					<div class="counter-wrap">
+						<div class="counter">
+							<span class="" data-number="120">0</span>
+						</div>
+						<span class="caption">Nº de paises</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="untree_co-section">
+		<div class="container">
+			<div class="row text-center justify-content-center mb-5">
+				<div class="col-lg-7">
+					<h2 class="section-title text-center">Destinos populares</h2>
+				</div>
+			</div>
+	
+			<div class="owl-carousel owl-3-slider">
+	
+				<div class="item" data-nombre="San Francisco">
+					<a class="media-thumb" href="destinos.html">
+						<div class="media-text">
+							<h3>San Francisco</h3>
+							<span class="location">Estados Unidos</span>
+						</div>
+						<img src="images/hero-slider-1.jpg" alt="Image" class="img-fluid">
+					</a>
+				</div>
+	
+				<div class="item"data-nombre="París">
+					<a class="media-thumb" href="destinos.html">
+						<div class="media-text">
+							<h3>París</h3>
+							<span class="location">Francia</span>
+						</div>
+						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid">
+					</a>
+				</div>
+	
+				<div class="item"data-nombre="Tokio">
+					<a class="media-thumb" href="destinos.html">
+						<div class="media-text">
+							<h3>Tokio</h3>
+							<span class= "location">Japón</span>
+						</div>
+						<img src="images/hero-slider-3.jpg" alt="Image" class="img-fluid">
+					</a>
+				</div>
+	
+				<!-- Agrega más elementos del carrusel aquí -->
+	
+			</div>
+	
+		</div>
+	</div>
+	
+
+
+	<div class="untree_co-section testimonial-section mt-5">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-7 text-center">
+					<h2 class="section-title text-center mb-5">Testimonios</h2>
+
+					<div class="owl-single owl-carousel no-nav">
+						<div class="testimonial mx-auto">
+							<figure class="img-wrap">
+								<img src="images/person_3.jpg" alt="Image" class="img-fluid">
+							</figure>
+							<h3 class="name">Gilberto Poncio</h3>
+							<blockquote>
+								<p>&ldquo;Increíble experiencia. Gracias a esta agencia, mi viaje fue perfecto. ¡Sin
+									duda, volveré!&rdquo;</p>
+							</blockquote>
+						</div>
+
+						<div class="testimonial mx-auto">
+							<figure class="img-wrap">
+								<img src="images/person_1.jpg" alt="Image" class="img-fluid">
+							</figure>
+							<h3 class="name">Jhonny</h3>
+							<blockquote>
+								<p>&ldquo;Precios inmejorables y un servicio excepcional. ¡Mis vacaciones soñadas se
+									hicieron realidad!&rdquo;</p>
+							</blockquote>
+						</div>
+
+						<div class="testimonial mx-auto">
+							<figure class="img-wrap">
+								<img src="images/person_4.jpg" alt="Image" class="img-fluid">
+							</figure>
+							<h3 class="name">Valentina Layton</h3>
+							<blockquote>
+								<p>&ldquo;El equipo de esta agencia es profesional y atento. Hicieron que nuestro viaje
+									fuera inolvidable. ¡Recomendados al 100%!&rdquo;</p>
+							</blockquote>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="untree_co-section">
+		<div class="container">
+			<div class="row justify-content-center text-center mb-5">
+				<div class="col-lg-6">
+					<h2 class="section-title text-center mb-3">Ofertas especiales y descuentos</h2>
+					<p>¡No te pierdas nuestras increíbles ofertas y descuentos exclusivos! En nuestra agencia de viajes,
+						creemos que todos merecen explorar el mundo a precios accesibles. Desde descuentos en vuelos
+						hasta paquetes vacacionales con todo incluido</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+					<div class="media-1"id="elemento1">
+						<a href="destinos.html?pais=España" class="d-block mb-3"><img src="/Assets/img/destinos/sevilla/sevilla.jpg" alt="Image"
+								class="img-fluid"></a>
+					
+						<div class="d-flex align-items-center">
+							<div>
+								<h3><a href="#">España</a></h3>
+								<div class="price ml-auto">
+									<span>Desde 520.00€</span>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+					<div class="media-1"id="elemento2">
+						<a href="destinos.html?pais=Australia" class="d-block mb-3"><img src="/Assets/img/destinos/gran_barrera_de_coral/gran_barrera_de_coral.jpg" alt="Image"
+								class="img-fluid"></a>
+						
+						<div class="d-flex align-items-center">
+							<div>
+								<h3><a href="#">Australia</a></h3>
+								<div class="price ml-auto">
+									<span>Desde $1025.00</span>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+					<div class="media-1"id="elemento3">
+						<a href="destinos.html?pais=México" class="d-block mb-3"><img src="/Assets/img/destinos/tulum/tulum.jpg" alt="Image"
+								class="img-fluid"></a>
+						
+						<div class="d-flex align-items-center">
+							<div>
+								<h3><a href="#">Mexico</a></h3>
+								<div class="price ml-auto">
+									<span>Desde $750.00</span>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+					<div class="media-1"id="elemento4">
+						<a href="destinos.html?pais=Italia" class="d-block mb-3"><img src="/Assets/img/destinos/roma/roma.jpg" alt="Image"
+								class="img-fluid"></a>
+
+				
+
+						<div class="d-flex align-items-center">
+							<div>
+								<h3><a href="#">Italia</a></h3>
+								<div class="price ml-auto">
+									<span>Desde 312.00€</span>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="untree_co-section">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+
+				<div class="col-lg-6">
+					<figure class="img-play-video">
+						<a id="play-video" class="video-play-button" href="https://www.youtube.com/watch?v=PyoRdu-i0AQ"
+							data-fancybox>
+							<span></span>
+						</a>
+						<img src="images/hero-slider-2.jpg" alt="Image" class="img-fluid rounded-20">
+					</figure>
+				</div>
+
+				<div class="col-lg-5">
+					<h2 class="section-title text-left mb-4">Echale un vistazo al video</h2>
+					<p>Sumérgete en el mundo de los viajes con nuestro video exclusivo. Desde paisajes impresionantes
+						hasta aventuras emocionantes, te invitamos a un emocionante recorrido visual que te inspirará a
+						explorar nuevos destinos. Prepárate para vivir la experiencia de viaje desde la comodidad de tu
+						hogar. ¡No te lo pierdas y descubre lo que te espera en tu próxima aventura!</p>
+
+					<p class="mb-4">Nuestro video es una ventana a un mundo lleno de posibilidades. Te transportará a
+						destinos exóticos, te llevará a través de culturas fascinantes y te mostrará la belleza del
+						planeta. </p>
+
+					<ul class="list-unstyled two-col clearfix">
+						<li>Actividades al aire libre</li>
+						<li>Aerolíneas</li>
+						<li>Alquiler de autos</li>
+						<li>Líneas de cruceros</li>
+						<li>Hoteles</li>
+						<li>Ferrocarriles</li>
+						<li>Seguro de viaje</li>
+						<li>Tours turísticos</li>
+						<li>Seguros</li>
+						<li>Libros de guía</li>
+					</ul>
+
+					<p><a href="#" class="btn btn-primary">Empezar</a></p>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="py-5 cta-section">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-12">
+					<h2 class="mb-2 text-white">Explora el mundo con nosotros. Contactanos</h2>
+					<p class="mb-4 lead text-white text-white-opacity">Vive las mejores experiencias</p>
+					<p class="mb-0"><a href="contacto.html"
+							class="btn btn-outline-white text-white btn-md font-weight-bold">Contacta</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="global__footer"></div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+	<script src="js/custom.js"></script>
+	<script type="module" src="js/header-footer.js"></script>
+	<script src="js/hero-slider.js"></script>
+	<script type="module" src="js/form-destinos.js"></script>
+	<script src="js/localStorage/carga.js"></script>
+	<script type="module" src="js/localStorage/descarga.js"></script>
 </body>
 
 </html>

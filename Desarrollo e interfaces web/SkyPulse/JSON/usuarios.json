@@ -1,0 +1,32 @@
+{
+    "usuarios": [
+        {
+            "usuario": "Bittor",
+            "nombre": "Bittor González",
+            "correo": "bittor@example.com",
+            "contrasena": "contrasena123",
+            "foto": "fotodefault.jpg"
+        },
+        {
+            "usuario": "Gaizka",
+            "nombre": "Gaizka Mendez",
+            "correo": "gaizka@example.com",
+            "contrasena": "contrasena123",
+            "foto": "fotodefault.jpg"
+        },
+        {
+            "usuario": "Christian",
+            "nombre": "Christian Ospina",
+            "correo": "christian@example.com",
+            "contrasena": "contrasena123",
+            "foto": "fotodefault.jpg"
+        },
+        {
+            "usuario": "Julen",
+            "nombre": "Julen Pérez",
+            "correo": "julen@example.com",
+            "contrasena": "julendejaelgym",
+            "foto": "fotodefault.jpg"
+        }
+    ]
+}

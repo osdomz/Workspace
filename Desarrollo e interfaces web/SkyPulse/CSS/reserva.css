@@ -1,0 +1,92 @@
+.carousel-inner {
+    border: 2px solid #1a374d;
+    padding: 2em;
+    border-radius: 1em;
+}
+
+.carousel-control-prev-icon{
+    background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="%231a374d" width="8" height="8" viewBox="0 0 8 8"%3e%3cpath d="M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z" /%3e%3c/svg%3e');
+}
+
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%231a374d' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+#custCarousel .carousel-indicators {
+    position: static;
+    margin-top: 20px;
+}
+
+#custCarousel .carousel-indicators>li {
+    width: 100px;
+}
+
+#custCarousel .carousel-indicators li img {
+    display: block;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 40em;
+}
+
+.carousel-item img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-destino{
+    margin-top: 15em;
+}
+
+.hotel-info{
+    width: 80%;
+    height: 100%;
+    background-color: #1a374d;
+    border-radius: 2em;
+    color: white;
+}
+
+.btn-reserva{
+    color: #1a374d;
+}
+
+.cta-section{
+    margin-top: 10em;
+}
+.thumnail{
+    height: 5em;
+}
+
+@media(max-width:500px){
+    .hotel-info{
+        width: 100%;
+    }
+
+    .carousel-inner {
+        width: 90%;
+        height: 23em;
+        padding: 0em;
+
+       
+    }
+
+    .carousel-control-prev, .carousel-control-next, .carousel-indicators{
+        display: none;
+    }
+
+    .info-destino{
+        margin-top: 2em;
+    }
+
+    .info-destino .container{
+        display: flex;
+        justify-content: center;
+    }
+    
+}

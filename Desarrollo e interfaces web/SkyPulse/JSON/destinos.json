@@ -1,0 +1,1371 @@
+{
+  "destinos": [
+    {
+      "pais": "España",
+      "ciudades": [
+        {
+          "id": 0,
+          "nombre": "Barcelona",
+          "descripcion": [
+            "Barcelona, una ciudad cautivadora en la costa mediterránea, ofrece una mezcla única de cultura, arquitectura y vida nocturna vibrante. Pasea por las pintorescas calles del Barrio Gótico, maravíllate con las obras maestras arquitectónicas de Gaudí, como la Sagrada Familia, y disfruta de la rica gastronomía catalana en los encantadores restaurantes de la ciudad.",
+            "Con su ubicación junto al mar, Barcelona es también un destino de playa de primer nivel. Las playas de la ciudad, como la Barceloneta, ofrecen arenas doradas y aguas cristalinas, perfectas para tomar el sol y disfrutar de actividades acuáticas. Además, la vida nocturna en Barcelona es legendaria, con numerosos bares, discotecas y locales de música en vivo que mantienen la ciudad en constante movimiento.",
+            "No puedes dejar de visitar lugares emblemáticos como el Parque Güell, el Mercado de la Boquería y el Camp Nou si eres un amante del fútbol. Barcelona es una ciudad que combina la tradición con la modernidad, lo histórico con lo contemporáneo, y te ofrece una experiencia única que nunca olvidarás."
+          ],
+          "categoria": "Playa",
+          "imagen": "barcelona",
+          "destInfo": {
+            "nombre": "Hotel Riu Plaza",
+            "numPersonas": 2,
+            "numCamas": 2,
+            "fechaEntrada": "13/06",
+            "fechaSalida": "18/06",
+            "precio": "356€"
+          }
+        },
+        {
+          "id": 1,
+          "nombre": "Madrid",
+          "descripcion": [
+            "Madrid, la capital de España, es una ciudad que respira historia y cultura en cada esquina. Desde el majestuoso Palacio Real hasta el famoso Museo del Prado, la ciudad está llena de tesoros culturales. Además, la Plaza Mayor y el Parque del Retiro son lugares ideales para relajarse y disfrutar de la vida urbana.",
+            "La gastronomía madrileña es excepcional, y no puedes perderte la oportunidad de probar platos como el cocido madrileño o los churros con chocolate en un típico café de la ciudad. Por la noche, Madrid cobra vida con sus numerosos bares de tapas y discotecas que te mantendrán entretenido hasta altas horas de la madrugada.",
+            "Madrid es también un centro de negocios y finanzas, lo que la convierte en una ciudad moderna y en constante evolución. Su red de transporte público es eficiente, lo que facilita la exploración de sus diversos barrios, desde Malasaña hasta Lavapiés. En resumen, Madrid es una ciudad que combina la elegancia histórica con la energía contemporánea."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "madrid",
+          "destInfo": {
+            "nombre": "Hotel Madrid Central",
+            "numPersonas": 3,
+            "numCamas": 2,
+            "fechaEntrada": "20/07",
+            "fechaSalida": "25/07",
+            "precio": "420€"
+          }
+        },
+        {
+          "id": 2,
+          "nombre": "Sevilla",
+          "descripcion": [
+            "Sevilla, en el corazón de Andalucía, es una ciudad que irradia pasión y encanto. Su arquitectura morisca, como la Giralda y el Alcázar, te transportará a una época pasada. El río Guadalquivir que atraviesa la ciudad agrega un toque de romanticismo. Durante la Semana Santa, Sevilla se llena de procesiones y fervor religioso, mientras que la Feria de Abril es una celebración alegre con trajes flamencos y bailes.",
+            "La gastronomía sevillana es deliciosa y variada. Prueba tapas tradicionales como el salmorejo o las espinacas con garbanzos en los bares locales. Además, el flamenco es una parte fundamental de la cultura sevillana, y puedes asistir a espectáculos en tablao en toda la ciudad.",
+            "Sevilla también es conocida por su ambiente festivo y relajado. Las estrechas calles del Barrio de Santa Cruz te invitan a pasear y perderse entre sus encantadoras plazas y patios repletos de flores. Con su clima cálido y su gente amable, Sevilla te hará sentir como en casa desde el momento en que llegues."
+          ],
+          "categoria": "Cultura",
+          "imagen": "sevilla",
+          "destInfo": {
+            "nombre": "Hotel Sevilla Paradise",
+            "numPersonas": 1,
+            "numCamas": 1,
+            "fechaEntrada": "10/08",
+            "fechaSalida": "15/08",
+            "precio": "310€"
+          }
+        },
+        {
+          "id": 3,
+          "nombre": "Valencia",
+          "descripcion": [
+            "Valencia, en la costa este de España, es una ciudad que encanta a visitantes de todo el mundo con su clima mediterráneo y su ambiente relajado. Las playas doradas, como la Playa de la Malvarrosa, son perfectas para tomar el sol y disfrutar del mar. Además, el puerto deportivo y el Oceanografico son destinos populares para los amantes de la vida marina.",
+            "La Ciudad de las Artes y las Ciencias de Valencia es una maravilla arquitectónica que alberga un planetario, un museo de ciencias y un acuario. El casco antiguo de la ciudad, con la Catedral de Valencia y la Lonja de la Seda, te sumerge en la historia de la ciudad y su rica herencia cultural.",
+            "Valencia es famosa por su gastronomía, y no puedes dejar de probar la paella valenciana, un plato icónico de la región. Los mercados como el Mercado Central ofrecen productos frescos y deliciosos. Con su mezcla de historia, cultura, playas y una animada escena gastronómica, Valencia es un destino que no querrás perderte."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "valencia",
+          "destInfo": {
+            "nombre": "Hotel Valencia Beach",
+            "numPersonas": 4,
+            "numCamas": 2,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "375€"
+          }
+        },
+        {
+          "id": 4,
+          "nombre": "Granada",
+          "descripcion": [
+            "Granada, en el sur de España, es una ciudad con un encanto inigualable. El impresionante conjunto arquitectónico de la Alhambra, con sus palacios y jardines, te transportará a la época medieval de Al-Ándalus. La Alhambra es una de las principales joyas del patrimonio mundial y un destino imperdible.",
+            "El barrio del Albaicín, con sus calles sinuosas y miradores que ofrecen vistas a la Alhambra y Sierra Nevada, es un lugar perfecto para perderse. La ciudad también es famosa por su ambiente bohemio, con numerosos bares de tapas y locales de flamenco que llenan las noches de música y alegría.",
+            "Granada es un lugar donde la cultura árabe y la española se entrelazan de manera única. Además, su ubicación a los pies de Sierra Nevada la convierte en un destino popular para los amantes de la naturaleza y los deportes de invierno. Con su rica historia y su belleza natural, Granada es una joya en el sur de España."
+          ],
+          "categoria": "Cultura",
+          "imagen": "granada",
+          "destInfo": {
+            "nombre": "Hotel Granada View",
+            "numPersonas": 2,
+            "numCamas": 1,
+            "fechaEntrada": "16/10",
+            "fechaSalida": "21/10",
+            "precio": "290€"
+          }
+        },
+        {
+          "id": 5,
+          "nombre": "Mallorca",
+          "descripcion": [
+            "Mallorca, la mayor de las Islas Baleares, es un paraíso en el Mediterráneo. Sus playas de arena blanca y aguas cristalinas, como la Playa de Palma y Cala d'Or, son perfectas para relajarse y disfrutar del sol. La isla también es famosa por sus calas escondidas, ideales para la exploración en barco.",
+            "La capital, Palma de Mallorca, es una ciudad vibrante con una catedral impresionante, el casco antiguo y una gran variedad de tiendas y restaurantes. La gastronomía mallorquina es deliciosa, con platos como la sobrasada y el tumbet que debes probar. Además, la vida nocturna en Magaluf y Palma es animada y emocionante.",
+            "Mallorca también ofrece oportunidades para actividades al aire libre, como el senderismo en la Serra de Tramuntana y el ciclismo por la isla. La combinación de hermosas playas, cultura, naturaleza y entretenimiento hacen de Mallorca un destino versátil que atrae a visitantes de todas partes del mundo."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "mallorca",
+          "destInfo": {
+            "nombre": "Hotel Mallorca Beach Resort",
+            "numPersonas": 3,
+            "numCamas": 2,
+            "fechaEntrada": "12/07",
+            "fechaSalida": "17/07",
+            "precio": "480€"
+          }
+        },
+        {
+          "id": 6,
+          "nombre": "Bilbao",
+          "descripcion": [
+            "Bilbao, en el País Vasco, es una ciudad industrial convertida en un centro cultural y artístico. El Museo Guggenheim de Frank Gehry, con su arquitectura vanguardista, es un símbolo icónico de la ciudad. Además, el Casco Viejo de Bilbao ofrece calles estrechas llenas de bares de pintxos y tiendas tradicionales.",
+            "La gastronomía vasca es de renombre y en Bilbao puedes disfrutar de platos como el bacalao a la vizcaína y el marmitako. La ciudad es famosa por su ambiente relajado y acogedor, lo que la convierte en un lugar perfecto para explorar a pie y disfrutar de la hospitalidad local.",
+            "Bilbao es un punto de partida ideal para explorar el País Vasco y sus montañas verdes, como el Parque Natural de Urkiola y la costa del Golfo de Vizcaya. La mezcla de tradición y modernidad en Bilbao te ofrece una experiencia única en el norte de España."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "bilbao",
+          "destInfo": {
+            "nombre": "Hotel Bilbao City Center",
+            "numPersonas": 2,
+            "numCamas": 1,
+            "fechaEntrada": "28/08",
+            "fechaSalida": "02/09",
+            "precio": "290€"
+          }
+        },
+        {
+          "id": 7,
+          "nombre": "Toledo",
+          "descripcion": [
+            "Toledo, conocida como la Ciudad de las Tres Culturas, es un tesoro histórico en el corazón de España. Su casco antiguo, declarado Patrimonio de la Humanidad, te transporta a la Edad Media con sus callejones empedrados, murallas antiguas y edificios históricos. La Catedral de Toledo y el Alcázar son monumentos impresionantes que no debes perderte.",
+            "La ciudad también es famosa por su artesanía, en particular la fabricación de espadas y damasquinado. Puedes visitar talleres donde se crean estas obras maestras artesanales. La gastronomía toledana es igualmente notable, con platos como el cordero asado y el mazapán, que son delicias locales.",
+            "Toledo, con su rica historia y su ambiente encantador, es un lugar perfecto para explorar a pie. Desde sus murallas, se pueden disfrutar de impresionantes vistas del río Tajo y los alrededores. La ciudad es un verdadero museo al aire libre que te sumergirá en la historia de España."
+          ],
+          "categoria": "Cultura",
+          "imagen": "toledo",
+          "destInfo": {
+            "nombre": "Hotel Toledo Historic Inn",
+            "numPersonas": 4,
+            "numCamas": 3,
+            "fechaEntrada": "06/09",
+            "fechaSalida": "11/09",
+            "precio": "525€"
+          }
+        },
+        {
+          "id": 8,
+          "nombre": "Ibiza",
+          "descripcion": [
+            "Ibiza, en el mar Mediterráneo, es un paraíso de playas de arena blanca, aguas cristalinas y una vibrante vida nocturna. La isla es conocida por sus famosas discotecas y fiestas de música electrónica que atraen a visitantes de todo el mundo. Pero Ibiza también ofrece una belleza natural impresionante, con calas tranquilas y paisajes costeros impresionantes.",
+            "El casco antiguo de Ibiza, Dalt Vila, es un laberinto de calles empedradas y murallas medievales que te transportarán en el tiempo. La isla también es un paraíso para los amantes de la gastronomía, con restaurantes que ofrecen platos frescos de pescado y marisco, así como cocina tradicional ibicenca.",
+            "Ibiza es un destino que combina la relajación en la playa con la emoción de la vida nocturna. Además, la isla cuenta con hermosos paisajes rurales y oportunidades para practicar deportes acuáticos y explorar la belleza natural de su interior."
+          ],
+          "categoria": "Playa",
+          "imagen": "ibiza",
+          "destInfo":{
+            "nombre":"Hotel Ibiza Sunset Paradise",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "15/10",
+            "fechaSalida": "20/10",
+            "precio": "380€"
+          }
+        },
+        {
+          "id": 9,
+          "nombre": "Salamanca",
+          "descripcion": [
+            "Salamanca, una ciudad universitaria con una rica herencia cultural, es un destino fascinante en el oeste de España. Su famosa Universidad de Salamanca es una de las más antiguas de Europa y su fachada plateresca es un símbolo emblemático de la ciudad. El centro histórico de Salamanca, también declarado Patrimonio de la Humanidad, está lleno de calles empedradas, plazas encantadoras y edificios históricos.",
+            "La Plaza Mayor de Salamanca es un punto focal de la vida en la ciudad y un lugar perfecto para disfrutar de un café o una comida en uno de sus numerosos restaurantes y cafeterías. La gastronomía castellana es deliciosa, con platos como el hornazo y las chanfainas que destacan en los menús locales.",
+            "Salamanca es una ciudad llena de vida gracias a su población estudiantil, lo que la convierte en un lugar animado y dinámico. La ciudad es también un punto de partida ideal para explorar la región de Castilla y León, con su impresionante paisaje rural y su historia fascinante. Salamanca es un destino que combina la tradición académica con la belleza histórica y cultural."
+          ],
+          "categoria": "Cultura",
+          "imagen": "salamanca",
+          "destInfo":{
+            "nombre":"Hotel Salamanca Heritage Retreat",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "04/11",
+            "fechaSalida": "09/11",
+            "precio": "310€"
+          }
+        }
+      ]
+    },
+    {
+      "pais": "Francia",
+      "ciudades": [
+        {
+          "id": 10,
+          "nombre": "París",
+          "descripcion": [
+            "París, la Ciudad de la Luz, es una metrópolis icónica que encanta a visitantes de todo el mundo. La Torre Eiffel, el Louvre y la Catedral de Notre-Dame son solo algunos de los monumentos que definen su horizonte. La ciudad es famosa por su elegancia, su alta costura y su gastronomía de clase mundial. Pasea por las orillas del río Sena y disfruta de la belleza arquitectónica que se despliega a tu alrededor.",
+            "El arte y la cultura son fundamentales en París. Los museos, como el Louvre y el Museo de Orsay, albergan algunas de las colecciones más impresionantes del mundo. Además, Montmartre es el hogar del famoso cabaret Moulin Rouge y ofrece una visión de la bohemia parisina. La ciudad es conocida por su ambiente romántico, lo que la convierte en un destino popular para parejas.",
+            "París es una ciudad que combina la tradición con la modernidad. Mientras que el Barrio Latino es un centro de la vida estudiantil y la animación nocturna, el Marais es conocido por su arquitectura medieval y su ambiente relajado. Con su encanto inigualable y su rica historia, París es una ciudad que nunca deja de sorprender."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "paris",
+          "destInfo":{
+            "nombre":"Hotel Paris Elegance",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "10/07",
+            "fechaSalida": "15/07",
+            "precio": "550€"
+          }
+        },
+        {
+          "id": 11,
+          "nombre": "Niza",
+          "descripcion": [
+            "Niza, en la Costa Azul de Francia, es un paraíso costero que combina la elegancia francesa con la belleza del Mediterráneo. Su paseo marítimo, la Promenade des Anglais, es el lugar perfecto para disfrutar de vistas al mar y del clima soleado. La ciudad es famosa por sus playas de guijarros y aguas cristalinas que invitan al relax y al baño.",
+            "El casco antiguo de Niza, conocido como el Vieux Nice, es un laberinto de callejones estrechos llenos de tiendas, restaurantes y edificios de colores pastel. La Place Masséna es una plaza emblemática que alberga eventos culturales y festivales durante todo el año. La cocina niçoise, con platos como la ensalada niçoise y la socca, es una delicia para los amantes de la gastronomía.",
+            "Niza es un punto de partida ideal para explorar la Riviera Francesa, con ciudades como Cannes y Mónaco a poca distancia en coche. La ciudad es también un lugar de gran belleza natural, con las montañas de los Alpes Marítimos en el horizonte. Con su combinación de cultura, playa y paisaje, Niza es un destino que atrae a viajeros de todo el mundo."
+          ],
+          "categoria": "Playa",
+          "imagen": "niza",
+          "destInfo":{
+            "nombre":"Hotel Niza Riviera",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "22/08",
+            "fechaSalida": "27/08",
+            "precio": "480€"
+          }
+        },
+        {
+          "id": 12,
+          "nombre": "Marsella",
+          "descripcion": [
+            "Marsella, en la costa sur de Francia, es una ciudad portuaria llena de historia y vitalidad. Su puerto antiguo, el Vieux-Port, es el corazón de la ciudad y un lugar ideal para disfrutar de la vida marítima y la gastronomía local. Marsella es famosa por su bouillabaisse, una sopa de pescado, y sus mercados locales repletos de productos frescos.",
+            "La Basílica de Notre-Dame de la Garde, que domina la ciudad desde una colina, ofrece impresionantes vistas panorámicas. La ciudad también es un crisol de culturas, con una fuerte influencia mediterránea y norteafricana. Los barrios como Le Panier son coloridos y llenos de vida.",
+            "Marsella es un punto de partida ideal para explorar la región de Provenza y la Riviera Francesa, con ciudades como Aix-en-Provence y Niza a un corto viaje en coche o tren. Con su mezcla de herencia cultural y ambiente marítimo, Marsella es una ciudad que combina lo antiguo y lo nuevo de una manera fascinante."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "marsella",
+          "destInfo":{
+            "nombre":"Hotel Marsella Ocean View",
+            "numPersonas":3,
+            "numCamas":2,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "420€"
+          }
+        },
+        {
+          "id": 13,
+          "nombre": "Lyon",
+          "descripcion": [
+            "Lyon, en el este de Francia, es una ciudad que combina historia, gastronomía y modernidad. Su casco antiguo, el Vieux Lyon, es un laberinto de calles empedradas y traboules, pasajes secretos que conectan edificios antiguos. La ciudad es famosa por su gastronomía, con platos como la sopa de cebolla y el quenelle, y es considerada la capital gastronómica de Francia.",
+            "Lyon es también conocida por su rica herencia cultural. El Museo de Bellas Artes de Lyon alberga una impresionante colección de obras maestras, y la ópera de la ciudad es uno de los teatros más prestigiosos de Francia. El Parque de la Tête d'Or es un oasis verde en el corazón de la ciudad y un lugar popular para relajarse.",
+            "La ciudad es un centro de la industria y la innovación, con una economía en constante crecimiento. Lyon se encuentra en la confluencia de dos ríos, el Ródano y el Saona, lo que le otorga una ubicación geográfica privilegiada. Con su mezcla de historia, cultura y modernidad, Lyon es una ciudad que ofrece una experiencia única en el corazón de Francia."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "lyon",
+          "destInfo":{
+            "nombre":"Hotel Lyon City Center",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "14/10",
+            "fechaSalida": "19/10",
+            "precio": "390€"
+          }
+        },
+        {
+          "id": 14,
+          "nombre": "Nantes",
+          "descripcion": [
+            "Nantes, en el oeste de Francia, es una ciudad que combina historia y modernidad a orillas del río Loira. El Castillo de los Duques de Bretaña, con su foso y murallas, es un recordatorio de su pasado como capital de la región de Bretaña. La isla de las Máquinas es un lugar impresionante donde la creatividad y la ingeniería se unen para crear esculturas mecánicas gigantes.",
+            "La ciudad es conocida por su ambiente cultural y artístico. El Museo de Bellas Artes de Nantes alberga una destacada colección de arte, mientras que la escena teatral y musical es vibrante y diversa. Nantes es también famosa por su gastronomía, con platos como la crêpe y el pastel nantais que deleitan a los paladares.",
+            "Nantes es una ciudad en constante evolución, con una población joven y dinámica. Su ambiente relajado y su énfasis en la sostenibilidad la convierten en un lugar acogedor para vivir y visitar. Con su combinación de historia, cultura y creatividad, Nantes es una ciudad que te sorprenderá en cada esquina."
+          ],
+          "categoria": "Cultura",
+          "imagen": "nantes",
+          "destInfo":{
+            "nombre":"Hotel Nantes Riverside",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "23/11",
+            "fechaSalida": "28/11",
+            "precio": "360€"
+          }
+        },
+        {
+          "id": 15,
+          "nombre": "Burdeos",
+          "descripcion": [
+            "Burdeos, en el suroeste de Francia, es una ciudad conocida por su arquitectura clásica, su cultura vinícola y su encanto urbano. Su centro histórico es Patrimonio de la Humanidad y alberga edificios impresionantes, como la Place de la Bourse y la catedral de San Andrés. La ciudad es también un punto de partida ideal para explorar los viñedos de la región de Burdeos.",
+            "La gastronomía en Burdeos es una delicia para los amantes del vino y la comida francesa. La región de Aquitania es famosa por su vino, y en Burdeos puedes disfrutar de platos tradicionales como el confit de pato y el canelé. La ciudad es un lugar de cultura y arte, con museos como el Museo de Bellas Artes y eventos culturales que atraen a visitantes de todo el mundo.",
+            "Burdeos es una ciudad que combina la elegancia con la vitalidad moderna. El río Garona que la atraviesa ofrece oportunidades para paseos en barco y relajación junto al agua. La región de Burdeos es conocida por su producción de vino, y las bodegas de la ciudad ofrecen degustaciones de vinos de renombre. Con su mezcla de cultura, gastronomía y vino, Burdeos es un destino que seduce a los amantes de la buena vida."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "burdeos",
+          "destInfo":{
+            "nombre":"Hotel Burdeos Boutique",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "01/12",
+            "fechaSalida": "06/12",
+            "precio": "320€"
+          }
+        },
+        {
+          "id": 16,
+          "nombre": "Toulouse",
+          "descripcion": [
+            "Toulouse, en el suroeste de Francia, es una ciudad que destaca por su historia aeroespacial y su ambiente relajado. La Ciudad del Espacio es un parque temático dedicado a la exploración espacial y la historia de la aviación. Toulouse es también conocida como La Ciudad Rosa debido a la característica arcilla rosa utilizada en la construcción de muchos de sus edificios.",
+            "La gastronomía en Toulouse es deliciosa, con platos tradicionales como el cassoulet y la saucisse de Toulouse que se disfrutan en los restaurantes locales. La ciudad cuenta con una vibrante escena cultural, con teatros y museos que ofrecen una variedad de eventos y exposiciones.",
+            "Toulouse es una ciudad universitaria y tecnológica con un ambiente joven y creativo. Además, su ubicación en el suroeste de Francia la convierte en un punto de partida ideal para explorar la región de Occitania, con sus bellos paisajes rurales y ciudades históricas. Con su combinación de innovación y tradición, Toulouse ofrece una experiencia única en el suroeste de Francia."
+          ],
+          "categoria": "Cultura",
+          "imagen": "toulouse",
+          "destInfo":{
+            "nombre":"Hotel Toulouse Charme",
+            "numPersonas":3,
+            "numCamas":2,
+            "fechaEntrada": "10/01",
+            "fechaSalida": "15/01",
+            "precio": "410€"
+          }
+        },
+        {
+          "id": 17,
+          "nombre": "Estrasburgo",
+          "descripcion": [
+            "Estrasburgo, en el noreste de Francia, es una ciudad que combina la influencia francesa y alemana en su arquitectura, cultura y gastronomía. Su centro histórico, Grande Île, es Patrimonio de la Humanidad y alberga la majestuosa catedral de Estrasburgo, una maravilla gótica. La ciudad es también sede del Parlamento Europeo y es un centro importante de la política europea.",
+            "La gastronomía en Estrasburgo es excepcional, con platos como la choucroute garnie y el foie gras que se disfrutan en sus restaurantes tradicionales. Además, la ciudad es famosa por su mercado navideño, que atrae a visitantes de todo el mundo durante la temporada de Adviento.",
+            "Estrasburgo es una ciudad que combina la elegancia y la historia con la modernidad y la innovación. Sus canales, su casco antiguo y su ambiente cultural hacen que sea un lugar encantador para explorar. Con su posición central en Europa y su rica herencia cultural, Estrasburgo es una ciudad que destaca en el panorama europeo."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "estrasburgo",
+          "destInfo":{
+            "nombre":"Hotel Estrasburgo Heritage",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "18/02",
+            "fechaSalida": "23/02",
+            "precio": "380€"
+          }
+        },
+        {
+          "id": 18,
+          "nombre": "Aviñón",
+          "descripcion": [
+            "Aviñón, en el sureste de Francia, es una ciudad con una rica herencia histórica. Es conocida principalmente por el Palacio de los Papas, una imponente fortaleza que fue la sede del papado en el siglo XIV. El famoso puente de Aviñón, el Pont Saint-Bénézet, es otro monumento emblemático que se extiende sobre el río Ródano. La ciudad es un testimonio vivo de la historia eclesiástica de Europa.",
+            "Aviñón es también conocida por su festival de teatro, el Festival de Aviñón, que es uno de los eventos culturales más importantes de Francia. Durante el festival, las calles y plazas de la ciudad se llenan de actuaciones teatrales y eventos artísticos. La ciudad es un centro de cultura y arte, con numerosos museos y galerías que muestran la creatividad local.",
+            "La gastronomía en Aviñón es deliciosa, con platos provenzales como la ratatouille y la bouillabaisse que se disfrutan en los restaurantes locales. La ciudad ofrece un ambiente encantador con sus calles empedradas, sus patios sombreados y sus terrazas al aire libre que invitan a disfrutar de la vida al estilo provenzal."
+          ],
+          "categoria": "Cultura",
+          "imagen": "avignon",
+          "destInfo":{
+            "nombre":"Hotel Aviñón Castle View",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "25/03",
+            "fechaSalida": "30/03",
+            "precio": "340€"
+          }
+        },
+        {
+          "id": 19,
+          "nombre": "Córcega",
+          "descripcion": [
+            "Córcega, la isla mediterránea de Francia, es un paraíso natural con una belleza escénica impresionante. Sus playas de arena dorada, como la playa de Palombaggia y la playa de Santa Giulia, son ideales para relajarse y disfrutar del sol. El interior montañoso de la isla alberga senderos de montaña y pueblos pintorescos.",
+            "La gastronomía corsa es una delicia para los amantes de la comida mediterránea, con platos como la charcutería corsa y el queso de cabra que son especialidades locales. Córcega también es famosa por su vino y su licor de hierbas, el myrte.",
+            "La isla es un lugar de gran diversidad natural, con parques naturales como el Parque Natural Regional de Córcega que ofrecen oportunidades para practicar senderismo, ciclismo y deportes acuáticos. Con su mezcla de belleza natural y cultura corsa única, Córcega es un destino perfecto para quienes buscan una escapada tranquila y pintoresca."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "corse",
+          "destInfo":{
+            "nombre":"Hotel Córcega Paradise",
+            "numPersonas":4,
+            "numCamas":3,
+            "fechaEntrada": "05/04",
+            "fechaSalida": "10/04",
+            "precio": "590€"
+          }
+        }
+      ]
+    },
+    {
+      "pais": "Italia",
+      "ciudades": [
+        {
+          "id": 20,
+          "nombre": "Roma",
+          "descripcion": [
+            "Roma, la Ciudad Eterna, es un destino emblemático en Italia y en todo el mundo. Sus monumentos antiguos, como el Coliseo, el Foro Romano y el Panteón, te transportan a la época del Imperio Romano. El Vaticano, con la Basílica de San Pedro y los Museos Vaticanos, es un centro espiritual y cultural importante. La ciudad está llena de plazas encantadoras, como la Piazza Navona y la Piazza di Spagna, que invitan a pasear y disfrutar de la atmósfera.",
+            "La gastronomía en Roma es deliciosa, con platos como la pasta carbonara y la pizza romana que deleitan a los amantes de la comida. Además, la ciudad ofrece un ambiente animado en sus calles, con numerosos restaurantes, cafeterías y bares que reflejan la vitalidad de la vida italiana.",
+            "Roma es un lugar donde la historia y la cultura se mezclan con la vida contemporánea. Con su encanto atemporal y su ambiente cosmopolita, la Ciudad Eterna es un destino que te sumergirá en la grandeza de la civilización antigua y la belleza de la Italia moderna."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "roma",
+          "destInfo":{
+            "nombre":"Hotel Roma Historical",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/07",
+            "fechaSalida": "15/07",
+            "precio": "520€"
+          }
+        },
+        {
+          "id": 21,
+          "nombre": "Venecia",
+          "descripcion": [
+            "Venecia, la Ciudad de los Canales, es un lugar mágico en Italia que desafía la imaginación. Sus canales, puentes y calles estrechas te sumergen en un mundo de belleza única. La Plaza de San Marcos, con la Basílica de San Marcos y el Palacio Ducal, es un conjunto arquitectónico impresionante. Los famosos canales de Venecia, como el Gran Canal, ofrecen una experiencia única de navegación.",
+            "La gastronomía veneciana es deliciosa, con platos como los cicchetti y el risotto al nero di seppia que son especialidades locales. La ciudad es famosa por su artesanía, en particular el vidrio de Murano y el encaje de Burano. Venecia es un lugar de cultura y tradición, con festivales como el Carnaval de Venecia que atraen a visitantes de todo el mundo.",
+            "Venecia es una ciudad que te transporta a un mundo de cuento de hadas. Con su ambiente romántico, sus góndolas y su arquitectura única, la Ciudad de los Canales es un destino inolvidable que te invita a explorar sus callejones escondidos y a disfrutar de su magia eterna."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "venecia",
+          "destInfo":{
+            "nombre":"Hotel Venecia Grand Canal",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "22/08",
+            "fechaSalida": "27/08",
+            "precio": "550€"
+          }
+        },
+        {
+          "id": 22,
+          "nombre": "Florencia",
+          "descripcion": [
+            "Florencia, en el corazón de la Toscana, es una ciudad que irradia arte, cultura e historia. El centro histórico de la ciudad es Patrimonio de la Humanidad y alberga tesoros renacentistas como la Galería Uffizi, que alberga obras maestras de Botticelli y Miguel Ángel, y la Galería de la Academia, que exhibe el David de Miguel Ángel. La catedral de Santa María del Fiore, con su cúpula icónica, es un símbolo de la ciudad.",
+            "La gastronomía florentina es exquisita, con platos como la bistecca alla fiorentina y la ribollita que deleitan a los amantes de la comida toscana. Florencia es también conocida por su cuero y su moda, con tiendas de lujo y boutiques que ofrecen productos de alta calidad.",
+            "La ciudad es un lugar donde la belleza se encuentra en cada esquina, desde sus puentes sobre el río Arno hasta sus jardines y plazas. Florencia es una joya del Renacimiento italiano que atrae a amantes del arte, la historia y la cultura de todo el mundo."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "florencia",
+          "destInfo":{
+            "nombre":"Hotel Florencia Renaissance",
+            "numPersonas":3,
+            "numCamas":2,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "480€"
+          }
+        },
+        {
+          "id": 23,
+          "nombre": "Milán",
+          "descripcion": [
+            "Milán, en el norte de Italia, es una ciudad que combina la moda, el arte y la historia. La catedral de Milán, el Duomo, es una obra maestra gótica y uno de los monumentos más impresionantes de Europa. La ciudad es conocida por su influencia en la moda y el diseño, con tiendas de lujo en la famosa Via Montenapoleone y eventos de moda de renombre.",
+            "La gastronomía en Milán es exquisita, con platos como el risotto alla milanese y el ossobuco que son delicias locales. La ciudad es también un centro cultural importante, con museos como el Museo del Castello Sforzesco y la Pinacoteca di Brera que albergan una amplia variedad de obras de arte.",
+            "Milán es una ciudad que combina la elegancia y el dinamismo. Su vida nocturna es animada, con bares y discotecas que atraen a amantes de la música y la diversión. Con su mezcla de historia, cultura y modernidad, Milán es un lugar que representa la sofisticación italiana en su máxima expresión."
+          ],
+          "categoria": "Cultura",
+          "imagen": "milan",
+          "destInfo":{
+            "nombre":"Hotel Milán Fashionista",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "14/10",
+            "fechaSalida": "19/10",
+            "precio": "490€"
+          }
+        },
+        {
+          "id": 24,
+          "nombre": "Nápoles",
+          "descripcion": [
+            "Nápoles, en el sur de Italia, es una ciudad llena de historia, cultura y vitalidad. La ciudad es famosa por su centro histórico, que es Patrimonio de la Humanidad y alberga tesoros arquitectónicos como el Castel dell'Ovo y el Duomo di San Gennaro. Además, Nápoles es la cuna de la pizza napolitana, por lo que no puedes dejar de probar una auténtica pizza margarita en una de las pizzerías locales.",
+            "La ciudad es un punto de partida ideal para explorar la región de Campania, con lugares emblemáticos como Pompeya, el Vesubio y la Costa Amalfitana a poca distancia en coche. Nápoles es también un centro cultural importante, con museos como el Museo Arqueológico Nacional que albergan una rica colección de arte y antigüedades.",
+            "Nápoles es una ciudad donde la pasión y la autenticidad se entrelazan con su ambiente caótico y encantador. Las estrechas calles del centro histórico, la amabilidad de la gente y la energía que se siente en cada esquina hacen que Nápoles sea un destino único en Italia."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "napoles",
+          "destInfo":{
+            "nombre":"Hotel Nápoles Coastal",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "23/11",
+            "fechaSalida": "28/11",
+            "precio": "430€"
+          }
+        },
+        {
+          "id": 25,
+          "nombre": "Sicilia",
+          "descripcion": [
+            "Sicilia, la isla más grande del Mediterráneo, es un paraíso de belleza natural y rica herencia histórica. La isla está salpicada de antiguos templos griegos, como el Valle de los Templos en Agrigento, y teatros romanos, como el Teatro Greco en Taormina. La ciudad de Palermo, con su catedral y palacios árabes-normandos, es un ejemplo impresionante de la fusión de culturas en Sicilia.",
+            "La gastronomía siciliana es una delicia, con platos como la pasta alla norma y la cassata que son verdaderas joyas culinarias. La isla es famosa por sus mercados locales, donde puedes probar productos frescos y auténticos. Además, Sicilia es conocida por su producción de vino, en particular el vino Marsala.",
+            "Sicilia es un lugar donde la historia y la belleza natural se entrelazan. Desde las playas de arena dorada y aguas cristalinas hasta las montañas y los parques naturales, la isla ofrece oportunidades para la aventura y la relajación. Con su mezcla de cultura, gastronomía y paisajes espectaculares, Sicilia es un destino que cautiva a los viajeros."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "sicilia",
+          "destInfo":{
+            "nombre":"Hotel Sicilia Beach Retreat",
+            "numPersonas":4,
+            "numCamas":3,
+            "fechaEntrada": "01/12",
+            "fechaSalida": "06/12",
+            "precio": "580€"
+          }
+        },
+        {
+          "id": 26,
+          "nombre": "Cinque Terre",
+          "descripcion": [
+            "Cinque Terre, en la costa noroeste de Italia, es un conjunto de cinco encantadores pueblos costeros: Monterosso al Mare, Vernazza, Corniglia, Manarola y Riomaggiore. Estos pueblos pintorescos se aferran a acantilados y ofrecen vistas espectaculares al mar Mediterráneo. El paisaje de Cinque Terre es impresionante, con terrazas de cultivo, senderos escarpados y playas de guijarros.",
+            "La gastronomía en Cinque Terre se basa en productos locales frescos, como mariscos, aceite de oliva y vino de la región. Los restaurantes y trattorias en los pueblos sirven platos tradicionales, como la pasta al pesto y el pescado fresco. Además, la región es famosa por su limoncello, un licor de limón que es una delicia refrescante.",
+            "Cinque Terre es un paraíso para los amantes del senderismo y la exploración al aire libre. Los senderos costeros conectan los pueblos y ofrecen oportunidades para caminatas escénicas. La región es un lugar donde la belleza natural y la vida tranquila de los pueblos crean una atmósfera única y relajada que atrae a visitantes de todo el mundo."
+          ],
+          "categoria": "Playa",
+          "imagen": "cinque_terre",
+          "destInfo":{
+            "nombre":"Hotel Cinque Terre View",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "10/01",
+            "fechaSalida": "15/01",
+            "precio": "450€"
+          }
+        },
+        {
+          "id": 27,
+          "nombre": "Veneto",
+          "descripcion": [
+            "Veneto, en el noreste de Italia, es una región rica en historia, cultura y belleza natural. Venecia, la ciudad de los canales, es el destino más icónico de la región, con sus monumentos como el Puente de Rialto y la Basílica de San Marcos. Pero Veneto también alberga ciudades históricas como Verona, conocida por su anfiteatro romano y su historia de amor en Romeo y Julieta.",
+            "La gastronomía veneciana es deliciosa, con platos como el risotto de mariscos y el tiramisú que son especialidades locales. La región es famosa por su producción de vino, en particular el Prosecco y el Amarone. Veneto es un lugar de tradición vinícola y eventos culturales, como el Carnaval de Venecia.",
+            "Veneto es una región diversa, que combina la costa del Adriático con las montañas de los Alpes. El Lago de Garda es uno de los destinos más populares, ofreciendo actividades como deportes acuáticos y senderismo. Veneto es un lugar donde la historia, la cultura y la belleza natural se mezclan para crear una experiencia única en Italia."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "veneto",
+          "destInfo":{
+            "nombre":"Hotel Veneto Charme",
+            "numPersonas":3,
+            "numCamas":2,
+            "fechaEntrada": "18/02",
+            "fechaSalida": "23/02",
+            "precio": "490€"
+          }
+        },
+        {
+          "id": 28,
+          "nombre": "Pisa",
+          "descripcion": [
+            "Pisa, en la región de la Toscana, es famosa en todo el mundo por su icónica Torre Inclinada. La Torre de Pisa, situada en el Campo dei Miracoli, es un campanario gótico que se inclina de manera peculiar debido a problemas en su cimentación. Además de la torre, la Piazza dei Miracoli alberga la impresionante catedral de estilo románico y el baptisterio.",
+            "La ciudad de Pisa es un lugar donde la historia se entrelaza con la vida cotidiana. Sus calles empedradas y plazas encantadoras invitan a pasear y disfrutar de la atmósfera italiana. La Universidad de Pisa, fundada en el siglo XII, es una de las más antiguas de Europa y le da a la ciudad un ambiente joven y animado.",
+            "Pisa es un punto de partida ideal para explorar la región de la Toscana, con ciudades como Florencia y Lucca a una corta distancia en coche o tren. Con su combinación de historia, arquitectura impresionante y ambiente acogedor, Pisa es un destino que atrae a visitantes de todo el mundo."
+          ],
+          "categoria": "Cultura",
+          "imagen": "pisa",
+          "destInfo":{
+            "nombre":"Hotel Pisa Tower View",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "25/03",
+            "fechaSalida": "30/03",
+            "precio": "510€"
+          }
+        },
+        {
+          "id": 29,
+          "nombre": "Amalfi",
+          "descripcion": [
+            "Amalfi, en la costa suroeste de Italia, es la joya de la Costa Amalfitana, conocida por su belleza escénica y su encanto mediterráneo. El pueblo de Amalfi, con su catedral de estilo árabe-normando, es el corazón de la región. Las casas de colores pastel se escalonan en las laderas que descienden hacia el mar, creando una vista impresionante.",
+            "La gastronomía en Amalfi es una delicia, con platos como la pasta alle vongole y el limoncello que son especialidades locales. La región es famosa por sus limoneros y su producción de limones, que se utilizan en una variedad de productos culinarios y licores.",
+            "Amalfi es un lugar donde la belleza natural se combina con la tranquilidad costera y el ambiente pintoresco. La carretera costera que serpentea a lo largo de la costa es famosa por sus vistas panorámicas y sus oportunidades de senderismo. La región de Amalfi es un destino perfecto para quienes buscan relajarse junto al mar y explorar el encanto de los pueblos costeros italianos."
+          ],
+          "categoria": "Playa",
+          "imagen": "amalfi",
+          "destInfo":{
+            "nombre":"Hotel Amalfi Coast Paradise",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "05/04",
+            "fechaSalida": "10/04",
+            "precio": "540€"
+          }
+        }
+      ]
+    },
+    {
+      "pais": "EEUU",
+      "ciudades": [
+        {
+          "id": 30,
+          "nombre": "Nueva York",
+          "descripcion": [
+            "Nueva York, la Gran Manzana, es una de las ciudades más emblemáticas de Estados Unidos y del mundo. Manhattan, con sus rascacielos imponentes, es el corazón de la ciudad. El Central Park, el Museo Metropolitano de Arte y el Empire State Building son solo algunos de los lugares icónicos que la ciudad tiene para ofrecer. La Estatua de la Libertad, en la isla de la Libertad, es un símbolo de la libertad y la bienvenida a los inmigrantes que llegaron a América.",
+            "La gastronomía en Nueva York es diversa y deliciosa, con restaurantes que ofrecen una amplia variedad de cocinas de todo el mundo. Los puestos de comida en la calle, como los carritos de hot dogs y pretzels, son una parte integral de la experiencia de la ciudad. Nueva York es también un centro de cultura y arte, con teatros de Broadway, museos de renombre y eventos culturales que se celebran a lo largo del año.",
+            "Nueva York es una ciudad que nunca duerme, con una vida nocturna vibrante, tiendas de lujo en la Quinta Avenida y una diversidad que se refleja en sus barrios, como Chinatown y Little Italy. La ciudad ofrece una experiencia única que combina lo antiguo y lo nuevo, lo tradicional y lo vanguardista."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "nueva_york",
+          "destInfo":{
+            "nombre":"Hotel Nueva York Skyline",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/07",
+            "fechaSalida": "15/07",
+            "precio": "$600"
+          }
+        },
+        {
+          "id": 31,
+          "nombre": "Los Ángeles",
+          "descripcion": [
+            "Los Ángeles, en la costa oeste de Estados Unidos, es conocida por ser el centro de la industria del entretenimiento en Hollywood. El Paseo de la Fama de Hollywood y el Teatro Chino TCL son destinos icónicos para los amantes del cine. La ciudad ofrece una variedad de playas, desde Santa Mónica y Venice Beach hasta Malibú, que son ideales para disfrutar del sol y el surf.",
+            "La gastronomía en Los Ángeles es diversa, con una escena culinaria que abarca desde la comida callejera en los food trucks hasta restaurantes de alta cocina. La ciudad es también un centro de arte y cultura, con museos como el Getty Center y el LACMA que albergan colecciones impresionantes.",
+            "Los Ángeles es una ciudad de contrastes, con barrios diversos como Beverly Hills y el Arts District. La ciudad es famosa por su estilo de vida relajado y su ambiente soleado, lo que la convierte en un destino popular para disfrutar de la playa, las compras y la vida al aire libre."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "los_angeles",
+          
+          "destInfo":{
+            "nombre":"Hotel Las Vegas Strip",
+            "numPersonas":4,
+            "numCamas":2,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "$700"
+          }
+        },
+        {
+          "id": 32,
+          "nombre": "San Francisco",
+          "descripcion": [
+            "San Francisco, en la costa oeste de California, es conocida por su icónico puente Golden Gate y su topografía única, con colinas empinadas y calles sinuosas. La isla de Alcatraz, con su famosa prisión, es un lugar de interés histórico. La ciudad es también el hogar de la cultura hippie y el Movimiento de Derechos Civiles en los años 60, con el barrio de Haight-Ashbury y el Distrito de Castro.",
+            "La gastronomía en San Francisco es diversa, con una escena culinaria que incluye mariscos frescos, platos de fusión asiática y restaurantes de alta gama. El área de la Bahía de San Francisco es conocida por su producción de vino, y la región vinícola de Napa Valley está a poca distancia en coche.",
+            "San Francisco es una ciudad progresista y diversa, con barrios como Chinatown y el Distrito Misiones que reflejan su multiculturalidad. La ciudad ofrece una gran cantidad de parques, como el Golden Gate Park, y una vibrante vida cultural con teatros, galerías y festivales que se celebran a lo largo del año."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "san_francisco",
+          "destInfo":{
+            "nombre":"Hotel San Francisco Bay View",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "22/08",
+            "fechaSalida": "27/08",
+            "precio": "$550"
+          }
+        },
+        {
+          "id": 33,
+          "nombre": "Las Vegas",
+          "descripcion": [
+            "Las Vegas, en el desierto de Nevada, es famosa por ser la capital del entretenimiento y el juego en Estados Unidos. El Strip de Las Vegas es el corazón de la ciudad, alineado con hoteles y casinos de lujo, como el Bellagio y el Caesars Palace. Las fuentes del Bellagio, los espectáculos de luces y las actuaciones en vivo hacen que el Strip sea una experiencia única.",
+            "La gastronomía en Las Vegas es diversa, con restaurantes de chefs de renombre mundial y bufés extravagantes en los casinos. La ciudad es también conocida por su vida nocturna, con clubes nocturnos, bares y espectáculos en vivo que se llevan a cabo durante toda la noche.",
+            "Las Vegas es una ciudad que ofrece una experiencia de escape y entretenimiento. Además de los casinos, la ciudad está rodeada de paisajes desérticos y ofrece oportunidades para practicar actividades al aire libre como el senderismo y los paseos en helicóptero por el Gran Cañón. Las Vegas es un destino que combina lujo, entretenimiento y emoción."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "las_vegas",
+          "destInfo":{
+            "nombre":"Hotel Las Vegas Strip",
+            "numPersonas":4,
+            "numCamas":2,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "$700"
+          }
+        },
+        {
+          "id": 34,
+          "nombre": "Miami",
+          "descripcion": [
+            "Miami, en el sur de Florida, es una ciudad que combina playas de arena dorada, arte urbano y una vibrante escena multicultural. South Beach es uno de los destinos más populares, con su famosa playa y la histórica arquitectura art déco. La ciudad es conocida por su ambiente latino, que se refleja en su gastronomía, festivales y vida nocturna.",
+            "La gastronomía en Miami es una delicia, con platos cubanos como la ropa vieja y el cortadito que son especialidades locales. La ciudad es un crisol de culturas, con barrios como Little Havana y Little Haiti que ofrecen una experiencia auténtica. Además, Miami es un centro de arte contemporáneo, con galerías de Wynwood y eventos como Art Basel Miami Beach que atraen a amantes del arte de todo el mundo.",
+            "Miami es una ciudad donde el clima cálido y la belleza natural se combinan con la vida urbana y el entretenimiento. Las actividades al aire libre, como el buceo y el surf, son populares, y los Everglades están a poca distancia en coche. Con su ambiente internacional y su ambiente de fiesta, Miami es un destino que ofrece una experiencia única en Estados Unidos."
+          ],
+          "categoria": "Playa",
+          "imagen": "miami",
+          "destInfo":{
+            "nombre":"Hotel Miami Beach Resort",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "14/10",
+            "fechaSalida": "19/10",
+            "precio": "$550"
+          }
+          
+        },
+        {
+          "id": 35,
+          "nombre": "Chicago",
+          "descripcion": [
+            "Chicago, en el Medio Oeste de Estados Unidos, es una ciudad que destaca por su arquitectura impresionante y su rica historia cultural. El horizonte de la ciudad es famoso por rascacielos emblemáticos como el Willis Tower (anteriormente Sears Tower) y el John Hancock Center. El Millennium Park, con el Cloud Gate (The Bean) y el Jay Pritzker Pavilion, es un centro cultural y de entretenimiento.",
+            "La gastronomía en Chicago es famosa por su pizza estilo deep-dish y sus perritos calientes estilo Chicago. La ciudad es también conocida por su escena de blues y su legado en el jazz. Los museos de la ciudad, como el Instituto de Arte de Chicago y el Museo Field de Historia Natural, ofrecen una amplia gama de exposiciones culturales.",
+            "Chicago es una ciudad que combina la sofisticación urbana con un ambiente relajado. El lago Míchigan ofrece oportunidades para disfrutar de la playa y actividades acuáticas. Los barrios diversos, como Lincoln Park y Wicker Park, reflejan la multiculturalidad de la ciudad. Con su mezcla de historia, cultura y arquitectura icónica, Chicago es un destino que atrae a amantes de la vida urbana y cultural."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "chicago",
+          "destInfo":{
+            "nombre":"Hotel Chicago City Center",
+            "numPersonas":3,
+            "numCamas":2,
+            "fechaEntrada": "23/11",
+            "fechaSalida": "28/11",
+            "precio": "$480"
+          }
+        },
+        {
+          "id": 36,
+          "nombre": "Nueva Orleans",
+          "descripcion": [
+            "Nueva Orleans, en Luisiana, es una ciudad única que combina influencias francesas, españolas, africanas y caribeñas. El Barrio Francés es el corazón histórico de la ciudad, conocido por su arquitectura de hierro forjado, calles empedradas y su vibrante escena musical. La ciudad es famosa por su música jazz y sus festivales, como el Mardi Gras.",
+            "La gastronomía en Nueva Orleans es deliciosa, con platos como el gumbo y el jambalaya que son especialidades locales. La ciudad es también famosa por su cultura culinaria criolla y cajún. Los restaurantes y bares de Nueva Orleans ofrecen una experiencia única en la que se combina la comida con la música en vivo.",
+            "Nueva Orleans es una ciudad que celebra la vida, la música y la diversión. La calle Bourbon es conocida por su vida nocturna, con bares y clubes que permanecen abiertos hasta altas horas de la noche. La ciudad es un lugar de festivales y celebraciones a lo largo del año, lo que la convierte en un destino lleno de alegría y energía."
+          ],
+          "categoria": "Cultura",
+          "imagen": "nueva_orleans",
+          "destInfo":{
+            "nombre":"Hotel Nueva Orleans Jazz",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "01/12",
+            "fechaSalida": "06/12",
+            "precio": "$470"
+          }
+        },
+        {
+          "id": 37,
+          "nombre": "Washington, D.C.",
+          "descripcion": [
+            "Washington D.C., la capital de Estados Unidos, es una ciudad llena de historia, política y cultura. El National Mall es el corazón de la ciudad y alberga monumentos emblemáticos como el Monumento a Washington y el Lincoln Memorial. La ciudad es también la sede del gobierno de Estados Unidos, con el Capitolio y la Casa Blanca como puntos de referencia importantes.",
+            "La gastronomía en Washington D.C. es diversa, con una amplia variedad de restaurantes que reflejan la multiculturalidad de la ciudad. La escena cultural es rica, con museos como el Museo Nacional de Historia Americana y el Museo Nacional de Arte que albergan colecciones impresionantes.",
+            "Washington D.C. es una ciudad que combina la política y la cultura con la belleza natural. Los parques y jardines, como el Jardín Botánico de Estados Unidos y Rock Creek Park, ofrecen oportunidades para disfrutar de la naturaleza en medio de la ciudad. La ciudad es también un lugar de protestas y marchas, lo que la convierte en un símbolo de la democracia y la participación cívica."
+          ],
+          "categoria": "Cultura",
+          "imagen": "washington_dc",
+          "destInfo":{
+            "nombre":"Hotel Washington D.C. Capitol View",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/01",
+            "fechaSalida": "15/01",
+            "precio": "$580"
+          }
+        },
+        {
+          "id": 38,
+          "nombre": "Hawái",
+          "descripcion": [
+            "Hawái, un paraíso en medio del océano Pacífico, es un estado de Estados Unidos conocido por su belleza natural y su cultura única. Las playas de arena blanca y las aguas cristalinas ofrecen oportunidades para el surf, el buceo y la relajación en la costa. La isla de Oahu alberga la ciudad de Honolulu y la famosa playa de Waikiki.",
+            "La gastronomía en Hawái es una delicia, con platos como el poke y el kalua pig que son especialidades locales. La influencia asiática se refleja en la comida hawaiana, con restaurantes que sirven sushi y comida tailandesa. La cultura hawaiana es rica, con festivales y eventos culturales que celebran la música, la danza hula y las artes tradicionales.",
+            "Hawái es un lugar donde la naturaleza se mezcla con la cultura. Los volcanes activos, como el Parque Nacional de los Volcanes de Hawái en la isla grande, ofrecen oportunidades únicas para explorar la geología del archipiélago. Con su ambiente relajado y su belleza natural, Hawái es un destino que te sumerge en el espíritu aloha."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "hawaii",
+          "destInfo":{
+            "nombre":"Hotel Hawái Beach Paradise",
+            "numPersonas":4,
+            "numCamas":3,
+            "fechaEntrada": "18/02",
+            "fechaSalida": "23/02",
+            "precio": "$750"
+          }
+        },
+        {
+          "id": 39,
+          "nombre": "Alaska",
+          "descripcion": [
+            "Alaska, en el extremo noroeste de Estados Unidos, es un estado vasto y majestuoso que ofrece una belleza natural impresionante. Los paisajes de Alaska incluyen montañas cubiertas de nieve, glaciares centelleantes y bosques prístinos. El Parque Nacional y Reserva de Denali, con el monte Denali (anteriormente monte McKinley), es uno de los puntos destacados de la región.",
+            "La gastronomía en Alaska destaca por su abundancia de mariscos frescos, como el salmón salvaje de Alaska y el cangrejo real de Alaska. La pesca es una parte importante de la economía y la cultura en el estado. Además, la cultura de los nativos de Alaska se refleja en la comida y las artesanías tradicionales.",
+            "Alaska es un lugar de aventura y exploración, con oportunidades para practicar senderismo, pesca, navegación y observación de vida silvestre. La aurora boreal es un fenómeno natural impresionante que atrae a visitantes de todo el mundo durante el invierno. Con su vastedad y su belleza natural única, Alaska es un destino que ofrece una experiencia auténtica y memorable."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "alaska",
+          "destInfo":{
+            "nombre":"Hotel Alaska Wilderness Retreat",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "25/03",
+            "fechaSalida": "30/03",
+            "precio": "$680"
+          }
+        }
+      ]
+    },
+    {
+      "pais": "Japón",
+      "ciudades": [
+        {
+          "id": 40,
+          "nombre": "Tokio",
+          "descripcion": [
+            "Tokio, la capital de Japón, es una metrópolis vibrante que combina la modernidad y la tradición. La ciudad es conocida por su impresionante horizonte de rascacielos y su tecnología de vanguardia, pero también alberga templos antiguos, como el Templo Senso-ji en el barrio de Asakusa. El cruce peatonal de Shibuya es famoso por su animada intersección y es un símbolo de la energía de la ciudad.",
+            "La gastronomía en Tokio es una delicia, con una amplia variedad de platos japoneses, como el sushi, el ramen y el tempura, disponibles en restaurantes y puestos de comida callejera. La ciudad es famosa por su mercado de pescado Tsukiji, donde puedes disfrutar de pescado fresco y sushi de alta calidad. Tokio también es un centro de compras de lujo, con distritos comerciales como Ginza.",
+            "Tokio es una ciudad que nunca deja de sorprender, con una mezcla de cultura pop, arte contemporáneo y tradición. Los jardines y parques, como el Jardín Imperial del Este y el Parque Ueno, ofrecen un refugio tranquilo en medio del bullicio urbano. La ciudad es un lugar de contrastes que te invita a explorar su diversidad."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "tokio",
+          "destInfo":{
+            "nombre":"Hotel Tokio Metropolitan",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/07",
+            "fechaSalida": "15/07",
+            "precio": "¥70,000"
+          }
+        },
+        {
+          "id": 41,
+          "nombre": "Kioto",
+          "descripcion": [
+            "Kioto, en el centro de Japón, es una ciudad que representa la esencia de la cultura tradicional japonesa. La ciudad es famosa por sus templos y santuarios antiguos, como el Templo Kinkaku-ji (Pabellón de Oro) y el Santuario Fushimi Inari Taisha, conocido por sus miles de torii rojos. El barrio de Gion es famoso por sus geishas y su arquitectura tradicional.",
+            "La gastronomía en Kioto es exquisita, con platos como el kaiseki (comida multicurso) y el tofu yudofu que son especialidades locales. La ciudad es famosa por su té verde matcha, que se utiliza en pasteles y dulces. Kioto es un lugar de tradición artesanal, con tiendas que venden kimono y cerámica.",
+            "Kioto es una ciudad que te transporta a la época feudal de Japón, con calles empedradas y casas de té. La ciudad es famosa por su belleza durante la temporada de sakura (cerezos en flor) en primavera y la temporada de momiji (hojas de arce rojo) en otoño. Kioto es un destino que te permite experimentar la elegancia y la serenidad de la cultura japonesa."
+          ],
+          "categoria": "Cultura",
+          "imagen": "kioto",
+          "destInfo":{
+            "nombre":"Hotel Kioto Traditional Inn",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "22/08",
+            "fechaSalida": "27/08",
+            "precio": "¥60,000"
+          }
+        },
+        {
+          "id": 42,
+          "nombre": "Osaka",
+          "descripcion": [
+            "Osaka, en la región de Kansai, es una ciudad conocida por su ambiente bullicioso y su aprecio por la comida. El castillo de Osaka, una fortaleza histórica, es uno de los principales puntos de referencia de la ciudad. El barrio de Dotonbori es famoso por sus letreros luminosos y su vida nocturna, con una variedad de restaurantes y bares.",
+            "La gastronomía en Osaka es una de las mejores de Japón, con platos como el okonomiyaki (panqueques japoneses) y el takoyaki (bolas de pulpo) que son especialidades locales. La ciudad es conocida como la cocina de Japón y ofrece una amplia variedad de opciones culinarias. Además, Osaka es un centro comercial y de entretenimiento, con parques de atracciones como Universal Studios Japan.",
+            "Osaka es una ciudad que combina la diversión y la energía con la cultura y la historia. El templo Shitenno-ji es uno de los templos budistas más antiguos de Japón, mientras que el distrito de Shinsekai refleja la arquitectura de principios del siglo XX. La ciudad es un lugar de festivales y eventos, como el Festival del Fuego de Osaka. Osaka es un destino que te sumerge en la vida urbana y la cultura japonesa contemporánea."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "osaka",
+          "destInfo":{
+            "nombre":"Hotel Osaka City View",
+            "numPersonas":4,
+            "numCamas":2,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "¥65,000"
+          }
+        },
+        {
+          "id": 43,
+          "nombre": "Hiroshima",
+          "descripcion": [
+            "Hiroshima, en la región de Chugoku, es una ciudad que conmemora la paz y la resiliencia. El Parque Conmemorativo de la Paz de Hiroshima alberga el Domo de la Bomba Atómica, uno de los pocos edificios que quedaron en pie después del bombardeo atómico en 1945. El Museo Memorial de la Paz de Hiroshima cuenta la historia de la ciudad antes y después de la tragedia.",
+            "La gastronomía en Hiroshima es deliciosa, con platos como el okonomiyaki de Hiroshima y el ostras que son especialidades locales. La ciudad es famosa por su producción de ostras frescas de mar. Hiroshima también es un lugar de festivales y eventos, como el Festival de las Linternas de la Paz.",
+            "Hiroshima es una ciudad que promueve un mensaje de paz y reconciliación. El Parque Memorial de la Paz y el Santuario Itsukushima en la isla de Miyajima son lugares de belleza y reflexión. La ciudad ofrece la oportunidad de aprender sobre la historia y la importancia de la paz en el mundo. Hiroshima es un destino que te invita a recordar y reflexionar sobre un capítulo importante de la historia mundial."
+          ],
+          "categoria": "Cultura",
+          "imagen": "hiroshima",
+          "destInfo":{
+            "nombre":"Hotel Hiroshima Peace",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "14/10",
+            "fechaSalida": "19/10",
+            "precio": "¥55,000"
+          }
+        },
+        {
+          "id": 44,
+          "nombre": "Nara",
+          "descripcion": [
+            "Nara, una ciudad en la región de Kansai, es conocida por su rica historia y su legado cultural. El Parque de Nara es el hogar de cientos de ciervos sika amigables, considerados mensajeros divinos en la tradición shintoísta. Nara también alberga el Gran Buda de Nara en el Templo Todai-ji, una impresionante estatua de bronce que es una de las más grandes del mundo.",
+            "La gastronomía en Nara es una delicia, con platos como el narazuke (verduras encurtidas) y el kakinoha sushi que son especialidades locales. La ciudad es conocida por sus dulces y postres tradicionales, como los bollos de ciervo y el mochi (pastel de arroz). Nara es un lugar donde puedes disfrutar de una mezcla de sabores auténticos y experiencias culturales.",
+            "Nara es una ciudad que te transporta a la época antigua de Japón, con templos y santuarios históricos que salpican el paisaje. El Santuario Kasuga Taisha, con sus miles de linternas de piedra y la arquitectura tradicional, es un ejemplo impresionante. La ciudad es un destino que combina la belleza natural y la cultura espiritual en un entorno sereno."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "nara",
+          "destInfo":{
+            "nombre":"Hotel Nara Deer Park",
+            "numPersonas":3,
+            "numCamas":2,
+            "fechaEntrada": "23/11",
+            "fechaSalida": "28/11",
+            "precio": "¥50,000"
+          }
+        },
+        {
+          "id": 45,
+          "nombre": "Sapporo",
+          "descripcion": [
+            "Sapporo, en la isla de Hokkaido, es una ciudad conocida por su belleza natural y su cultura única. El Parque Odori, en el centro de la ciudad, es famoso por sus jardines y eventos, como el Festival de la Nieve de Sapporo en invierno. La ciudad es también el hogar del Museo de la Cervecería Sapporo y el Jardín Botánico de Higashi.",
+            "La gastronomía en Sapporo destaca por sus mariscos frescos, como los cangrejos de nieve y los mejillones, y sus platos de ramen, que son especialmente populares en Hokkaido. La ciudad es famosa por su cerveza, con la Cervecería Sapporo que ofrece visitas y degustaciones. Sapporo es un lugar donde puedes disfrutar de los sabores únicos de Hokkaido.",
+            "Sapporo es una ciudad que combina la vida urbana con la naturaleza circundante. Las montañas de los alrededores ofrecen oportunidades para practicar esquí y senderismo. La ciudad es conocida por su hospitalidad y su ambiente relajado. Sapporo es un destino que te permite disfrutar de la belleza de Hokkaido en todas las estaciones."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "sapporo",
+          "destInfo":{
+            "nombre":"Hotel Sapporo Snow Bliss",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "01/12",
+            "fechaSalida": "06/12",
+            "precio": "¥45,000"
+          }
+        },
+        {
+          "id": 46,
+          "nombre": "Fukuoka",
+          "descripcion": [
+            "Fukuoka, en la isla de Kyushu, es una ciudad que combina la historia, la cultura y la modernidad. El Castillo de Fukuoka es un punto de referencia histórico, con sus jardines y museos que ofrecen una visión de la historia de la ciudad. El Canal City Hakata es un complejo de entretenimiento que combina tiendas, restaurantes y un teatro.",
+            "La gastronomía en Fukuoka es una delicia, con platos como el tonkotsu ramen y la yatai (puestos de comida callejera) que son especialidades locales. La ciudad es conocida por su mercado de pescado, el mercado Yanagibashi, donde puedes disfrutar de pescado fresco y mariscos. Fukuoka es un lugar donde puedes explorar una mezcla de sabores tradicionales y contemporáneos.",
+            "Fukuoka es una ciudad donde se fusiona lo antiguo y lo nuevo, con barrios históricos como Hakata y Gion que contrastan con el ambiente moderno de Tenjin. La ciudad es un punto de partida ideal para explorar la región de Kyushu, con sus aguas termales, hermosos paisajes y cultura única. Fukuoka es un destino que te ofrece una auténtica experiencia japonesa."
+          ],
+          "categoria": "Cultura",
+          "imagen": "fukuoka", 
+          "destInfo":{
+            "nombre":"Hotel Fukuoka Harbor View",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/01",
+            "fechaSalida": "15/01",
+            "precio": "¥55,000"
+          }
+        },
+        {
+          "id": 47,
+          "nombre": "Kanazawa",
+          "descripcion": [
+            "Kanazawa, en la región de Chubu, es una ciudad que combina la tradición, el arte y la belleza natural. El Jardín Kenrokuen es uno de los jardines más famosos de Japón y es un lugar de serenidad y belleza. La ciudad también alberga el Barrio de los Geishas de Higashi-Chaya, conocido por sus calles empedradas y casas de té tradicionales.",
+            "La gastronomía en Kanazawa es una delicia, con platos como el sushi de mariscos frescos y el kaga ryori (cocina local de Kanazawa) que son especialidades de la ciudad. La región es famosa por su producción de oro, que se utiliza en la decoración de la comida. Kanazawa es un lugar donde puedes disfrutar de la elegancia de la cocina y la cultura japonesa.",
+            "Kanazawa es una ciudad que te transporta a la época feudal de Japón, con su arquitectura histórica y sus museos que cuentan la historia de la"
+          ],
+          "categoria": "Cultura",
+          "imagen": "kanazawa",
+          "destInfo":{
+            "nombre":"Hotel Kanazawa Zen Retreat",
+            "numPersonas":4,
+            "numCamas":3,
+            "fechaEntrada": "18/02",
+            "fechaSalida": "23/02",
+            "precio": "¥58,000"
+          }
+        },
+        {
+          "id": 48,
+          "nombre": "Nikko",
+          "descripcion": [
+            "Nikko, en la región de Kanto, es un lugar de belleza natural y espiritualidad. El Santuario Toshogu es uno de los tesoros culturales más importantes de Japón y un sitio declarado Patrimonio de la Humanidad por la UNESCO. Este santuario está dedicado a Tokugawa Ieyasu, el fundador del shogunato Tokugawa. Los edificios ornamentados y los jardines cuidadosamente diseñados hacen que el Santuario Toshogu sea un lugar de gran importancia cultural y espiritual.",
+            "La gastronomía en Nikko es una delicia, con platos como el yuba (tofu skin) y el yudofu (tofu hervido) que son especialidades locales. La ciudad también es conocida por sus dulces y pasteles tradicionales. La región de Nikko es un lugar de montañas y bosques, lo que la convierte en un destino popular para la observación de la naturaleza y el senderismo.",
+            "Nikko es una ciudad que combina la serenidad con la majestuosidad. El Parque Nacional de Nikko, que rodea la ciudad, ofrece oportunidades para explorar la naturaleza y visitar cascadas y lagos pintorescos. La ciudad es un refugio espiritual y cultural que te permite sumergirte en la rica historia y belleza de Japón."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "nikko",
+          "destInfo":{
+            "nombre":"Hotel Nikko Nature Escape",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "25/03",
+            "fechaSalida": "30/03",
+            "precio": "¥48,000"
+          }
+        },
+        {
+          "id": 49,
+          "nombre": "Okinawa",
+          "descripcion": [
+            "Okinawa, un paraíso tropical en el sur de Japón, es conocida por sus playas de aguas cristalinas y su cultura única. La isla de Ishigaki es un destino popular para practicar buceo y snorkel, con arrecifes de coral impresionantes y vida marina diversa. El Parque Memorial de la Paz de Okinawa en la ciudad de Itoman rinde homenaje a los eventos de la Segunda Guerra Mundial en la región.",
+            "La gastronomía en Okinawa es deliciosa, con platos como el goya champuru (revuelto de amargos) y el cerdo asado que son especialidades locales. La dieta tradicional de Okinawa es conocida por su longevidad y salud, lo que ha llevado a investigaciones sobre la dieta okinawense. La ciudad de Naha es un lugar ideal para probar la comida local en mercados y restaurantes.",
+            "Okinawa es un lugar donde la cultura y la belleza natural se combinan. El castillo de Shuri en Naha es un sitio histórico importante y un lugar declarado Patrimonio de la Humanidad por la UNESCO. La danza tradicional de Okinawa y la música Ryu Kyu son una parte integral de la cultura local. La isla ofrece una experiencia tropical y cultural única en Japón."
+          ],
+          "categoria": "Playa",
+          "imagen": "okinawa",
+          "destInfo":{
+            "nombre":"Hotel Okinawa Beach Paradise",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "05/04",
+            "fechaSalida": "10/04",
+            "precio": "¥62,000"
+          }
+        }
+      ]
+    },
+    {
+      "pais": "México",
+      "ciudades": [
+        {
+          "id": 50,
+          "nombre": "Ciudad de México",
+          "descripcion": [
+            "La Ciudad de México, la capital de México, es una metrópolis vibrante y culturalmente rica. El Zócalo, una de las plazas más grandes del mundo, alberga la majestuosa Catedral Metropolitana y el Palacio Nacional, donde puedes admirar los murales de Diego Rivera. La ciudad es famosa por su historia, con sitios arqueológicos como Teotihuacán y el Templo Mayor que cuentan la historia de las civilizaciones antiguas que la poblaron.",
+            "La gastronomía en la Ciudad de México es una delicia, con platos como los tacos al pastor, el mole y el pozole que son especialidades locales. Los mercados y puestos de comida callejera son una parte esencial de la experiencia culinaria en la ciudad. La Ciudad de México es también un centro de arte y cultura, con museos de clase mundial como el Museo Frida Kahlo y el Museo de Antropología.",
+            "La Ciudad de México es una metrópolis diversa, con barrios como Coyoacán y la Condesa que ofrecen una mezcla de historia, arte y vida nocturna. El Bosque de Chapultepec es un oasis urbano que alberga museos, lagos y áreas verdes para relajarse. La ciudad es un lugar de contrastes, donde lo antiguo y lo moderno se combinan en una experiencia única."
+          ],
+          "categoria": "Cultura",
+          "imagen": "ciudad_de_mexico",
+          "destInfo":{
+            "nombre":"Hotel Ciudad de México Centro",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/07",
+            "fechaSalida": "15/07",
+            "precio": "$4,500"
+          }
+        },
+        {
+          "id": 51,
+          "nombre": "Cancún",
+          "descripcion": [
+            "Cancún, en la costa caribeña de México, es un destino de playa y turismo conocido por su belleza natural. Las playas de arena blanca y las aguas turquesas del mar Caribe hacen de Cancún un lugar ideal para practicar buceo, snorkel y disfrutar del sol. La ciudad es también un punto de partida para explorar la antigua ciudad maya de Chichén Itzá y la Reserva de la Biosfera Sian Ka'an.",
+            "La gastronomía en Cancún destaca por sus mariscos frescos, como el ceviche y los tacos de pescado, que son especialidades locales. La comida mexicana y la cocina internacional se combinan en los restaurantes y bares de la zona hotelera. Cancún es conocido por su vida nocturna, con clubes y discotecas que atraen a visitantes de todo el mundo.",
+            "Cancún es un destino de vacaciones que combina la relajación en la playa con la aventura y la diversión. Los parques temáticos como Xcaret ofrecen oportunidades para nadar en ríos subterráneos y explorar la cultura maya. La ciudad es un lugar de entretenimiento y relajación en medio de un entorno natural espectacular."
+          ],
+          "categoria": "Playa",
+          "imagen": "cancun",
+          "destInfo":{
+            "nombre":"Hotel Cancún Beach Resort",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "22/08",
+            "fechaSalida": "27/08",
+            "precio": "$5,000"
+          }
+        },
+        {
+          "id": 52,
+          "nombre": "Guadalajara",
+          "descripcion": [
+            "Guadalajara, en el oeste de México, es una ciudad que representa la cultura y la tradición mexicana. El Instituto Cultural Cabañas es un sitio declarado Patrimonio de la Humanidad por la UNESCO y alberga obras de arte y murales impresionantes. El Hospicio Cabañas es un ejemplo de arquitectura neoclásica y es conocido por su historia y belleza.",
+            "La gastronomía en Guadalajara es deliciosa, con platos como la birria, el pozole y las tortas ahogadas que son especialidades locales. La ciudad es famosa por su tequila y su mariachi, lo que hace que el mariachi sea una parte integral de la cultura local. Guadalajara es un lugar donde puedes disfrutar de la música, la danza y la comida tradicional mexicana.",
+            "Guadalajara es una ciudad que combina la tradición con la modernidad, con barrios como Tlaquepaque y Zapopan que ofrecen una mezcla de artesanías, arte y vida nocturna. La ciudad es un centro de tecnología y emprendimiento en México, lo que le ha valido el apodo de Silicon Valley mexicano. Guadalajara es un destino que te permite experimentar la auténtica cultura mexicana en un entorno contemporáneo."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "guadalajara",
+          "destInfo":{
+            "nombre":"Hotel Guadalajara City View",
+            "numPersonas":4,
+            "numCamas":2,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "$3,800"
+          }
+        },
+        {
+          "id": 53,
+          "nombre": "Oaxaca",
+          "descripcion": [
+            "Oaxaca, en el sur de México, es una ciudad llena de cultura, historia y belleza natural. El Centro Histórico de Oaxaca y las iglesias barrocas que lo rodean son un sitio declarado Patrimonio de la Humanidad por la UNESCO. El Zócalo es un lugar de encuentro popular, donde puedes disfrutar de música en vivo y la comida tradicional de Oaxaca.",
+            "La gastronomía en Oaxaca es una delicia, con platos como el mole, el chapulín (saltamontes) y el mezcal que son especialidades locales. La ciudad es famosa por su comida tradicional mexicana y sus mercados coloridos, como el Mercado Benito Juárez. Oaxaca es un lugar donde puedes disfrutar de una mezcla de sabores autiguos y auténticos.",
+            " Oaxaca es una ciudad que te sumerge en la cultura y la tradición mexicana. Las celebraciones y festivales, como la Guelaguetza, ofrecen una visión de la danza y la música regionales. La ciudad es un punto de partida ideal para explorar las ruinas arqueológicas de Monte Albán y Mitla. Oaxaca es un destino que te permite experimentar la riqueza de la cultura mexicana en un entorno histórico y pintoresco."
+          ],
+          "categoria": "Cultura",
+          "imagen": "oaxaca",
+          "destInfo":{
+            "nombre":"Hotel Oaxaca Colonial Inn",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "14/10",
+            "fechaSalida": "19/10",
+            "precio": "$3,200"
+          }
+        },
+        {
+          "id": 54,
+          "nombre": "Tulum",
+          "descripcion": [
+            "Tulum, en la Riviera Maya de México, es un destino de playa que combina historia y belleza natural. La ciudad es famosa por sus ruinas mayas frente al mar, donde puedes explorar templos antiguos y disfrutar de vistas espectaculares del mar Caribe. Las playas de Tulum son conocidas por su arena blanca y aguas cristalinas, lo que la convierte en un lugar ideal para relajarse y practicar deportes acuáticos.",
+            "La gastronomía en Tulum es una delicia, con platos como el ceviche, los tacos de pescado y los antojitos mexicanos que son especialidades locales. La ciudad es famosa por su comida fresca y saludable, con una gran cantidad de restaurantes que sirven opciones vegetarianas y veganas. Tulum es un lugar donde puedes disfrutar de la comida con vista al mar y un ambiente relajado.",
+            "Tulum es un destino que combina la serenidad de la playa con la aventura y la exploración. Cenotes como el Gran Cenote y el Cenote Dos Ojos ofrecen oportunidades para nadar y bucear en aguas subterráneas cristalinas. La ciudad es también un punto de partida para explorar la Reserva de la Biosfera de Sian Ka'an, un paraíso natural que alberga una variedad de vida silvestre."
+          ],
+          "categoria": "Cultura",
+          "imagen": "tulum",
+          "destInfo":{
+            "nombre":"Hotel Tulum Beach Retreat",
+            "numPersonas":3,
+            "numCamas":2,
+            "fechaEntrada": "23/11",
+            "fechaSalida": "28/11",
+            "precio": "$4,000"
+          }
+        },
+        {
+          "id": 55,
+          "nombre": "Mérida",
+          "descripcion": [
+            "Mérida, en el estado de Yucatán, es una ciudad que refleja la cultura y el encanto de México. El Centro Histórico de Mérida es un lugar de arquitectura colonial, con calles empedradas, plazas arboladas y edificios históricos bien conservados. La Catedral de San Ildefonso es un punto de referencia importante, y el Paseo de Montejo es una avenida emblemática llena de mansiones antiguas.",
+            "La gastronomía en Mérida es una delicia, con platos como los salbutes, los panuchos y el cochinita pibil que son especialidades locales. La ciudad es famosa por su comida yucateca, que destaca por sus sabores únicos y la influencia maya. Los mercados como el Mercado Lucas de Gálvez son lugares ideales para probar la comida tradicional.",
+            "Mérida es una ciudad que te transporta a la época colonial de México, con su ambiente tranquilo y su rica tradición cultural. La ciudad es conocida por su música en vivo, danza y festivales, que celebran la cultura yucateca. Mérida es un destino que te permite experimentar la autenticidad de México en un entorno histórico y acogedor."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "merida",
+          "destInfo":{
+            "nombre":"Hotel Mérida Hacienda Escape",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "01/12",
+            "fechaSalida": "06/12",
+            "precio": "$3,500"
+          }
+        },
+        {
+          "id": 56,
+          "nombre": "Puerto Vallarta",
+          "descripcion": [
+            "Puerto Vallarta, en la costa del Pacífico de México, es un destino de playa y turismo conocido por su belleza natural y su encanto cultural. La ciudad se encuentra rodeada de montañas y playas de arena dorada, lo que la convierte en un lugar ideal para disfrutar del sol y el mar. El Malecón, un paseo marítimo a lo largo de la playa, es famoso por sus esculturas y su animada vida nocturna.",
+            "La gastronomía en Puerto Vallarta es una delicia, con platos como el ceviche, los mariscos frescos y los tacos de pescado que son especialidades locales. La ciudad es famosa por su comida mexicana y los restaurantes que ofrecen opciones frente al mar. Puerto Vallarta es un lugar donde puedes disfrutar de una amplia variedad de sabores auténticos.",
+            "Puerto Vallarta es un destino que combina la relajación en la playa con la aventura y la cultura. Las actividades como el buceo, la observación de ballenas y las visitas a las montañas cercanas ofrecen oportunidades para explorar la naturaleza circundante. La ciudad es un lugar acogedor que te invita a disfrutar de la belleza de la costa del Pacífico mexicano."
+          ],
+          "categoria": "Playa",
+          "imagen": "puerto_vallarta",
+          "destInfo":{
+            "nombre":"Hotel Puerto Vallarta Bay View",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/01",
+            "fechaSalida": "15/01",
+            "precio": "$4,800"
+          }
+        },
+        {
+          "id": 57,
+          "nombre": "San Miguel de Allende",
+          "descripcion": [
+            "San Miguel de Allende, en el estado de Guanajuato, es una ciudad que combina la historia, la arquitectura y el arte. El Centro Histórico de San Miguel es un sitio declarado Patrimonio de la Humanidad por la UNESCO, con calles empedradas, plazas arboladas y edificios coloniales bien conservados. La Parroquia de San Miguel Arcángel es un ícono de la ciudad, conocida por su arquitectura distintiva.",
+            "La gastronomía en San Miguel de Allende es una delicia, con platos como el pozole, el chiles en nogada y el atole que son especialidades locales. La ciudad es famosa por su comida tradicional mexicana y su influencia en la cocina internacional. San Miguel de Allende es también un lugar de arte y cultura, con una comunidad artística vibrante.",
+            "San Miguel de Allende es una ciudad que te sumerge en la belleza colonial de México, con una mezcla de lo antiguo y lo nuevo. Galerías de arte, tiendas de artesanías y mercados ofrecen oportunidades para explorar la cultura local. La ciudad es un destino que te permite disfrutar de la serenidad y la sofisticación en un entorno histórico."
+          ],
+          "categoria": "Playa",
+          "imagen": "san_miguel_de_allende",
+          "destInfo":{
+            "nombre":"Hotel San Miguel de Allende Charme",
+            "numPersonas":4,
+            "numCamas":3,
+            "fechaEntrada": "18/02",
+            "fechaSalida": "23/02",
+            "precio": "$4,600"
+          }
+        },
+        {
+          "id": 58,
+          "nombre": "Chichen Itza",
+          "descripcion": [
+            "Chichén Itzá, en la península de Yucatán, es un sitio arqueológico maya de importancia mundial. La ciudad antigua fue un centro ceremonial y comercial en la civilización maya y es famosa por su pirámide de Kukulcán, también conocida como El Castillo. La estructura es un ejemplo impresionante de la arquitectura maya y sirve como un calendario solar en la forma en que las sombras crean la imagen de una serpiente descendente durante los equinoccios.",
+            "La gastronomía en la región de Chichén Itzá destaca por su comida yucateca, con platos como el poc chuc, el papadzul y el sopa de lima que son especialidades locales. La comida yucateca se caracteriza por sus sabores únicos, que incorporan influencias mayas, españolas y caribeñas. Los restaurantes locales ofrecen una oportunidad para probar la auténtica cocina de Yucatán.",
+            "Chichén Itzá es un destino que combina la historia antigua con la belleza natural de la península de Yucatán. El Cenote Sagrado es una piscina natural que desempeñó un papel importante en las ceremonias mayas. El sitio arqueológico es una ventana al pasado y una oportunidad para explorar la cultura maya. Chichén Itzá es un lugar que te invita a sumergirte en la maravilla de la civilización antigua."
+          ],
+          "categoria": "Cultura",
+          "imagen": "chichen_itza",
+          "destInfo":{
+            "nombre":"Hotel Chichén Itzá Archaeological View",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "25/03",
+            "fechaSalida": "30/03",
+            "precio": "$3,900"
+          }
+        },
+        {
+          "id": 59,
+          "nombre": "La Paz",
+          "descripcion": [
+            "La Paz, en la península de Baja California, es una ciudad costera que combina la belleza del desierto con el esplendor del mar. Las playas de La Paz son conocidas por sus aguas cristalinas y su vida marina diversa, lo que la convierte en un destino ideal para practicar buceo y snorkel. El Malecón de La Paz es un paseo marítimo que ofrece vistas panorámicas de la bahía y una variedad de restaurantes y bares.",
+            "La gastronomía en La Paz destaca por sus mariscos frescos, como los tacos de pescado, el ceviche y los almejas chocolatas que son especialidades locales. La ciudad es famosa por su comida del mar y los mariscos capturados en el golfo de California. La Paz es un lugar donde puedes disfrutar de una combinación de sabores frescos y auténticos.",
+            "La Paz es un destino que combina la tranquilidad del desierto con la emoción del mar. Las actividades como la observación de ballenas y el avistamiento de delfines ofrecen oportunidades para explorar la vida marina. La ciudad es un lugar de relajación y aventura en medio de un entorno natural espectacular."
+          ],
+          "categoria": "Playa",
+          "imagen": "la_paz",
+          "destInfo":{
+            "nombre":"Hotel La Paz Coastal Retreat",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "05/04",
+            "fechaSalida": "10/04",
+            "precio": "$4,200"
+          }
+        }
+      ]
+    },
+    {
+      "pais": "Australia",
+      "ciudades": [
+        {
+          "id": 60,
+          "nombre": "Sídney",
+          "descripcion": [
+            "Sídney, la ciudad más grande de Australia, es un vibrante centro urbano que combina rascacielos modernos con la belleza natural de su puerto y playas. El icónico Teatro de la Ópera de Sídney, con su distintiva arquitectura, es uno de los hitos más reconocibles del mundo. El Puente de la Bahía de Sídney ofrece oportunidades para caminar, escalar y disfrutar de vistas panorámicas de la ciudad.",
+            "La gastronomía en Sídney es una delicia, con platos como los mariscos frescos, el barramundi y el famoso Vegemite que son especialidades locales. La ciudad es un crisol de culturas, lo que se refleja en su oferta culinaria diversa. Los mercados, como el Mercado de Paddy's, son lugares ideales para probar la comida local y la escena culinaria internacional.",
+            "Sídney es una ciudad que ofrece una mezcla de cultura, entretenimiento y actividades al aire libre. Los barrios como The Rocks y Newtown son conocidos por su vida nocturna, galerías de arte y tiendas boutique. Las playas, como Bondi y Manly, son lugares ideales para nadar y hacer surf. Sídney es un destino que te permite experimentar la vitalidad de Australia en un entorno urbano espectacular."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "sydney",
+          "destInfo":{
+            "nombre":"Hotel Sídney Harbor View",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/07",
+            "fechaSalida": "15/07",
+            "precio": "$500"
+          }
+        },
+        {
+          "id": 61,
+          "nombre": "Melbourne",
+          "descripcion": [
+            "Melbourne, la capital del estado de Victoria, es una ciudad que combina la elegancia europea con un ambiente cosmopolita y artístico. El Centro de Arte de Australia (NGV) es un lugar destacado que alberga una impresionante colección de arte internacional. La ciudad es famosa por su arquitectura victoriana y sus calles llenas de cafeterías, tiendas y mercados.",
+            "La gastronomía en Melbourne es una delicia, con platos como el café de especialidad, el cordero a la parrilla y los dumplings que son especialidades locales. La ciudad es conocida por su escena de café y su diversidad culinaria, con influencias de todo el mundo. Los mercados como el Mercado Queen Victoria son lugares ideales para probar la comida local y gourmet.",
+            "Melbourne es una ciudad que te sumerge en la cultura, la música y el arte. La ciudad es conocida por su escena musical, con festivales y eventos en vivo. Barrios como Fitzroy y St Kilda son conocidos por su vida nocturna y su ambiente artístico. Melbourne es un destino que te permite explorar la sofisticación y la creatividad en un entorno urbano único."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "melbourne",
+          "destInfo":{
+            "nombre":"Hotel Melbourne City Center",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "22/08",
+            "fechaSalida": "27/08",
+            "precio": "$480"
+          }
+        },
+        {
+          "id": 62,
+          "nombre": "Gran Barrera de Coral",
+          "descripcion": [
+            "La Gran Barrera de Coral, ubicada frente a la costa de Queensland, es uno de los tesoros naturales más grandes y espectaculares del mundo. Esta maravilla de la naturaleza se extiende a lo largo de más de 2,300 kilómetros y es un paraíso para los amantes del buceo y el snorkel. La Gran Barrera de Coral alberga una increíble diversidad de vida marina, incluyendo corales de colores, tortugas marinas, tiburones, y una variedad de peces tropicales.",
+            "La gastronomía en la región de la Gran Barrera de Coral es una delicia, con platos como el marisco fresco, el pescado y las frutas tropicales que son especialidades locales. Los restaurantes y bares a lo largo de la costa ofrecen delicias culinarias que resaltan los sabores de la región. Puedes disfrutar de una comida con vista al mar y relajarte en los pueblos costeros.",
+            "La Gran Barrera de Coral es un destino que te permite explorar la belleza natural y la vida submarina de Australia. Además del buceo y el snorkel, puedes hacer excursiones en barco, disfrutar de actividades acuáticas y explorar islas como la Isla Hamilton y la Isla Lizard. Este patrimonio de la humanidad es un lugar mágico donde puedes conectar con la naturaleza y maravillarte con los arrecifes de coral."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "gran_barrera_de_coral",
+          "destInfo":{
+            "nombre":"Hotel en la Gran Barrera de Coral",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "05/09",
+            "fechaSalida": "10/09",
+            "precio": "$650"
+          }
+        },
+        {
+          "id": 63,
+          "nombre": "Cairns",
+          "descripcion": [
+            "Cairns, en la región de Queensland, es la puerta de entrada a la Gran Barrera de Coral y la selva tropical de Daintree. La ciudad es famosa por su clima tropical y su ambiente relajado. El Paseo Marítimo de Cairns es un lugar popular para pasear y disfrutar de restaurantes, bares y tiendas. La ciudad es un punto de partida ideal para explorar los arrecifes de coral y las maravillas naturales circundantes.",
+            "La gastronomía en Cairns destaca por sus mariscos frescos, como los camarones y los mejillones, y los platos tropicales que son especialidades locales. La ciudad es conocida por su cocina multicultural, que incluye influencias asiáticas y del Pacífico. Los mercados, como el Mercado Rusty's, ofrecen una variedad de sabores locales y exóticos.",
+            "Cairns es una ciudad que combina la aventura y la belleza natural. Las actividades como el buceo en la Gran Barrera de Coral, las excursiones a la selva tropical y los paseos en barco por la costa ofrecen oportunidades para explorar la región. La ciudad es un lugar de relajación y exploración en medio de un entorno tropical espectacular."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "cairns",
+          "destInfo":{
+            "nombre":"Hotel Cairns Beach Paradise",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "14/10",
+            "fechaSalida": "19/10",
+            "precio": "$550"
+          }
+        },
+        {
+          "id": 64,
+          "nombre": "Ayers Rock (Uluru)",
+          "descripcion": [
+            "Uluru, también conocido como Ayers Rock, es un monolito icónico en el corazón del desierto australiano. Este sitio sagrado de los aborígenes australianos es famoso por su forma imponente y los cambios de color que experimenta durante el amanecer y el atardecer. La región de Uluru-Kata Tjuta es Patrimonio de la Humanidad y ofrece una profunda conexión con la cultura indígena australiana.",
+            "La gastronomía en la región de Uluru destaca por sus ingredientes nativos, como el canguro y el bush tucker (alimentos silvestres autóctonos). Los restaurantes en la zona ofrecen una oportunidad para probar la cocina australiana y conocer la cultura aborigen. Uluru es un lugar donde puedes disfrutar de platos únicos y sabores auténticos.",
+            "Uluru es un destino que te permite experimentar la grandeza de la naturaleza y la cultura ancestral de Australia. Además de admirar Uluru y Kata Tjuta (Las Olgas), puedes explorar la historia y la espiritualidad de los aborígenes en el Centro Cultural de Uluru. El entorno natural y las formaciones rocosas de la región ofrecen una experiencia única en el corazón de Australia."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "uluru",
+          "destInfo":{
+            "nombre":"Hotel en Uluru Desert Retreat",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "23/11",
+            "fechaSalida": "28/11",
+            "precio": "$700"
+          }
+        },
+        {
+          "id": 65,
+          "nombre": "Brisbane",
+          "descripcion": [
+            "Brisbane, la capital del estado de Queensland, es una ciudad que combina la sofisticación urbana con la belleza natural. El río Brisbane atraviesa la ciudad, y el South Bank Parklands es un lugar popular para relajarse, disfrutar de jardines, piscinas y restaurantes junto al agua. La ciudad es famosa por su clima subtropical y su ambiente amigable.",
+            "La gastronomía en Brisbane es una delicia, con platos como el marisco fresco, el cordero y la comida internacional que son especialidades locales. La ciudad es conocida por su escena culinaria diversa y sus mercados, como el Mercado de Davies Park. Brisbane es un lugar donde puedes disfrutar de comidas al aire libre y vistas al río.",
+            "Brisbane es una ciudad que ofrece una mezcla de cultura, entretenimiento y actividades al aire libre. Las galerías de arte, los teatros y los festivales culturales son parte de la escena artística de la ciudad. Parques naturales y senderos para caminar, como el Mont Coot-tha, ofrecen oportunidades para explorar la naturaleza circundante. Brisbane es un destino que te permite experimentar la vida urbana y la naturaleza en un equilibrio perfecto."
+          ],
+          "categoria": "Ciudad",
+          "imagen": "brisbane",
+          "destInfo":{
+            "nombre":"Hotel Brisbane River View",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "01/12",
+            "fechaSalida": "06/12",
+            "precio": "$520"
+          }
+        },
+        {
+          "id": 66,
+          "nombre": "Perth",
+          "descripcion": [
+            "Perth, la capital de Australia Occidental, es una ciudad costera que combina playas doradas con una escena cultural en auge. La playa de Cottesloe es famosa por su arena suave y aguas cristalinas, y es un lugar popular para nadar y hacer surf. La ciudad se encuentra a orillas del río Swan, lo que la convierte en un lugar ideal para pasear y disfrutar de la vista.",
+            "La gastronomía en Perth es una delicia, con platos como los mariscos frescos, el cordero australiano y la comida asiática que son especialidades locales. La ciudad es conocida por su diversidad culinaria y sus restaurantes frente al mar. Los mercados, como el Mercado de Fremantle, son lugares ideales para probar la comida local y gourmet.",
+            "Perth es una ciudad que ofrece una mezcla de vida al aire libre, deportes acuáticos y eventos culturales. El Kings Park y el jardín botánico de la ciudad ofrecen oportunidades para explorar la naturaleza y disfrutar de vistas panorámicas de la ciudad. Perth es un destino que te permite disfrutar de la vida junto al mar y la cultura en un entorno relajado."
+          ],
+          "categoria": "Playa",
+          "imagen": "perth",
+          "destInfo":{
+            "nombre":"Hotel Perth Cityscape",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "10/01",
+            "fechaSalida": "15/01",
+            "precio": "$460"
+          }
+        },
+        {
+          "id": 67,
+          "nombre": "Adelaida",
+          "descripcion": [
+            "Adelaida, en Australia del Sur, es una ciudad que combina la elegancia histórica con la belleza de sus parques y jardines. El Parque Botánico de Adelaida es un oasis verde en el corazón de la ciudad, con una impresionante colección de plantas y flores. La ciudad es famosa por su arquitectura victoriana y sus calles arboladas.",
+            "La gastronomía en Adelaida es una delicia, con platos como los mariscos, los vinos del Valle de Barossa y la comida de fusión que son especialidades locales. La ciudad es conocida por su escena culinaria y su proximidad a algunas de las mejores regiones vinícolas de Australia. Los restaurantes y bodegas ofrecen una oportunidad para probar la comida y los vinos locales.",
+            "Adelaida es una ciudad que te permite explorar la cultura, la música y la naturaleza. El Festival de Adelaida es uno de los eventos culturales más importantes de Australia, que presenta música en vivo, teatro y arte. Los parques y jardines de la ciudad, como el Parque Nacional de Cleland, ofrecen oportunidades para disfrutar de la vida al aire libre y la observación de la vida silvestre. Adelaida es un destino que te sumerge en la elegancia y el encanto de Australia del Sur."
+          ],
+          "categoria": "Gastronomía",
+          "imagen": "adelaida",
+          "destInfo":{
+            "nombre":"Hotel Adelaida Coastal Retreat",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "18/02",
+            "fechaSalida": "23/02",
+            "precio": "$490"
+          }
+        },
+        {
+          "id": 68,
+          "nombre": "La Gran Carretera del Océano",
+          "descripcion": [
+            "La Gran Carretera del Océano, una ruta escénica a lo largo de la costa sur de Australia, es famosa por su belleza natural y sus vistas panorámicas al mar. La carretera se extiende por más de 240 kilómetros y es una de las carreteras costeras más espectaculares del mundo. A lo largo del recorrido, puedes disfrutar de playas de arena dorada, acantilados escarpados y parques nacionales.",
+            "La gastronomía a lo largo de la Gran Carretera del Océano destaca por sus mariscos frescos, los productos locales y los vinos del sur de Australia. Los restaurantes y bodegas a lo largo de la ruta ofrecen oportunidades para probar la comida y los vinos regionales. La región es conocida por su gastronomía costera y la influencia de las regiones vinícolas cercanas.",
+            "La Gran Carretera del Océano es un destino que te permite explorar la belleza natural y la vida marina de Australia. Puedes hacer paradas en lugares como el Parque Nacional de Port Campbell, donde puedes admirar los famosos Doce Apóstoles, y en la Reserva de Vida Marina del Parque Nacional de la Isla de Phillip. La carretera es una experiencia única para los amantes de la naturaleza y los viajeros que buscan paisajes impresionantes."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "great_ocean_road",
+          "destInfo":{
+            "nombre":"Hotel en la Gran Carretera del Océano",
+            "numPersonas":2,
+            "numCamas":1,
+            "fechaEntrada": "25/03",
+            "fechaSalida": "30/03",
+            "precio": "$550"
+          }
+        },
+        {
+          "id": 69,
+          "nombre": "Darwin",
+          "descripcion": [
+            "Darwin, la capital del Territorio del Norte de Australia, es una ciudad que combina la belleza costera con una atmósfera multicultural. La ciudad está situada en la costa norte de Australia y es conocida por su clima tropical. El Parque Nacional de Litchfield y el Parque Nacional de Kakadu ofrecen oportunidades para explorar la naturaleza circundante y disfrutar de cascadas y vida silvestre.",
+            "La gastronomía en Darwin es una delicia, con platos como los mariscos frescos, el canguro y la comida asiática que son especialidades locales. La ciudad es famosa por su diversidad culinaria y sus mercados, como el Mercado de Mindil Beach. Los restaurantes y puestos de comida callejera ofrecen una oportunidad para probar la comida local y exótica.",
+            "Darwin es una ciudad que te sumerge en la cultura indígena y la vida al aire libre. Puedes aprender sobre la historia y la cultura de los aborígenes australianos en el Museo y Galería de Arte del Territorio del Norte. Las actividades al aire libre, como la pesca y los paseos en barco por el río Adelaide, ofrecen oportunidades para explorar la región y su entorno natural único. Darwin es un destino que te permite experimentar la diversidad y la belleza del Territorio del Norte de Australia."
+          ],
+          "categoria": "Naturaleza",
+          "imagen": "darwin",
+          "destInfo":{
+            "nombre":"Hotel Darwin Tropical Oasis",
+            "numPersonas":2,
+            "numCamas":2,
+            "fechaEntrada": "05/04",
+            "fechaSalida": "10/04",
+            "precio": "$480"
+          }
+        }
+      ]
+    }
+  ]
+}
