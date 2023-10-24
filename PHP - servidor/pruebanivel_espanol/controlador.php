@@ -5,76 +5,74 @@ session_start();
 include_once 'vista.php';
 include_once 'modelo.php';
 
-$VistaLogin = new VistaLogin;
+$Vista = new VistaLogin;
 
-$ModeloJugador = new ModeloJugador;
-$ModeloJugador->conectar();
+$modelo = new ModeloJugador;
+$modelo->conectar();
 
 // Array asociativo de preguntas y posibles respuestas.
-$juegoArray = [
-    "¿Cuál es el elemento químico del oro?" => ["Fr", "Au", "Ur"],
-    "¿Qué color se obtiene mezclando azul y rojo?" => ["Verde", "Morado"],
-    "¿Cuánto es 4x4?" => ["7", "16", "14", "15"]
+$preguntas_respuestas = [
+    "¿Cuál es el elemento químico del oro?" => array("Fr", "Au", "Ur"),
+    "¿Qué se obtiene de la mezcla de azul y rojo?" => array("Verde", "Morado"),
+    "¿Cuánto es 4x4?" => array("7", "16", "14", "15")
 ];
 
-// Array asociativo de preguntas con sus respuestas.
-$resultadosArray = [
+// Array asociativo de preguntas y sus respuestas.
+$respuestas_correctas = [
     "¿Cuál es el elemento químico del oro?" => "Au",
-    "¿Qué color se obtiene mezclando azul y rojo?" => "Morado",
+    "¿Qué se obtiene de la mezcla de azul y rojo?" => "Morado",
     "¿Cuánto es 4x4?" => "16"
 ];
 
-// Comprueba el inicio de sesión, muestra un mensaje de error y el formulario si no es válido.
-if (isset($_POST['boton']) && !$_SESSION["autenticado"]) {
-    if ($ModeloJugador->validarInicioSesion($_POST['usuario'], $_POST['contrasena'])) {
-        $_SESSION["autenticado"] = TRUE;
+// Comprobar el inicio de sesión, mostrar un mensaje de error y cargar el formulario nuevamente si no es válido.
+if (isset($_POST['boton']) && !$_SESSION["validado"]) {
+    if ($modelo->validar($_POST['usuario'], $_POST['clave'])) {
+        $_SESSION["validado"] = true;
         $_SESSION["Usuario"] = $_POST['usuario'];
     } else {
         ?>
-        <h3 style="color: red;">Intenta de nuevo, el nombre de usuario o la contraseña no son válidos.</h3>
+        <h3 style="color: red;">Inténtalo de nuevo, el usuario o la contraseña no son válidos.</h3>
         <?php
-        $VistaLogin->CargarFormularioInicial();
+        $Vista->CargarFormularioInicial();
     }
 }
 
-/* Una vez que el inicio de sesión se ha verificado y se ha presionado el botón del formulario, 
-   muestra la puntuación o comienza el juego. Si no se ha elegido ninguna opción, muestra un 
-   error y el formulario para elegir la opción. */
-if ($_SESSION["autenticado"] && isset($_POST['boton'])) {
+// Una vez iniciada la sesión y enviado el botón del formulario, según la opción elegida, mostrará la puntuación o el juego.
+// Si no se ha elegido ninguna opción, mostrará un error y el formulario para hacer una elección.
+if ($_SESSION["validado"] && isset($_POST['boton'])) {
     if (isset($_POST['opcion'])) {
         switch ($_POST['opcion']) {
-            case "ranking":
-                $VistaLogin->MostrarOpcion();
-                $VistaLogin->Listar($ModeloJugador->listaOrdenadaPorPuntuacion());
+            case "puntuacion":
+                $Vista->ElegirOpcion();
+                $Vista->MostrarPuntuaciones($modelo->obtenerPuntuacionesOrdenadas());
                 break;
             case "jugar":
-                $VistaLogin->DibujarPreguntasRespuestas($juegoArray);
+                $Vista->MostrarPreguntas($preguntas_respuestas);
                 break;
         }
     } else {
         ?>
-        <h3 style="color: red;">No has elegido qué deseas hacer.</h3>
+        <h3 style="color: red;">No has seleccionado lo que quieres hacer.</h3>
         <?php
-        $VistaLogin->MostrarOpcion();
+        $Vista->ElegirOpcion();
     }
 }
 
-/* Una vez que el inicio de sesión está establecido y se ha presionado el botón de jugar, 
-   verifica las respuestas del juego, asigna una puntuación y actualiza esa puntuación en la 
-   base de datos. */
-if ($_SESSION["autenticado"] && isset($_POST['boton_jugar'])) {
+// Una vez iniciada la sesión y enviado el botón de juego, se validan las respuestas, se asigna la puntuación y se actualiza en la base de datos.
+if ($_SESSION["validado"] && isset($_POST['boton_jugar'])) {
     $puntos = 0;
     $contador = 0;
-    foreach ($resultadosArray as $pregunta => $respuesta) {
+    foreach ($respuestas_correctas as $pregunta => $respuesta) {
         if ($_POST['pregunta' . $contador++] == $respuesta) {
-            echo ($pregunta . " - La respuesta es " . $respuesta . ". ¡Así que es correcto, has ganado muchos puntos!<br><br>");
-            $puntos += 3;
+            echo ($pregunta . " la respuesta es " . $respuesta . ". Por lo tanto, has obtenido puntos. <br><br>");
+            $puntos = $puntos + 3;
         }
     }
-    echo "Has ganado " . $puntos . " puntos.<br><br>";
-    $ModeloJugador->actualizarPuntuacion($_SESSION["Usuario"], $puntos);
-    $VistaLogin->MostrarOpcion();
+    echo "Has obtenido " . $puntos . " puntos. <br><br>";
+    $modelo->actualizarPuntuacion($_SESSION["Usuario"], $puntos);
+    $Vista->ElegirOpcion();
 }
+
 
 
 

@@ -1,0 +1,99 @@
+h1{
+    background-color: rgb(169, 169, 169);
+    text-align: center;
+}
+
+nav a{
+    text-decoration:none;
+    color:inherit;
+    font-size:14px;
+} 
+nav li{
+    display:inline-block;
+    width:10%;
+    padding:5px 10px;
+    background-color:rgb(228, 228, 228);
+    text-align:center;
+    color:#000;
+}
+nav li:hover{
+    background-color:#000;
+    color:rgb(255, 255, 255);
+}
+nav{
+    text-align:center;
+    background-color: rgb(228, 228, 228);
+}
+
+img{
+    margin: 1%;
+    width: 250px ;
+    height: 300px;
+}
+
+.serie{
+    border: solid yellow;
+}
+
+.pelicula{
+    border: solid blue;
+}
+
+body{
+    background-color: rgb(169, 169, 169)   ;
+}
+
+.historico{
+    opacity: 0.5;
+}
+
+.accion:hover{
+    cursor: crosshair;
+}
+
+.infantil{
+    border-radius: 7px;
+ }
+
+ .texto{
+    display: none;
+} 
+
+.imagen:hover .texto{
+    display: block;
+    position: fixed;
+    padding-left: 10px;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    border: 2px solid gray;
+    color: whitesmoke;
+    background-color: #999999;
+    box-shadow: 10px 10px 5px;
+    z-index: 50;
+} 
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 20px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1199px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

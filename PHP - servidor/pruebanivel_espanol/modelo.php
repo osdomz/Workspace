@@ -9,14 +9,14 @@ class ModeloJugador {
         try {
             $this->mysqli = new mysqli('localhost', 'root', '', 'juego');
             if ($this->mysqli->connect_errno) {
-                throw new Exception('Error en la conexión: ' . $this->mysqli->connect_error);
+                throw new Exception('Error en conexión: ' . $this->mysqli->connect_error);
             }
         } catch (Exception $e) {
             echo $e->getMessage();
         }
     }
 
-    // Función para verificar el inicio de sesión.
+    // Función para comprobar el inicio de sesión.
     public function validarInicioSesion($usuario, $contrasena) {
         $sql = "SELECT * FROM jugadores WHERE usuario = '" . $usuario . "' and contrasena = '" . $contrasena . "'";
         $this->mysqli->query($sql);
@@ -26,7 +26,7 @@ class ModeloJugador {
             return FALSE;
         }
     }
-  
+
     // Se actualizará la puntuación en la base de datos.
     public function actualizarPuntuacion($usuario, $puntuacion) {
         $sql = "SELECT puntuacion_maxima FROM jugadores WHERE usuario = '" . $usuario . "'";
@@ -39,13 +39,12 @@ class ModeloJugador {
         $this->mysqli->query($sql);
     }
 
-    // Devolverá la lista de usuarios ordenada por puntuación.
+    // Devolverá la lista asociativa de usuarios ordenada por puntuación.
     public function listaOrdenadaPorPuntuacion() {
         try {
             $sql = "SELECT usuario, puntuacion_maxima FROM jugadores ORDER BY puntuacion_maxima DESC;";
             $resultado = $this->mysqli->query($sql);
-            $lista = array();
-            foreach ($resultado as $fila) {
+            foreach($resultado as $fila) {
                 $lista[$fila['usuario']] = $fila['puntuacion_maxima'];
             }
             return $lista;
@@ -54,4 +53,5 @@ class ModeloJugador {
         }
     }
 }
+
     
