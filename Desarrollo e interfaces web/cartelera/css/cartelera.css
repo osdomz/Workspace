@@ -78,7 +78,9 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-gap: 20px;
+    
 }
+
 
 @media (min-width: 1200px) {
     .container {
