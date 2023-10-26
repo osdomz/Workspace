@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", load, false);
 function load() {
   cargarTodo();
   document.querySelector('.accion').addEventListener("click", function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
     cargarPeli('accion');
   });
 
@@ -24,7 +24,7 @@ function load() {
 
   document.querySelector('.infantiles').addEventListener("click", function (event) {
     event.preventDefault();
-    cargarPeli('infantiles');
+    cargarPeli('infantil');
   });
 
   document.querySelector('.container').addEventListener("click", function (event) {
@@ -34,12 +34,19 @@ function load() {
 
     indice = event.target.getAttribute('data-id')
     verTexto(indice);
+
   })
-  for (i = 0; i < pelis.length; i++) {
-    document.querySelector('img')[i].addEventListener("click", function (event) {
+  //for (i = 0; i < pelis.length; i++) {
+  //  document.querySelector('img')[i].addEventListener("click", function (event) {
+  //    alert('betiko era')
+  //  })
+  //}
+  document.querySelectorAll('img').forEach(el => {
+    el.addEventListener("click", function (event) {
       alert('betiko era')
     })
-  }
+  })
+
 }
 function cargarTodo() {
 
@@ -47,7 +54,7 @@ function cargarTodo() {
   console.log(pelis.length);
 
   for (var i = 0; i < pelis.length; i++) {
-    var cartel = `<figure><a><img class="${pelis[i][1]}" src="${pelis[i][2]}" data-id="${i}" alt="" /></a>
+    var cartel = `<figure data-id="${i}"><img class="${pelis[i][1]}" src="${pelis[i][2]}" alt="" />
         <div class="texto">
           <h3>${pelis[i][0]}</h3>
           <p>${pelis[i][3]}</p>
@@ -60,45 +67,84 @@ function cargarTodo() {
 
   document.querySelector('.container').innerHTML = carteles;
 }
+// <!----------------------------- --------------------------------------------------------------------------------------------->
 function cargarPeli(tipo) {
-  var textos = document.querySelectorAll('.texto');
 
-  textos.forEach((texto) => {
-    texto.style.display = "none";
+  var figuras = document.querySelectorAll('figure');
+  console.log(figuras)
+  figuras.forEach((figure) => {
+    figure.style.display = "none";
   });
 
-  var peliculasPorGenero = document.querySelectorAll(`.container img.${tipo}`);
+  var peliculasPorTipo = document.querySelectorAll(`.container img.${tipo}`);
+  console.log(peliculasPorTipo)
+  peliculasPorTipo.forEach((pelicula) => {
+    pelicula.parentElement.style.display = "block"; // Muestra la figura que contiene la imagen
 
-  peliculasPorGenero.forEach((pelicula) => {
-    pelicula.parentElement.nextElementSibling.style.display = "block";
   });
+
+  figuras.forEach((figure) => {
+    figure.addEventListener("mouseenter", (e) => {
+      // Cuando el puntero entra en la figura
+      verTexto(figure.getAttribute("data-id"));
+    });
+
+    figure.addEventListener("mouseleave", (e) => {
+      // Cuando el puntero sale de la figura
+      ocultarTexto();
+    });
+  });
+
+  function ocultarTexto() {
+    var textos = document.querySelectorAll('.texto');
+    textos.forEach((texto) => {
+      texto.style.display = "none";
+    });
+  }
+
 }
 
-for (var i = 0; i < pelis.length; i++) {
-  document.querySelectorAll('.container img')[i].addEventListener("click", function (event) {
-    alert('betiko era');
-  });
-}
+let peliculas = document.querySelectorAll('.container img')
+
+peliculas.forEach(pelicula => {
+  pelicula.addEventListener("click", e => {
+    console.log(pelicula)
+  })
+})
+
+
+
+// <!----------------------------- --------------------------------------------------------------------------------------------->
+
+
 
 function verTexto(i) {
-
+  console.log(i)
   var tipo = pelis[i][1];
   var titulo = pelis[i][0];
 
   console.log(tipo);
   console.log(titulo);
 
-  document.querySelector('.texto').forEach((element, index) => {
+  var figu = document.querySelector("[data-id='" + i + "']")
+  figu.querySelector('.texto').style.display = "flex"
+
+  //figu.querySelector('.texto').forEach((element, index) => {
+
+  /*
     console.log(index);
-    tit = document - querySelectorAll('h3')[index].innerHTML.trim();
+    tit = figu.querySelectorAll('h3').innerHTML.trim();
     console.log(tit)
     if (titulo === tit) {
-      document.querySelectorAll('.texto')[index].computedStyleMap.display = "flex"
+      figu.querySelector('.texto').computedStyleMap.display = "flex"
     } else {
-      document.querySelectorAll('.texto')[index].computedStyleMap.display = "none"
+      figu.querySelector('.texto').computedStyleMap.display = "none"
     }
     
-  });
+    */
+  //});
+
+
 }
 
 
