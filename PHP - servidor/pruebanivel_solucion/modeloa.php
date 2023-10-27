@@ -60,8 +60,5 @@ class Jokalari_Modeloa {
         }
     }
 
-
-
-
     }
     
