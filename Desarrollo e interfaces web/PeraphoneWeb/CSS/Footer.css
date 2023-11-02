@@ -1,0 +1,133 @@
+.global__footer{
+    margin-top: 10em;
+    border-top: 1px solid #262626;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    background-color: var(--background-color);
+    color: var(--white-color);
+
+     & .footer-info-first{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       
+    }
+
+    & .footer-logo{
+        max-width: 15%;
+        & .footer-logo-img{
+            width: 3em;
+        }
+
+        & .footer-text{
+            margin-top: 1em;
+            color: var(--white-color);
+            font-weight: 500;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            line-height: 1.2em;
+        }
+    }
+
+    & .footer-menu{
+        display: flex;
+
+        & .footer-menu-item{
+            width: 10em;
+            height: 5em;
+
+            & h3{
+                font-weight: 500;
+                font-size: 1.1em;
+                margin-bottom: 2em;
+            }
+
+            & ul li {
+                margin-bottom: 1em;
+
+                & a{
+                    color: var(--white-color);
+                    font-size: 0.9em;
+
+                    &:hover{
+                        color: var(--active-color);
+                    }
+                }
+            }
+
+            & p{
+                font-size: 0.9em;
+            }
+
+            & input{
+                margin-top: 2em;
+                padding: 0.5em;
+                border-radius: 1em;
+                border: none;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+        
+        }
+    }
+
+    & .footer-btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 1em;
+
+        &   .footer-btn{
+            display: block;
+            padding: 0.7em;
+            width: 100%;
+            text-align: center;
+            background-color: var(--active-color);
+            border-radius: 0.5em;
+
+
+            &:last-child{
+                margin-top: 1em;
+                background-color: transparent;
+                border: 2px solid var(--active-color);
+            }
+
+        }
+    }
+
+    & .footer-info-second{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 6em 2em 3em 2em;
+        padding-top:3em ;
+       border-top: 1px solid #262626;
+        
+       & .footer-info-second-icons{
+            display: flex;
+            align-items: center;
+
+            & .icons-item{
+                margin:0 1em 0 1em;
+
+                & i{
+                    font-size: 1.3em;
+                    color: var(--white-color);
+
+                    &:hover{
+                        color: var(--active-color);
+                    }
+                }
+            }
+       }
+    }
+
+
+}
