@@ -4,7 +4,7 @@ import { buscarDestino, obtenerParametro } from "./buscarDestinos.js";
 //Encontrar destinos
 const destinosFiltrados = buscarDestino();
 
-//Cambair titulo de pagina
+//Cambiar titulo de pagina
 const pageTitle = document.querySelector(".mb-0")
 pageTitle.textContent = obtenerParametro()
 
