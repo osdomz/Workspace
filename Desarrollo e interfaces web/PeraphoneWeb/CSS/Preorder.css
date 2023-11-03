@@ -1,0 +1,11 @@
+@import "Global.css";
+
+
+.precompra1imagen{
+    & img{
+        width: 56px;
+    }
+}
+.precompra1{
+    width: 50%;
+}

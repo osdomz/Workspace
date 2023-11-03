@@ -1,0 +1,39 @@
+.global__header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+
+    & .menu .menu-list {
+        display: flex;
+
+        & .menu-item .menu-link {
+            display: block;
+            padding: 0.5em 1em;
+            color: var(--white-color);
+            font-size: 1em;
+            font-weight: 400;
+
+            &:hover{
+                color: var(--active-color);
+            }
+        }
+    }
+
+    & .header-logo-img{
+        width: 30px;
+    }
+
+    & .preorder-btn-link{
+        display: block;
+        padding: 0.5em 2em;
+        color: var(--white-color);
+        background-color: var(--active-color);
+        border-radius: 2em;
+
+        &:hover{
+            background-color: var(--secondary-active-color);
+        }
+    }
+}
