@@ -5,7 +5,7 @@ session_start();
 include_once 'vista.php';
 include_once 'modelo.php';
 
-$Vista = new VistaLogin;
+$Vista = new VistaInicioSesion;
 
 $modelo = new ModeloJugador;
 $modelo->conectar();
@@ -26,14 +26,14 @@ $respuestas_correctas = [
 
 // Comprobar el inicio de sesión, mostrar un mensaje de error y cargar el formulario nuevamente si no es válido.
 if (isset($_POST['boton']) && !$_SESSION["validado"]) {
-    if ($modelo->validar($_POST['usuario'], $_POST['clave'])) {
+    if ($modelo->validarInicioSesion($_POST['usuario'], $_POST['clave'])) {
         $_SESSION["validado"] = true;
         $_SESSION["Usuario"] = $_POST['usuario'];
     } else {
         ?>
         <h3 style="color: red;">Inténtalo de nuevo, el usuario o la contraseña no son válidos.</h3>
         <?php
-        $Vista->CargarFormularioInicial();
+        $Vista->FormularioInicioSesion();
     }
 }
 
@@ -43,18 +43,18 @@ if ($_SESSION["validado"] && isset($_POST['boton'])) {
     if (isset($_POST['opcion'])) {
         switch ($_POST['opcion']) {
             case "puntuacion":
-                $Vista->ElegirOpcion();
-                $Vista->MostrarPuntuaciones($modelo->obtenerPuntuacionesOrdenadas());
+                $Vista->MostrarOpcion();
+                $Vista->MostrarPreguntasRespuestas($modelo->listaOrdenadaPorPuntuacion());
                 break;
             case "jugar":
-                $Vista->MostrarPreguntas($preguntas_respuestas);
+                $Vista->MostrarPreguntasRespuestas($preguntas_respuestas);
                 break;
         }
     } else {
         ?>
         <h3 style="color: red;">No has seleccionado lo que quieres hacer.</h3>
         <?php
-        $Vista->ElegirOpcion();
+        $Vista->MostrarOpcion();
     }
 }
 
@@ -70,7 +70,7 @@ if ($_SESSION["validado"] && isset($_POST['boton_jugar'])) {
     }
     echo "Has obtenido " . $puntos . " puntos. <br><br>";
     $modelo->actualizarPuntuacion($_SESSION["Usuario"], $puntos);
-    $Vista->ElegirOpcion();
+    $Vista->MostrarOpcion();
 }
 
 
