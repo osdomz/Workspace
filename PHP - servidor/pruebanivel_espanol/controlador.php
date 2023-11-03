@@ -26,7 +26,7 @@ $respuestas_correctas = [
 
 // Comprobar el inicio de sesión, mostrar un mensaje de error y cargar el formulario nuevamente si no es válido.
 if (isset($_POST['boton']) && !$_SESSION["validado"]) {
-    if ($modelo->validarInicioSesion($_POST['usuario'], $_POST['clave'])) {
+    if ($modelo->validarInicioSesion($_POST['usuario'], $_POST['contrasena'])) {
         $_SESSION["validado"] = true;
         $_SESSION["Usuario"] = $_POST['usuario'];
     } else {
