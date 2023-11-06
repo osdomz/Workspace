@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     btnSubmit.addEventListener("click", function() {
         divReserva.style.display = "block";
+        temporadaLabel.style.display = "block";
     });
 
 function actualizarTemporadaYFecha(mes) {
@@ -28,14 +29,17 @@ function actualizarTemporadaYFecha(mes) {
 }
 
 function updateSeasonLabel(mes) {
+
     if (temporadaAltaMeses.includes(mes)) {
         temporadaLabel.textContent = "High season";
         temporadaLabel.style.color = "yellow";
         temporadaLabel.style.backgroundColor = "yellow";
+        temporadaLabel.style.display = "block";
     } else if (temporadaBajaMeses.includes(mes)) {
         temporadaLabel.textContent = "Low season";
         temporadaLabel.style.color = "green";
         temporadaLabel.style.backgroundColor = "green";
+        temporadaLabel.style.display = "block";
     } else {
         temporadaLabel.textContent = "";
         temporadaLabel.style.color = "";
