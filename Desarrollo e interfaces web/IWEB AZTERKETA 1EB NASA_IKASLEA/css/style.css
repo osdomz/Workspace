@@ -1,0 +1,127 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  background-color: transparent;
+  background-image: url("../img/fondo.png");
+  background-size: cover;
+  font-family: cursive;
+  padding: 40px;
+}
+
+#goikoa {
+  padding: 10px 20px;
+  color: #cccccc;
+  text-align: end;
+  margin-right: 13%;
+  text-decoration: none;
+}
+#goikoa a {
+  padding: 20px 30px;
+  color: #cccccc;
+  text-decoration: none;
+  border-right: 4px solid #999999;
+}
+#behekoa {
+  margin-top: 20px;
+  text-align: center;
+  margin-right: 5%;
+  font-size: 13px;
+}
+
+#behekoa a {
+  background-color: #666666;
+  color: #cccccc;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-right: 4px solid #999999;
+}
+
+#behekoa a:hover {
+  color: #666666;
+  background-color: #ffffff;
+}
+
+#logo {
+  float: left;
+  height: 80px;
+  width: 90px;
+}
+footer {
+  font-family: cursive;
+}
+h3 {
+  background-color: blue;
+  color: #99ccff;
+  text-align: center;
+}
+
+footer p {
+  color: #cccccc;
+}
+
+footer a {
+  color: #99ccff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.tarjeta {
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+img {
+  object-fit: cover;
+}
+
+.container p {
+  color: black;
+  background-color: #666666;
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header nav {
+    display: none;
+  }
+  footer a{
+    display:flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header nav {
+    display: none;
+  }
+  footer a{
+    display:flex;
+  }
+}
