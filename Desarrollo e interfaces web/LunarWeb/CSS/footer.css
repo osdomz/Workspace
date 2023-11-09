@@ -1,0 +1,12 @@
+/* Agrega estas reglas a tu CSS para los iconos de redes sociales */
+a.btn-floating {
+  border-radius: 50%; /* Establece el borde redondeado */
+  width: 40px; /* Ajusta el ancho según tus preferencias */
+  height: 40px; /* Ajusta la altura según tus preferencias */
+ 
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+  

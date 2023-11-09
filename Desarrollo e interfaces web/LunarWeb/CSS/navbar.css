@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #E6E6E9;
+  /* Color principal */
+  --text-color: #232323;
+  /* Color de texto */
+  --background-color: #BDBDBD;
+  /* Fondo gris */
+  --hover-color: #CCAA00;
+  /* Color de botones al hacer hover */
+  --secondary-background: #E6ACEC;
+  /* Segundo color de fondo */
+}
+.navbar {
+  margin-left: 5%;
+  margin-right: 5%; /* Establece el margen general de la página */
+}
+
+.navbar-brand {
+  font-family: "Cochin", serif;
+  font-weight: bold;
+  
+}
+.navbar .navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* Cambiar el tamaño del texto de los botones (excluyendo el logo) a 14px */
+.navbar-nav .nav-link {
+  font-size: 14px;
+  font-family: "Inter",sans-serif; 
+  color: var(--text-color);
+  position: relative;
+  
+}
+
+/* Estilos para el texto en negrita al hacer hover */
+.navbar a:hover {
+  font-weight: bold;
+}
+
+/* Estilo para el formulario de inicio de sesión y registro */
+.login-form,
+.registration-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input,
+.registration-form input,
+.login-form button,
+.registration-form button {
+  margin: 10px;
+  padding: 10px; /* Mayor espacio entre elementos */
+  border: 0.1px solid var(--primary-color); /* Borde ligero */
+
+}
+
+.login-form button,
+.registration-form button,
+#show-registration-form,
+#return-to-login {
+margin-top: 10px;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+.contenedor-sliders {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #carouselExampleCaptions-one {
+    width: 800px; /* Asigna un ancho de 700px para dejar espacio al segundo carrusel */
+    order: 1; /* Cambia el orden para alinear a la izquierda */
+  }
+  
+  #carouselExampleCaptions-two {
+    width: 800px; /* Asigna un ancho de 700px */
+    order: 2; /* Cambia el orden para alinear a la derecha */
+  }
+  
+  #carouselExampleCaptions-one:hover,
+  #carouselExampleCaptions-two:hover {
+    opacity: 0.5; /* Al hacer hover, el slider se vuelve opaco */
+  }
+  
+  .carousel-item img {
+    width: 800px; /* Establece el ancho máximo al 100% del contenedor */
+    height: 608px; /* Ajusta la altura automáticamente */
+    object-fit: cover; /* Ajusta la imagen para cubrir el tamaño especificado sin deformarla */
+  }
+  
+  .carousel-item img:hover {
+    width: 800px; /* Establece el ancho máximo al 100% del contenedor */
+    height: 608px; /* Ajusta la altura automáticamente */
+    object-fit: cover; /* Ajusta la imagen para cubrir el tamaño especificado sin deformarla */
+  }
+  
+  .carousel-caption {
+    transition: opacity 0.3s ease; /* Agregamos una transición suave para la opacidad */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline; /* Agregamos un subrayado al texto */
+
+  }
+  .carousel-caption:hover {
+    transition: opacity 0.3s ease; /* Agregamos una transición suave para la opacidad */
+    position: absolute;
+
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: underline; /* Agregamos un subrayado al texto */
+    color: black;
+
+  }
+
