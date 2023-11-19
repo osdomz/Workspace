@@ -1,27 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>MVC Ejemplo</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Ejemplo MVC</title>
     <script src="script.js"></script>
 </head>
 <body>
-
-<div id="result"></div>
-
-<form id="dataForm">
-    <label for="name">Nombre:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <button type="button" onclick="submitForm()">Enviar</button>
-</form>
-
+    <h1>Ejemplo MVC</h1>
+    <div id="datos"></div>
+    <button onclick="obtenerDatos()">Obtener Datos</button>
 </body>
 </html>
-
 
 
