@@ -5,8 +5,8 @@ class VistaInicioSesion {
     public function FormularioInicioSesion() {
         ?>
         <form method="POST" action="controlador.php">
-            <div >
-                <div >
+            <div>
+                <div>
                     <label><b>Usuario</b></label>
                     <input type="text" placeholder="Ingrese el nombre de usuario" name="usuario"/>
                 </div>
@@ -48,46 +48,43 @@ class VistaInicioSesion {
     }
 
     // Muestra en pantalla el array asociativo dado.
-    public function Listar($lista_asociativa) {
-
-        ?>
-        <table border="1">
-            <tr><th>Usuario</th><th>Puntuación</th></tr>
-            <?php
-            foreach ($lista_asociativa as $usuario => $puntuacion) {
-            ?>
-                <tr><td><?php echo($usuario); ?></td><td><?php echo($puntuacion); ?></td></tr>
-                <?php
-            }
-            ?>
-        </table>
-        <?php
-    }
-
-    /* Dado un array asociativo (la clave es la pregunta y el valor es un array con las posibles respuestas),
-    muestra en pantalla las preguntas y respuestas. */
-    public function MostrarPreguntasRespuestas($preguntas_respuestas_array){
-                
+    public function MostrarPreguntasRespuestas($preguntas_respuestas_array) {
         echo '<form method="POST" action="controlador.php">';
+        
         // Crear la etiqueta de la pregunta
-        $contador=0;
+        $contador = 0;
         foreach($preguntas_respuestas_array as $pregunta => $respuestas){
             echo "<b>" . $pregunta . " &nbsp</b>";
-
+    
             // Crear el menú desplegable de respuestas
-            echo '<select name="pregunta'. $contador++. '">';
-            
+            echo '<select name="pregunta' . $contador . '">';
+    
             foreach($respuestas as $respuesta ){
                 echo "<option value='". $respuesta ."'>" . $respuesta . "</option>";
             }
             echo '</select><br><br>';    
-            
+    
+            $contador++; // Incrementar el contador para el próximo menú desplegable
         }
-        
+    
         echo '<input type="submit" value="ENVIAR" name="boton_jugar"/>';
         echo '</form>';
-       
     }
+    
+
+   // Muestra en pantalla el array asociativo dado.
+public function Listar($lista_asociativa) {
+    ?>
+    <table border="1">
+        <tr><th>Usuario</th><th>Puntuación</th></tr>
+        <?php foreach ($lista_asociativa as $usuario => $puntuacion): ?>
+            <tr><td><?= $usuario ?></td><td><?= $puntuacion ?></td></tr>
+        <?php endforeach; ?>
+    </table>
+    <?php
 }
+
+}
+    
 
 

@@ -8,7 +8,6 @@ session_start();
 $_SESSION["validado"] = FALSE;
 
 // Cargar el formulario inicial
-$VistaInicio = new VistaInicioSesion;
+$VistaInicio = new VistaInicioSesion();
 $VistaInicio->FormularioInicioSesion();
-?>
 

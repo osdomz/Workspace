@@ -44,7 +44,7 @@ if ($_SESSION["validado"] && isset($_POST['boton'])) {
         switch ($_POST['opcion']) {
             case "puntuacion":
                 $Vista->MostrarOpcion();
-                $Vista->MostrarPreguntasRespuestas($modelo->listaOrdenadaPorPuntuacion());
+                $Vista->Listar($modelo->listaOrdenadaPorPuntuacion());
                 break;
             case "jugar":
                 $Vista->MostrarPreguntasRespuestas($preguntas_respuestas);
