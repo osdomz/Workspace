@@ -6,6 +6,7 @@ fetch("./JSON/datosPlatos.json")
     }
     return response.json();
   })
+
   .then((data) => {
     const menus = data.menu;
 
@@ -62,39 +63,93 @@ fetch("./JSON/datosPlatos.json")
     });
 
     function filtrarPlatos() {
-        const selectedValue = document.getElementById("comboMenus").value; // Obtiene el valor seleccionado del menú
-        const platos = document.querySelectorAll(".card"); // Selecciona todas las tarjetas de platos
-      
-        platos.forEach(function (plato) {
-          const esBasico = plato.getAttribute("data-basico") === "true";
-          const esEspecial = plato.getAttribute("data-especial") === "true";
-      
-          if (
-            (selectedValue === "basico" && esBasico) ||
-            (selectedValue === "especial" && esEspecial) ||
-            selectedValue === "elegir"
-          ) {
-            // Si el plato cumple con el filtro seleccionado o no se ha seleccionado filtro, muestra el plato
-            plato.style.display = "block";
-          } else {
-            // Si no cumple con el filtro seleccionado, oculta el plato
-            plato.style.display = "none";
-          }
-        });
-      }
-      
-      // Agrega el evento change al elemento comboMenus
-      document.getElementById("comboMenus").addEventListener("change", filtrarPlatos);
-      
-      // Llama a la función para realizar el filtrado al cargar la página, si es necesario
-      filtrarPlatos();
-      
-  
+      const selectedValue = document.getElementById("comboMenus").value; // Obtiene el valor seleccionado del menú
+      const platos = document.querySelectorAll(".card"); // Selecciona todas las tarjetas de platos
+
+      platos.forEach(function (plato) {
+        const esBasico = plato.getAttribute("data-basico") === "true";
+        const esEspecial = plato.getAttribute("data-especial") === "true";
+
+        if (
+          (selectedValue === "basico" && esBasico) ||
+          (selectedValue === "especial" && esEspecial) ||
+          selectedValue === "elegir"
+        ) {
+          // Si el plato cumple con el filtro seleccionado o no se ha seleccionado filtro, muestra el plato
+          plato.style.display = "block";
+        } else {
+          // Si no cumple con el filtro seleccionado, oculta el plato
+          plato.style.display = "none";
+        }
+      });
+    }
+
+    // Agrega el evento change al elemento comboMenus
+    document
+      .getElementById("comboMenus")
+      .addEventListener("change", filtrarPlatos);
+
+    // Llama a la función para realizar el filtrado al cargar la página, si es necesario
+    filtrarPlatos();
   })
   .catch((error) => {
     console.error("Hubo un error al cargar el archivo JSON:", error);
-  }); 
+  });
 
+document.getElementById("elemCompra").addEventListener("click", function () {
+  light = document.getElementById("light");
+  fade = document.getElementById("fade");
 
+  light.style.display = "block";
+  fade.style.display = "block";
+  pillarDatos();
 
+  salir = document.getElementById("btnCancelar");
+  salir.addEventListener("click", function () {
+    // light.style.display = 'none';
+    // fade.style.display = 'none';
+    window.location.href = "index.html";
+  });
+});
+function pillarDatos() {
+  let platosSeleccionados = document.querySelectorAll(".classCheckbox:checked");
+  let aqui = document.getElementById("hemenJarri");
+  let texto = "";
+  let total = 0;
 
+  platosSeleccionados.forEach(function (plato) {
+    if (platosSeleccionados.length > 0) {
+    }
+    texto +=
+      plato.getAttribute("data-titulo") + " " + plato.value + "€" + "<br>";
+    total += parseFloat(plato.value);
+
+    aqui.innerHTML = texto + "<br>" + "Total: " + total + "€";
+    platosSeleccionados = true;
+  });
+  alert("Has seleccionado " + platosSeleccionados.length + " platos");
+}
+function filtroEdad(event) {
+  if (event.key >= 0 && event.key <= 9) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+document.getElementById("edad").addEventListener("keypress", function (event) {
+  if (filtroEdad(event) == false) {
+    event.preventDefault();
+  }
+});
+
+document.getElementById("edad").addEventListener("focusout", function () {
+  var edad = document.getElementById("edad").value;
+  var direccion = document.getElementById("direccion");
+
+  if (edad.length > 2) {
+    direccion.setAttribute("disabled", false);
+  } else {
+    direccion.removeAttribute("disabled", true);
+  }
+});

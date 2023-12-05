@@ -1,34 +1,21 @@
 :root {
   --primary-color: #E6E6E9;
-  /* Color principal */
   --text-color: #232323;
-  /* Color de texto */
   --background-color: #BDBDBD;
-  /* Fondo gris */
   --hover-color: #CCAA00;
-  /* Color de botones al hacer hover */
   --secondary-background: #E6ACEC;
-  /* Segundo color de fondo */
 }
-* {
-  margin: 0px;
-  padding: 0px;
 
+* {
+  margin: 0;
+  padding: 0;
 }
 
 header {
   height: 55px;
-  border-bottom: 0.1px solid #E6E6E9;
+  border-bottom: 0.1px solid var(--primary-color); /* Use custom property with fallback */
   margin-bottom: 75px;
-
 }
-
-
-main {
- 
-
-}
-
 
 footer {
   font-size: 14px;
@@ -39,7 +26,7 @@ footer {
 .login-form button,
 .registration-form button {
   padding: 8px 20px;
-  background-color: #232323;
+  background-color: var(--text-color);
   color: var(--primary-color);
   border: none;
   cursor: pointer;
@@ -49,5 +36,5 @@ footer {
 .login-form button:hover,
 .registration-form button:hover {
   background-color: var(--hover-color);
-  color: #232323;
+  color: var(--text-color);
 }
