@@ -1,9 +1,8 @@
 <?php
 
 /**
- * Bistaren deskribapena 
+ * Bistaren deskribapena
  * Descripcion de la vista
-
  */
 
 class Login_Bista

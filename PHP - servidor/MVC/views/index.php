@@ -10,5 +10,3 @@
     <button onclick="obtenerDatos()">Obtener Datos</button>
 </body>
 </html>
-
-
