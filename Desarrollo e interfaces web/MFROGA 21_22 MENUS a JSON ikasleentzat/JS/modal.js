@@ -31,6 +31,13 @@ fetch("./JSON/datosPlatos.json")
     const segundosPlatosSection = document.getElementById("SegundosPlatos");
     const postresPlatosSection = document.getElementById("PostresPlatos");
 
+      if (window.location.search.includes('platos')) {
+          document.getElementById('comboMenus').style.display = "none";
+          document.getElementById('titulo').innerHTML = 'platos'
+          filtrarPlatos("elegir");
+          console.log('platos');
+  }
+
     // Recorrer los platos y crear tarjetas para cada uno
     menus.forEach((menu) => {
       const categoria = menu.orden;
@@ -100,8 +107,8 @@ document.getElementById("elemCompra").addEventListener("click", function () {
   light = document.getElementById("light");
   fade = document.getElementById("fade");
 
-  light.style.display = "block";
-  fade.style.display = "block";
+  light.style.display = "flex";
+  fade.style.display = "flex";
   pillarDatos();
 
   salir = document.getElementById("btnCancelar");
@@ -165,6 +172,42 @@ document.getElementById("direccion").addEventListener("keyup", function () {
     btnComprar.setAttribute("disabled", "disabled");
   }
 });
+
+// info.innerHTML += `<h3> TOTAL: ${Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(total)} </h3>`;
+
+// const descuentodiv = document.getElementById('descuento');
+// const edad = document.getElementById('edad');
+// const direccion = document.getElementById('direccion');
+
+// edad.addEventListener("input", function () {
+//     let valor = this.value;
+
+//     valor = valor.replace(/\D/g, '');
+
+//     if (valor.length > 2) {
+//         valor = valor.slice(0, 2);
+//     }
+
+//     this.value = valor;
+
+//     direccion.disabled = valor.trim() === '';
+
+//     if (valor === '' || valor === '0' || valor === '00') {
+//         descuentodiv.innerHTML = '';
+//     } else if (valor < 18) {
+//         let descuento = total * 0.10;
+//         let totalConDescuento = total - descuento;
+//         descuentodiv.innerHTML = `<p>PROMOCIÓN: -10% = ${Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(totalConDescuento)}</p>`;
+//     } else if (valor > 65) {
+//         let descuento = total * 0.20;
+//         let totalConDescuento2 = total - descuento;
+//         descuentodiv.innerHTML = `<p>PROMOCIÓN: -20% = ${Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(totalConDescuento2)}</p>`;
+//     } else {
+//         descuentodiv.innerHTML = '';
+//     }
+// });
+
+
 
 
 
