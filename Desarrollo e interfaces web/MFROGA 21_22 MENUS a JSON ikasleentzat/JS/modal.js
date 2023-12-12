@@ -88,6 +88,9 @@ fetch("./JSON/datosPlatos.json")
           // Si no cumple con el filtro seleccionado, oculta el plato
           plato.style.display = "none";
         }
+
+    
+
       });
     }
 

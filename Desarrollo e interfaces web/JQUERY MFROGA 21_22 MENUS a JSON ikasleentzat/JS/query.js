@@ -26,13 +26,6 @@ $.ajax({
     const segundosPlatosSection = $("#SegundosPlatos");
     const postresPlatosSection = $("#PostresPlatos");
 
-    if (window.location.search.includes("platos")) {
-      $("#comboMenus").hide();
-      $("#titulo").html("platos");
-      filtrarPlatos("elegir");
-      console.log("platos");
-    }
-
     // Recorrer los platos y crear tarjetas para cada uno
     menus.forEach(function (menu) {
       const categoria = menu.orden;
@@ -66,6 +59,7 @@ $.ajax({
     // Función para filtrar los platos
     function filtrarPlatos() {
       const selectedValue = $("#comboMenus").val();
+      console.log(selectedValue);
       const platos = $(".card");
 
       platos.each(function () {
@@ -77,18 +71,24 @@ $.ajax({
           (selectedValue === "especial" && esEspecial) ||
           selectedValue === "elegir"
         ) {
-          $(this).show();
+          $(this).css({ display: "flex" });
         } else {
           $(this).hide();
         }
       });
     }
 
+    if (window.location.search.includes("platos")) {
+      $("#comboMenus").hide();
+      $("#titulo").html("platos");
+      filtrarPlatos();
+      console.log("platos");
+    }
+
     // Agrega el evento change al elemento comboMenus
     $("#comboMenus").change(filtrarPlatos);
 
-    // Llama a la función para realizar el filtrado al cargar la página, si es necesario
-    filtrarPlatos();
+  
   },
   error: function (error) {
     console.error("Hubo un error al cargar el archivo JSON:", error);
@@ -200,3 +200,8 @@ function mostrarDescuento(total) {
     }
   });
 }
+
+
+
+
+
