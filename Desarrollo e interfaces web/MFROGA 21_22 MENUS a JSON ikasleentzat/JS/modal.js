@@ -177,12 +177,6 @@ function mostrarDescuento(total) {
       btnComprar.setAttribute("disabled", "disabled");
     } else {
       descuentodiv.innerHTML = "";
-      // Habilitar el botón Comprar solo si hay dirección
-      if (direccion.value.length > 5) {
-        btnComprar.removeAttribute("disabled");
-      } else {
-        btnComprar.setAttribute("disabled", "disabled");
-      }
     }
   });
 
