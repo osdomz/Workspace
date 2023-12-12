@@ -31,12 +31,12 @@ fetch("./JSON/datosPlatos.json")
     const segundosPlatosSection = document.getElementById("SegundosPlatos");
     const postresPlatosSection = document.getElementById("PostresPlatos");
 
-      if (window.location.search.includes('platos')) {
-          document.getElementById('comboMenus').style.display = "none";
-          document.getElementById('titulo').innerHTML = 'platos'
-          filtrarPlatos("elegir");
-          console.log('platos');
-  }
+    if (window.location.search.includes("platos")) {
+      document.getElementById("comboMenus").style.display = "none";
+      document.getElementById("titulo").innerHTML = "platos";
+      filtrarPlatos("elegir");
+      console.log("platos");
+    }
 
     // Recorrer los platos y crear tarjetas para cada uno
     menus.forEach((menu) => {
@@ -92,9 +92,7 @@ fetch("./JSON/datosPlatos.json")
     }
 
     // Agrega el evento change al elemento comboMenus
-    document
-      .getElementById("comboMenus")
-      .addEventListener("change", filtrarPlatos);
+    document.getElementById("comboMenus").addEventListener("change", filtrarPlatos);
 
     // Llama a la función para realizar el filtrado al cargar la página, si es necesario
     filtrarPlatos();
@@ -113,11 +111,10 @@ document.getElementById("elemCompra").addEventListener("click", function () {
 
   salir = document.getElementById("btnCancelar");
   salir.addEventListener("click", function () {
-    // light.style.display = 'none';
-    // fade.style.display = 'none';
     window.location.href = "index.html";
   });
 });
+
 function pillarDatos() {
   let platosSeleccionados = document.querySelectorAll(".classCheckbox:checked");
   let aqui = document.getElementById("hemenJarri");
@@ -126,7 +123,7 @@ function pillarDatos() {
   var btnComprar = document.getElementById("btnComprar");
 
   btnComprar.setAttribute("disabled", "disabled");
-  
+
   platosSeleccionados.forEach(function (plato) {
     texto +=
       plato.getAttribute("data-titulo") + " " + plato.value + "€" + "<br>";
@@ -134,80 +131,83 @@ function pillarDatos() {
   });
 
   aqui.innerHTML = texto + "<br>" + "Total: " + total + "€";
+  mostrarDescuento(total);
   alert("Has seleccionado " + platosSeleccionados.length + " platos");
 }
 
-function filtroEdad(event) {
-  if (event.key >= 0 && event.key <= 9) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-document.getElementById("edad").addEventListener("keypress", function (event) {
-  if (filtroEdad(event) == false) {
-    event.preventDefault();
-  }
-});
-
-document.getElementById("edad").addEventListener("keyup", function () {
-  var edad = document.getElementById("edad").value;
-  var direccion = document.getElementById("direccion");
-
-  if (edad.length >= 2) {
-    direccion.removeAttribute("disabled");
-  } else {
-    direccion.setAttribute("disabled", "disabled");
-  }
-});
-
-document.getElementById("direccion").addEventListener("keyup", function () {
-  var direccion = document.getElementById("direccion").value;
+function mostrarDescuento(total) {
+  const descuentodiv = document.getElementById("descuento");
+  const edad = document.getElementById("edad");
+  const direccion = document.getElementById("direccion");
   var btnComprar = document.getElementById("btnComprar");
 
-  if (direccion.length > 5) {
-    btnComprar.removeAttribute("disabled");
-  } else {
-    btnComprar.setAttribute("disabled", "disabled");
-  }
-});
+  edad.addEventListener("input", function () {
+    let valor = this.value;
 
-// info.innerHTML += `<h3> TOTAL: ${Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(total)} </h3>`;
+    valor = valor.replace(/\D/g, "");
 
-// const descuentodiv = document.getElementById('descuento');
-// const edad = document.getElementById('edad');
-// const direccion = document.getElementById('direccion');
+    if (valor.length > 2) {
+      valor = valor.slice(0, 2);
+    }
 
-// edad.addEventListener("input", function () {
-//     let valor = this.value;
+    this.value = valor;
 
-//     valor = valor.replace(/\D/g, '');
+    direccion.disabled = valor.trim() === "";
 
-//     if (valor.length > 2) {
-//         valor = valor.slice(0, 2);
-//     }
+    // Calcula el descuento basado en la edad
+    let descuento = 0;
+    if (valor === "" || valor === "0" || valor === "00") {
+      descuentodiv.innerHTML = "";
+    } else if (valor < 18) {
+      descuento = total * 0.1;
+    } else if (valor > 65) {
+      descuento = total * 0.2;
+    }
 
-//     this.value = valor;
+    // Muestra el descuento en el div descuento
+    if (descuento > 0) {
+      let totalConDescuento = total - descuento;
+      descuentodiv.innerHTML = `<p>PROMOCIÓN: -${(
+        (descuento / total) *
+        100
+      ).toFixed(0)}% = ${Intl.NumberFormat("es-ES", {
+        style: "currency",
+        currency: "EUR",
+      }).format(totalConDescuento)}</p>`;
+      btnComprar.setAttribute("disabled", "disabled");
+    } else {
+      descuentodiv.innerHTML = "";
+      // Habilitar el botón Comprar solo si hay dirección
+      if (direccion.value.length > 5) {
+        btnComprar.removeAttribute("disabled");
+      } else {
+        btnComprar.setAttribute("disabled", "disabled");
+      }
+    }
+  });
 
-//     direccion.disabled = valor.trim() === '';
+  document.getElementById("direccion").addEventListener("keyup", function () {
+    var direccion = document.getElementById("direccion").value;
 
-//     if (valor === '' || valor === '0' || valor === '00') {
-//         descuentodiv.innerHTML = '';
-//     } else if (valor < 18) {
-//         let descuento = total * 0.10;
-//         let totalConDescuento = total - descuento;
-//         descuentodiv.innerHTML = `<p>PROMOCIÓN: -10% = ${Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(totalConDescuento)}</p>`;
-//     } else if (valor > 65) {
-//         let descuento = total * 0.20;
-//         let totalConDescuento2 = total - descuento;
-//         descuentodiv.innerHTML = `<p>PROMOCIÓN: -20% = ${Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(totalConDescuento2)}</p>`;
-//     } else {
-//         descuentodiv.innerHTML = '';
-//     }
-// });
+    if (direccion.length > 5) {
+      // Habilitar el botón Comprar solo si no hay descuento aplicado
+      btnComprar.removeAttribute("disabled");
+    } else {
+      btnComprar.setAttribute("disabled", "disabled");
+    }
+  });
+  document.getElementById("btnComprar").addEventListener("click", function () {
+    // Muestra un cuadro de confirmación
+    var confirmarCompra = window.confirm(
+      "¿Estás seguro de que deseas realizar la compra?"
+    );
 
-
-
-
-
+    if (confirmarCompra) {
+      // Aquí puedes agregar la lógica para realizar la compra
+      alert("¡Compra realizada con éxito!");
+    } else {
+      // Aquí puedes agregar la lógica para cancelar la compra o simplemente no hacer nada
+      alert("Compra cancelada");
+    }
+  });
+}
