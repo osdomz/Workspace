@@ -94,7 +94,7 @@ class Login_Bista
         <form method="POST" action="controlador.php">
             <div>
                 <div>
-                    <label><b>Zer da egin nahi duzuna?/ ¿Qué es lo que quieres hacer?</b></label>
+                    <label><b>¿Qué es lo que quieres hacer?</b></label>
                 </div>
 
                 <input type="radio" value="idatzi_escribir" name="opcion" />Gutuna idatzi / Escribir carta
@@ -114,7 +114,7 @@ class Login_Bista
         <form method="POST" action="controlador.php">
             <div>
                 <div>
-                    <label><b>Ze erabiltzaileren ekintzak sartu nahi dituzu?/ ¿A qué usuario quieres le quieres asignar acciones? </b></label>
+                    <label><b>¿A qué usuario quieres le quieres asignar acciones? </b></label>
                 </div>
                 <?php
                 echo '<select name="erab_usuario">';
@@ -164,7 +164,7 @@ class Login_Bista
 
     ?>
         <form method="POST" action="controlador.php">
-            <label><b>Olentzero eta Mari Domingi maiteak ondorengoa gustatuko litzaidake:/ Queridos Olentzero y Mari Domingi me gustaría que me traerais lo siguiente:</b></label>
+            <label><b>Queridos Olentzero y Mari Domingi me gustaría que me traerais lo siguiente:</b></label>
             <br><br>
 
 
