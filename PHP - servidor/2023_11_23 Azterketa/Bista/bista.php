@@ -167,7 +167,6 @@ class Login_Bista
             <label><b>Queridos Olentzero y Mari Domingi me gustaría que me traerais lo siguiente:</b></label>
             <br><br>
 
-
             <?php
             foreach ($zerrenda_asoziatiboa as $oparia_regalo => $puntuazioa_puntuacion) {
                 echo ($oparia_regalo . " " . $puntuazioa_puntuacion . " puntu/puntos");

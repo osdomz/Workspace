@@ -68,4 +68,67 @@ class Model
         }
         return $usuarios;
     }
+    //////////////////////////////////////////////REGALOS//////////////////////////////////////////////
+
+    public function obtenerRegalosSegunFechaNacimiento($fechaNacimiento)
+    {
+        // Calcular la edad del usuario
+        $edad = $this->calcularEdad($fechaNacimiento);
+
+        // Determinar el grupo de edad del usuario
+        $grupoEdad = $this->determinarGrupoEdad($edad);
+
+        // Obtener regalos según el grupo de edad
+        return $this->obtenerRegalosDesdeBD($grupoEdad);
+    }
+
+    private function calcularEdad($fechaNacimiento)
+    {
+        $fechaNacimientoObj = new DateTime($fechaNacimiento);
+        $fechaActual = new DateTime();
+        $edad = $fechaNacimientoObj->diff($fechaActual)->y;
+        return $edad;
+    }
+
+    private function determinarGrupoEdad($edad)
+    {
+        if ($edad <= 7) {
+            return "Umeak";
+        } elseif ($edad >= 8 && $edad <= 14) {
+            return "Nerabeak";
+        } elseif ($edad >= 15) {
+            return "Gazteak";
+        } else {
+            return "Desconocido";
+        }
+    }
+
+    public function obtenerRegalosDesdeBD($grupoEdad)
+    {
+        // Asumiendo que tienes una tabla en la base de datos llamada 'opariak_regalos'
+        $sql = "SELECT * FROM opariak_regalos WHERE adina_edad = ?";
+
+        // Preparar la consulta SQL
+        $stmt = $this->mysqli->prepare($sql);
+
+        // Vincular el parámetro de la edad
+        $stmt->bind_param('s', $grupoEdad); // Cambiar 's' según el tipo de dato real en la base de datos
+
+        // Ejecutar la consulta
+        $stmt->execute();
+
+        // Obtener el resultado
+        $result = $stmt->get_result();
+
+        // Obtener los datos de los regalos como un array asociativo
+        $regalos = array();
+        while ($row = $result->fetch_assoc()) {
+            $regalos[] = $row;
+        }
+
+        // Cerrar la declaración
+        $stmt->close();
+
+        return $regalos;
+    }
 }
