@@ -70,18 +70,6 @@ class Model
     }
     //////////////////////////////////////////////REGALOS//////////////////////////////////////////////
 
-    public function obtenerRegalosSegunFechaNacimiento($fechaNacimiento)
-    {
-        // Calcular la edad del usuario
-        $edad = $this->calcularEdad($fechaNacimiento);
-
-        // Determinar el grupo de edad del usuario
-        $grupoEdad = $this->determinarGrupoEdad($edad);
-
-        // Obtener regalos según el grupo de edad
-        return $this->obtenerRegalosDesdeBD($grupoEdad);
-    }
-
     private function calcularEdad($fechaNacimiento)
     {
         $fechaNacimientoObj = new DateTime($fechaNacimiento);
@@ -89,8 +77,32 @@ class Model
         $edad = $fechaNacimientoObj->diff($fechaActual)->y;
         return $edad;
     }
+    public function obtenerRegalosSegunEdadYGrupo($fechaNacimiento)
+    {
+        $edad = $this->calcularEdad($fechaNacimiento);
+        $grupoEdad = $this->determinarGrupoEdad($edad);
 
-    private function determinarGrupoEdad($edad)
+        return $this->obtenerRegalosDesdeBD($grupoEdad);
+    }
+
+    // Modifica la función obtenerRegalosDesdeBD para que acepte el grupo de edad
+    public function obtenerRegalosDesdeBD($grupoEdad)
+    {
+        $sql = "SELECT * FROM opariak_regalos WHERE grupo_edad = ?";
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param('s', $grupoEdad);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $regalos = array();
+        while ($row = $result->fetch_assoc()) {
+            $regalos[] = $row;
+        }
+        $stmt->close();
+        return $regalos;
+    }
+
+    // Agrega una función para determinar el grupo de edad según la clasificación que tienes
+    public function determinarGrupoEdad($edad)
     {
         if ($edad <= 7) {
             return "Umeak";
@@ -102,33 +114,6 @@ class Model
             return "Desconocido";
         }
     }
-
-    public function obtenerRegalosDesdeBD($grupoEdad)
-    {
-        // Asumiendo que tienes una tabla en la base de datos llamada 'opariak_regalos'
-        $sql = "SELECT * FROM opariak_regalos WHERE adina_edad = ?";
-
-        // Preparar la consulta SQL
-        $stmt = $this->mysqli->prepare($sql);
-
-        // Vincular el parámetro de la edad
-        $stmt->bind_param('s', $grupoEdad); // Cambiar 's' según el tipo de dato real en la base de datos
-
-        // Ejecutar la consulta
-        $stmt->execute();
-
-        // Obtener el resultado
-        $result = $stmt->get_result();
-
-        // Obtener los datos de los regalos como un array asociativo
-        $regalos = array();
-        while ($row = $result->fetch_assoc()) {
-            $regalos[] = $row;
-        }
-
-        // Cerrar la declaración
-        $stmt->close();
-
-        return $regalos;
-    }
 }
+
+  

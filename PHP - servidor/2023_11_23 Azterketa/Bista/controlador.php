@@ -31,7 +31,7 @@ if (isset($_POST['accion'])) {
                             // Lógica relacionada con 'idatzi_escribir'
                             if (isset($_POST['b_gutuna_carta'])) {
                                 // Lógica después de hacer clic en el botón 'Ok'
-                                $Vista->erakutsiOpariak_mostrarRegalos($modelo->obtenerRegalosSegunFechaNacimiento($fechaNacimiento));
+                                $Vista->erakutsiOpariak_mostrarRegalos($modelo->obtenerRegalosSegunEdadYGrupo($fechaNacimiento));
                                 exit; // Evitar que se ejecute más código después de la redirección
                             }
                         } elseif (isset($_POST['opcion']) && $_POST['opcion'] == 'aldatu_cambiar') {
@@ -87,6 +87,7 @@ if (isset($_POST['accion'])) {
 
         case "registrar":
             $Vista->Alta_AukeraEman_Opcion();
+            break;
         case "Ok":
             $modelo->agregarUsuario(
                 $_POST['izena_nombre'],
