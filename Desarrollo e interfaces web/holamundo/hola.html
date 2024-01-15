@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOSCUMENT</title>  
+  </head>
+
+  <body ng-app="app" ng-controller="PruebaController">
+    <div ng-style="estilo">
+      <h1>{{mensaje}}</h1>
+    </div>
+    <br>
+    <button ng-click="CambiarColor()">ER COLO</button>
+    <br>
+    <label>Testua: </label>
+      <input type="text" placeholder="idatzi" ng-model="mensaje">
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="hola.js"></script>
+  </body>
+</html>
