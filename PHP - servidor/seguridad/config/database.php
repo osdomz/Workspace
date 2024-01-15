@@ -1,19 +1,14 @@
 <?php
-class Database {
-    private static $host = "localhost";
-    private static $dbname = "phpseguridad";
-    private static $username = "root";
-    private static $password = "";
+// database.php
 
-    public static function connect() {
-        try {
-            $pdo = new PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname, self::$username, self::$password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $pdo;
-        } catch (PDOException $e) {
-            die("Error de conexión: " . $e->getMessage());
-        }
-    }
+$host = "localhost";
+$dbname = "phpseguridad";
+$username = "root";
+$password = "";
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Error de conexión: " . $e->getMessage();
 }
-
-

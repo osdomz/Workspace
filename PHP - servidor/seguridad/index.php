@@ -1,40 +1,48 @@
 <?php
-// index.php
+echo $_SERVER['DOCUMENT_ROOT'];  // Muestra la raíz del documento web
+echo $_SERVER['REQUEST_URI'];    // Muestra la URI de la solicitud actual
+echo $_SERVER['PHP_SELF'];       // Muestra el nombre del archivo del script en ejecución
 
-// Autoload para cargar clases automáticamente
-spl_autoload_register(function ($className) {
-    require_once "controllers/$className.php";
-    require_once "models/$className.php";
-});
-
-// Iniciar la sesión
 session_start();
 
-// Enrutamiento
-$action = isset($_GET['action']) ? $_GET['action'] : 'login';
-$userController = new UserController();
+require_once('config/database.php');
+require_once('controllers/UserController.php');
 
-switch ($action) {
-    case 'login':
-        $userController->login();
-        break;
-    case 'signup':
-        $userController->signup();
-        break;
-    case 'dashboard':
-        // Asegurarse de que el usuario esté autenticado
-        if (!isset($_SESSION['user_id'])) {
-            header('Location: index.php?action=login');
-            exit();
-        }
-        include('../views/dashboard.php');
-        break;
-    case 'logout':
-        $userController->logout();
-        break;
-    default:
-        echo 'Ruta no válida';
+// Manejar la solicitud de inicio de sesión
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $userController = new UserController($conn);
+    if ($userController->loginUser($email, $password)) {
+        header('Location: views/dashboard.php');
+        exit;
+    } else {
+        echo "Login fallido. Verifica tus credenciales.";
+    }
 }
+?>
+
+<!-- views/login.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="../index.php" method="post">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
+
 
 
 

@@ -1,24 +1,18 @@
 <?php
 // models/UserModel.php
 
-class UserModel
-{
-    private $pdo;
+class UserModel {
+    private $conn;
 
-    public function __construct()
-    {
-        $dbConfig = require_once('../config/database.php');
-        $this->pdo = new PDO(
-            "mysql:host={$dbConfig['host']};dbname={$dbConfig['dbname']}",
-            $dbConfig['user'],
-            $dbConfig['password']
-        );
+    public function __construct($conn) {
+        $this->conn = $conn;
     }
 
-    public function getUserByEmail($email)
-    {
-        $stmt = $this->pdo->prepare("SELECT * FROM usuarios WHERE Email = ?");
-        $stmt->execute([$email]);
+    public function getUserByEmail($email) {
+        $stmt = $this->conn->prepare("SELECT * FROM usuarios WHERE Email = :email");
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
+
