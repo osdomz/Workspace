@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Camiones</title>
+    <link rel="stylesheet" href="css/gestion_camiones.css">
+</head>
+<body>
+
+<!-- Agregamos un encabezado h1 -->
+<h1>Gestión de Camiones</h1>
+
+<div id="truck-list">
+    <!-- Aquí se mostrarán los camiones -->
+</div>
+
+<div id="add-truck-form">
+    <h2>Agregar Nuevo Camión</h2>
+    <form id="truck-form">
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" required>
+
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" required>
+
+        <label for="ano">Año:</label>
+        <input type="number" id="ano" required>
+
+        <label for="imagen">Imagen URL:</label>
+        <input type="text" id="imagen" required>
+
+        <button type="submit">Agregar Camión</button>
+    </form>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/gestion_camiones.js"></script>
+<script src="js/angular.min_1.js" type="text/javascript"></script>
+</body>
+</html>
+    

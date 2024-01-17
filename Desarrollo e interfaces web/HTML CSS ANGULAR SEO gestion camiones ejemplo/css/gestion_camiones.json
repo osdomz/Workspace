@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "modelo": "Camión A",
+        "marca": "Marca X",
+        "ano": 2020,
+        "imagen": "img/camion1.jpeg"
+    },
+    {
+        "id": 2,
+        "modelo": "Camión B",
+        "marca": "Marca Y",
+        "ano": 2022,
+        "imagen": "img/camion2.jpeg"
+    },
+    {
+        "id": 3,
+        "modelo": "Camión D",
+        "marca": "Marca Z",
+        "ano": 2019,
+        "imagen": "img/camion3.jpeg"
+    }
+]
