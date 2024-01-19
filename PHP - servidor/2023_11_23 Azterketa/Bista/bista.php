@@ -89,23 +89,24 @@ class Login_Bista
 
     public function AukeraEmanErab_DarOpcionesUsuario()
     {
-
     ?>
         <form method="POST" action="controlador.php">
             <div>
                 <div>
                     <label><b>¿Qué es lo que quieres hacer?</b></label>
                 </div>
-
+    
                 <input type="radio" value="idatzi_escribir" name="opcion" />Gutuna idatzi / Escribir carta
                 <input type="radio" value="aldatu_cambiar" name="opcion" /> Gutuna aldatu / Cambiar carta
                 <br>
                 <br>
                 <input type="submit" value="Ok" name="b_gutuna_carta" />
+
             </div>
         </form>
     <?php
     }
+    
 
     public function AukeraEmanOlen_DarOpcionesOlen($ebailtzaileak_usuarios)
     {

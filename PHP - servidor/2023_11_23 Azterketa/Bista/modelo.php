@@ -43,10 +43,12 @@ class Model
 
     // Se actualizará la password en la base de datos
     public function actualizarPass($erab_usuario, $contrasena)
-    {
-        $sql = "UPDATE erabiltzaileak_usuarios SET pasahitza_contraseña = '$contrasena' WHERE erab_usuario = '$erab_usuario'";
-        return $this->mysqli->query($sql);
-    }
+{
+    $sql = "UPDATE erabiltzaileak_usuarios SET pasahitza_contraseña = ? WHERE erab_usuario = ?";
+    $stmt = $this->mysqli->prepare($sql);
+    $stmt->bind_param('ss', $contrasena, $erab_usuario);
+    return $stmt->execute();
+}
     public function balioztatuOlentzero($user)
     {
 
@@ -70,6 +72,30 @@ class Model
     }
     //////////////////////////////////////////////REGALOS//////////////////////////////////////////////
 
+    public function obtenerFechaNacimientoDesdeBD($usuarioID)
+    {
+        $sql = "SELECT jaiotze_data_fecha_nacimiento FROM erabiltzaileak_usuarios WHERE id = ?";
+        $stmt = $this->mysqli->prepare($sql);
+    
+        // Asegúrate de que el ID sea del tipo correcto
+        $stmt->bind_param('s', $usuarioID);
+    
+        $stmt->execute();
+        
+        // Vincula el resultado a una variable
+        $fechaNacimiento = $stmt->get_result();
+    
+        // Obtiene el resultado
+        $stmt->fetch();
+    
+        $stmt->close();
+    
+        // Crea un objeto DateTime a partir de la cadena de fecha
+        $fechaNacimiento = new DateTime($fechaNacimiento);
+    
+        return $fechaNacimiento;
+    }
+    
     private function calcularEdad($fechaNacimiento)
     {
         $fechaNacimientoObj = new DateTime($fechaNacimiento);
@@ -77,31 +103,7 @@ class Model
         $edad = $fechaNacimientoObj->diff($fechaActual)->y;
         return $edad;
     }
-    public function obtenerRegalosSegunEdadYGrupo($fechaNacimiento)
-    {
-        $edad = $this->calcularEdad($fechaNacimiento);
-        $grupoEdad = $this->determinarGrupoEdad($edad);
-
-        return $this->obtenerRegalosDesdeBD($grupoEdad);
-    }
-
-    // Modifica la función obtenerRegalosDesdeBD para que acepte el grupo de edad
-    public function obtenerRegalosDesdeBD($grupoEdad)
-    {
-        $sql = "SELECT * FROM opariak_regalos WHERE grupo_edad = ?";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param('s', $grupoEdad);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $regalos = array();
-        while ($row = $result->fetch_assoc()) {
-            $regalos[] = $row;
-        }
-        $stmt->close();
-        return $regalos;
-    }
-
-    // Agrega una función para determinar el grupo de edad según la clasificación que tienes
+    
     public function determinarGrupoEdad($edad)
     {
         if ($edad <= 7) {
@@ -114,6 +116,39 @@ class Model
             return "Desconocido";
         }
     }
-}
-
-  
+    
+    public function obtenerRegalosDesdeBD($grupoEdad)
+    {
+        $sql = "SELECT * FROM opariak_regalos WHERE adina_edad = ?";
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param('s', $grupoEdad);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $regalos = array();
+        while ($row = $result->fetch_assoc()) {
+            $regalos[] = $row;
+        }
+        $stmt->close();
+        return $regalos;
+    }
+    
+    public function obtenerRegalosSegunEdadYGrupo($fechaNacimiento)
+    {
+        if (isset($fechaNacimiento) && !empty($fechaNacimiento)) {
+            // Obtener la edad en años
+            $edad = $this->calcularEdad($fechaNacimiento);
+            // Determinar el grupo de edad
+            $grupoEdad = $this->determinarGrupoEdad($edad);
+            echo "Grupo de Edad: " . $grupoEdad; 
+            // Obtener los regalos según el grupo de edad
+            return $this->obtenerRegalosDesdeBD($grupoEdad);
+        } else {
+            // Manejar la situación cuando $fechaNacimiento no está definida o es vacía
+            echo '<h3 style="color: red;">Error: La fecha de nacimiento no está definida o es inválida.</h3>';
+            return array();  // Otra acción que debas realizar en este caso.
+        }
+    }
+    
+    // Función para calcular la edad
+   
+}    

@@ -25,23 +25,16 @@ if (isset($_POST['accion'])) {
                     // Redirigir a la vista correspondiente
                     if ($olentzero_MariDomingi == 0) {
                         $Vista->AukeraEmanErab_DarOpcionesUsuario();
+                        echo 'Estás aquí 1';
 
-                        // Verificar si se seleccionó "Gutuna idatzi / Escribir carta"
-                        if (isset($_POST['opcion']) && $_POST['opcion'] == 'idatzi_escribir') {
-                            // Lógica relacionada con 'idatzi_escribir'
-                            if (isset($_POST['b_gutuna_carta'])) {
-                                // Lógica después de hacer clic en el botón 'Ok'
-                                $Vista->erakutsiOpariak_mostrarRegalos($modelo->obtenerRegalosSegunEdadYGrupo($fechaNacimiento));
-                                exit; // Evitar que se ejecute más código después de la redirección
-                            }
-                        } elseif (isset($_POST['opcion']) && $_POST['opcion'] == 'aldatu_cambiar') {
-                            // Lógica para "aldatu_cambiar"
-                        }
                     
                     } elseif ($olentzero_MariDomingi == 1) {
                         $Vista->AukeraEmanOlen_DarOpcionesOlen($modelo->filtrarUsuarios());
+            
                     } else {
                         echo '<h3 style="color: red;">Error al obtener la información del usuario.</h3>';
+                        $Vista->Login();
+                
                     }
                 } else {
                     echo '<h3 style="color: red;">Inténtalo de nuevo, el usuario o la contraseña no son válidos.</h3>';
@@ -105,3 +98,46 @@ if (isset($_POST['accion'])) {
             break;
     }
 }
+
+// ... (código previo)
+
+if (isset($_POST['opcion'])) {
+    if ($_POST['opcion'] == 'idatzi_escribir') {
+        echo 'Estás aquí 2';
+
+        // Obtener la fecha de nacimiento del usuario desde la base de datos
+        $usuarioActual = $_SESSION['Usuario'];
+        echo 'Usuario: ' . $usuarioActual;
+
+        // Asegúrate de que la sesión del usuario está configurada correctamente
+        if (!empty($usuarioActual)) {
+            // Aquí deberías manejar la conexión a la base de datos, asegurándote de que $modelo->mysqli esté correctamente configurado
+            $fechaNacimiento = $modelo->obtenerFechaNacimientoDesdeBD($usuarioActual);
+            
+            // Verifica si se obtuvo la fecha de nacimiento correctamente
+            if ($fechaNacimiento !== false) {
+                echo 'Fecha de nacimiento: ' . $fechaNacimiento->format('Y-m-d');
+
+                // Mostrar los regalos según la edad y el grupo
+                $Vista->erakutsiOpariak_mostrarRegalos($modelo->obtenerRegalosSegunEdadYGrupo($regalos));
+
+                echo 'Número de Regalos: ' . count($regalos);
+            } else {
+                echo 'Error al obtener la fecha de nacimiento del usuario.';
+            }
+        } else {
+            echo 'Error: La sesión del usuario no está configurada correctamente.';
+        }
+    } elseif ($_POST['opcion'] == 'aldatu_cambiar') {
+        // Lógica para "aldatu_cambiar"
+        // Puedes agregar aquí el código necesario para cambiar la información
+    } else {
+        // Manejar otras opciones si es necesario
+    }
+} else {
+    // Manejar el caso en el que $_POST['opcion'] no está definido
+}
+
+
+
+
