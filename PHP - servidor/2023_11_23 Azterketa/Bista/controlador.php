@@ -9,6 +9,8 @@ $Vista = new Login_Bista;
 $modelo = new Model;
 $modelo->conectar();
 
+
+
 if (isset($_POST['accion'])) {
     switch ($_POST['accion']) {
         case "entrar":
@@ -26,15 +28,11 @@ if (isset($_POST['accion'])) {
                     if ($olentzero_MariDomingi == 0) {
                         $Vista->AukeraEmanErab_DarOpcionesUsuario();
                         echo 'Estás aquí 1';
-
-                    
                     } elseif ($olentzero_MariDomingi == 1) {
                         $Vista->AukeraEmanOlen_DarOpcionesOlen($modelo->filtrarUsuarios());
-            
                     } else {
                         echo '<h3 style="color: red;">Error al obtener la información del usuario.</h3>';
                         $Vista->Login();
-                
                     }
                 } else {
                     echo '<h3 style="color: red;">Inténtalo de nuevo, el usuario o la contraseña no son válidos.</h3>';
@@ -99,8 +97,6 @@ if (isset($_POST['accion'])) {
     }
 }
 
-// ... (código previo)
-
 if (isset($_POST['opcion'])) {
     if ($_POST['opcion'] == 'idatzi_escribir') {
         echo 'Estás aquí 2';
@@ -109,21 +105,50 @@ if (isset($_POST['opcion'])) {
         $usuarioActual = $_SESSION['Usuario'];
         echo 'Usuario: ' . $usuarioActual;
 
-        // Asegúrate de que la sesión del usuario está configurada correctamente
+        // Asegúrate de que la sesión del usuario esté configurada correctamente
         if (!empty($usuarioActual)) {
-            // Aquí deberías manejar la conexión a la base de datos, asegurándote de que $modelo->mysqli esté correctamente configurado
-            $fechaNacimiento = $modelo->obtenerFechaNacimientoDesdeBD($usuarioActual);
-            
-            // Verifica si se obtuvo la fecha de nacimiento correctamente
-            if ($fechaNacimiento !== false) {
-                echo 'Fecha de nacimiento: ' . $fechaNacimiento->format('Y-m-d');
+            try {
+                // Obtener la fecha de nacimiento
+                $fechaNacimiento = $modelo->obtenerFechaNacimientoDesdeBD($usuarioActual);
 
-                // Mostrar los regalos según la edad y el grupo
-                $Vista->erakutsiOpariak_mostrarRegalos($modelo->obtenerRegalosSegunEdadYGrupo($regalos));
+                // Obtener la cadena de fecha
+                $fechaNacimientoStr = $fechaNacimiento->format('Y-m-d');
+                echo 'Fecha en controller: ' . $fechaNacimientoStr;
 
-                echo 'Número de Regalos: ' . count($regalos);
-            } else {
-                echo 'Error al obtener la fecha de nacimiento del usuario.';
+                // Calcular la edad pasando la cadena de fecha a la función
+                $edad = $modelo->calcularEdad($fechaNacimientoStr);
+                echo 'Edad: ' . $edad;
+
+                // Verificar si la carta ya se ha completado previamente
+                $cartaCompletada = $modelo->verificarCartaCompletada($usuarioActual);
+
+                if (!$cartaCompletada) {
+                    // Mostrar los regalos según la edad y el grupo
+                    $regalos = $modelo->obtenerRegalosSegunEdadYGrupo($fechaNacimientoStr);
+
+                    // Muestra el formulario de regalos
+                    $Vista->erakutsiOpariak_mostrarRegalos($regalos);
+
+                    // Verificar si se ha enviado el formulario
+                    if (isset($_POST['b_eskariak_peticiones'])) {
+                        // Verificar si se ha seleccionado al menos un regalo
+                        if (isset($_POST['opariak']) && !empty($_POST['opariak'])) {
+                            $regalosElegidos = $_POST['opariak'];
+                            
+                            // Marcar la carta como completada y realizar la inserción en la base de datos
+                            $modelo->completarCarta($usuarioActual, $regalosElegidos);
+
+                            // Agrega un mensaje de éxito
+                            echo 'La carta se completó correctamente.';
+                        } else {
+                            echo 'Error: Debes seleccionar al menos un regalo.';
+                        }
+                    }
+                } else {
+                    echo 'Error: La carta ya ha sido completada previamente.';
+                }
+            } catch (Exception $e) {
+                echo 'Error: ' . $e->getMessage();
             }
         } else {
             echo 'Error: La sesión del usuario no está configurada correctamente.';

@@ -43,12 +43,12 @@ class Model
 
     // Se actualizará la password en la base de datos
     public function actualizarPass($erab_usuario, $contrasena)
-{
-    $sql = "UPDATE erabiltzaileak_usuarios SET pasahitza_contraseña = ? WHERE erab_usuario = ?";
-    $stmt = $this->mysqli->prepare($sql);
-    $stmt->bind_param('ss', $contrasena, $erab_usuario);
-    return $stmt->execute();
-}
+    {
+        $sql = "UPDATE erabiltzaileak_usuarios SET pasahitza_contraseña = ? WHERE erab_usuario = ?";
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param('ss', $contrasena, $erab_usuario);
+        return $stmt->execute();
+    }
     public function balioztatuOlentzero($user)
     {
 
@@ -74,20 +74,28 @@ class Model
 
     public function obtenerFechaNacimientoDesdeBD($usuarioID)
     {
-        $sql = "SELECT jaiotze_data_fecha_nacimiento FROM erabiltzaileak_usuarios WHERE id = ?";
+        $sql = "SELECT jaiotze_data_fecha_nacimiento FROM erabiltzaileak_usuarios WHERE erab_usuario = ?";
         $stmt = $this->mysqli->prepare($sql);
     
-        // Asegúrate de que el ID sea del tipo correcto
+        if (!$stmt) {
+            die('Error en la preparación de la consulta: ' . $this->mysqli->error);
+        }
+    
         $stmt->bind_param('s', $usuarioID);
-    
         $stmt->execute();
-        
+    
         // Vincula el resultado a una variable
-        $fechaNacimiento = $stmt->get_result();
+        $result = $stmt->get_result();
     
-        // Obtiene el resultado
-        $stmt->fetch();
+        if ($result->num_rows === 0) {
+            // No se encontró la fecha de nacimiento
+            return null;
+        }
     
+        // Obtén el valor de la fecha de nacimiento
+        $fechaNacimiento = $result->fetch_assoc()['jaiotze_data_fecha_nacimiento'];
+    
+        // Cierra la declaración preparada
         $stmt->close();
     
         // Crea un objeto DateTime a partir de la cadena de fecha
@@ -96,14 +104,23 @@ class Model
         return $fechaNacimiento;
     }
     
-    private function calcularEdad($fechaNacimiento)
+
+
+    public function calcularEdad($fechaNacimiento)
     {
+        // Asegúrate de que $fechaNacimiento es una cadena
+        if (!is_string($fechaNacimiento)) {
+            throw new InvalidArgumentException('La fecha de nacimiento debe ser una cadena.');
+        }
+    
         $fechaNacimientoObj = new DateTime($fechaNacimiento);
         $fechaActual = new DateTime();
         $edad = $fechaNacimientoObj->diff($fechaActual)->y;
         return $edad;
     }
     
+    
+
     public function determinarGrupoEdad($edad)
     {
         if ($edad <= 7) {
@@ -111,27 +128,30 @@ class Model
         } elseif ($edad >= 8 && $edad <= 14) {
             return "Nerabeak";
         } elseif ($edad >= 15) {
-            return "Gazteak";
+            return "Gazte";
         } else {
             return "Desconocido";
         }
     }
-    
-    public function obtenerRegalosDesdeBD($grupoEdad)
-    {
-        $sql = "SELECT * FROM opariak_regalos WHERE adina_edad = ?";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param('s', $grupoEdad);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $regalos = array();
-        while ($row = $result->fetch_assoc()) {
-            $regalos[] = $row;
-        }
-        $stmt->close();
-        return $regalos;
+
+    public function obtenerGrupoEdadDesdeBD($grupoEdad)
+{
+    $sql = "SELECT * FROM opariak_regalos WHERE adina_edad LIKE concat('%', ?, '%')";
+    $stmt = $this->mysqli->prepare($sql);
+    $stmt->bind_param('s', $grupoEdad);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $regalos = array();
+    while ($row = $result->fetch_assoc()) {
+        $regalos[$row['izena_nombre']] = $row['puntuazioa_puntuacion'];
     }
-    
+    $stmt->close();
+    echo 'Regalos: ' . print_r($regalos, true);
+    return $regalos;
+}
+ 
+
+
     public function obtenerRegalosSegunEdadYGrupo($fechaNacimiento)
     {
         if (isset($fechaNacimiento) && !empty($fechaNacimiento)) {
@@ -139,16 +159,57 @@ class Model
             $edad = $this->calcularEdad($fechaNacimiento);
             // Determinar el grupo de edad
             $grupoEdad = $this->determinarGrupoEdad($edad);
-            echo "Grupo de Edad: " . $grupoEdad; 
+            echo "Grupo de Edad: " . $grupoEdad;
             // Obtener los regalos según el grupo de edad
-            return $this->obtenerRegalosDesdeBD($grupoEdad);
+            return $this->obtenerGrupoEdadDesdeBD($grupoEdad);
         } else {
             // Manejar la situación cuando $fechaNacimiento no está definida o es vacía
             echo '<h3 style="color: red;">Error: La fecha de nacimiento no está definida o es inválida.</h3>';
-            return array();  // Otra acción que debas realizar en este caso.
+           // return array();  // Otra acción que debas realizar en este caso.
         }
     }
+
+    public function verificarCartaCompletada($usuarioID) {
+        $sql = "SELECT COUNT(*) as count FROM gutunak_cartas WHERE erab_usuario = ?";
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param('s', $usuarioID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows === 0) {
+            // El usuario no tiene carta existente
+            return false;
+        }
+
+        $count = $result->fetch_assoc()['count'];
+
+        // Cierra la declaración preparada
+        $stmt->close();
+
+        return $count > 0;
+    }
+
+    public function completarCarta($usuarioID, $opciones) {
+        // Verificar si el usuario ya tiene una carta existente
+        if ($this->verificarCartaCompletada($usuarioID)) {
+            // El usuario ya ha completado la carta previamente, mostrar un mensaje de error
+            throw new Exception('Error: La carta ya ha sido completada previamente.');
+        }
     
-    // Función para calcular la edad
+        // Obtener el año actual
+        $anoActual = date('Y');
+    
+        // Convertir las opciones a una cadena usando implode
+        $opcionesStr = implode(', ', $opciones);
+    
+        // El usuario no tiene una carta existente, proceder con la inserción
+        $sql = "INSERT INTO gutunak_cartas (erab_usuario, urtea, eskatutakoak_pedidos) VALUES (?, ?, ?)";
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param('sss', $usuarioID, $anoActual, $opcionesStr);
+        $stmt->execute();
    
+        // Cierra la declaración preparada
+        $stmt->close();
+    }
+    
 }    

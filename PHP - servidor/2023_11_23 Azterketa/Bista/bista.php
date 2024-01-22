@@ -162,7 +162,7 @@ class Login_Bista
     //Mostrará en pantalla el array asociativo dado.
     public function erakutsiOpariak_mostrarRegalos($zerrenda_asoziatiboa)
     {
-
+        echo 'Método erakutsiOpariak_mostrarRegalos llamado.';
     ?>
         <form method="POST" action="controlador.php">
             <label><b>Queridos Olentzero y Mari Domingi me gustaría que me traerais lo siguiente:</b></label>
@@ -172,7 +172,7 @@ class Login_Bista
             foreach ($zerrenda_asoziatiboa as $oparia_regalo => $puntuazioa_puntuacion) {
                 echo ($oparia_regalo . " " . $puntuazioa_puntuacion . " puntu/puntos");
             ?>
-                <input type="checkbox" name="opariak[]" value="<?php echo ($oparia_regalo); ?>">
+                <input type="radio" name="opariak[]" value="<?php echo ($oparia_regalo); ?>">
 
             <?php
             } ?>
