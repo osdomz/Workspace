@@ -128,22 +128,6 @@ if (isset($_POST['opcion'])) {
 
                     // Muestra el formulario de regalos
                     $Vista->erakutsiOpariak_mostrarRegalos($regalos);
-
-                    // Verificar si se ha enviado el formulario
-                    if (isset($_POST['b_eskariak_peticiones'])) {
-                        // Verificar si se ha seleccionado al menos un regalo
-                        if (isset($_POST['opariak']) && !empty($_POST['opariak'])) {
-                            $regalosElegidos = $_POST['opariak'];
-                            
-                            // Marcar la carta como completada y realizar la inserción en la base de datos
-                            $modelo->completarCarta($usuarioActual, $regalosElegidos);
-
-                            // Agrega un mensaje de éxito
-                            echo 'La carta se completó correctamente.';
-                        } else {
-                            echo 'Error: Debes seleccionar al menos un regalo.';
-                        }
-                    }
                 } else {
                     echo 'Error: La carta ya ha sido completada previamente.';
                 }
@@ -162,6 +146,42 @@ if (isset($_POST['opcion'])) {
 } else {
     // Manejar el caso en el que $_POST['opcion'] no está definido
 }
+
+// Antes de cualquier estructura condicional en tu controlador, define $regalosElegidos
+$regalosElegidos = array(); // O inicializa con el valor que necesites
+
+if (!empty($_SESSION['Usuario'])) {
+    $usuarioActual = $_SESSION['Usuario'];
+    // Resto de tu código...
+
+    // Verificar si se ha enviado el formulario
+    if (isset($_POST['b_eskariak_peticiones'])) {
+        // Verificar si se ha seleccionado al menos un regalo
+        if (isset($_POST['opariak']) && !empty($_POST['opariak'])) {
+            $regalosElegidos = $_POST['opariak'];
+
+            // Aquí deberías tener $usuarioActual y $puntosNecesarios definidos
+            try {
+                $puntosNecesarios = $modelo->calcularPuntosNecesarios($regalosElegidos);
+                $modelo->completarCarta($usuarioActual, $regalosElegidos, $puntosNecesarios);
+
+                // Agrega un mensaje de éxito
+                echo 'La carta se completó correctamente.';
+            } catch (Exception $e) {
+                echo 'Error: ' . $e->getMessage();
+            }
+        } else {
+            echo 'Error: Debes seleccionar al menos un regalo.';
+        }
+    }
+
+    // Resto de tu código...
+} else {
+    echo 'Error: La sesión del usuario no está configurada correctamente.';
+}
+
+
+
 
 
 

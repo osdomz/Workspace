@@ -189,6 +189,27 @@ class Model
         return $count > 0;
     }
 
+    public function verificarPuntosSuficientes($usuarioID, $puntosNecesarios) {
+        $sql = "SELECT puntuazioa_puntuacion FROM erabiltzaileak_usuarios WHERE erab_usuario = ?";
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param('s', $usuarioID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if ($result->num_rows === 0) {
+            // El usuario no existe
+            throw new Exception('Error: El usuario no existe.');
+        }
+    
+        $usuarioPuntos = $result->fetch_assoc()['puntuazioa_puntuacion'];
+    
+        // Cierra la declaración preparada
+        $stmt->close();
+    
+        return $usuarioPuntos >= $puntosNecesarios;
+    }
+    
+
     public function completarCarta($usuarioID, $opciones) {
         // Verificar si el usuario ya tiene una carta existente
         if ($this->verificarCartaCompletada($usuarioID)) {
@@ -202,14 +223,73 @@ class Model
         // Convertir las opciones a una cadena usando implode
         $opcionesStr = implode(', ', $opciones);
     
-        // El usuario no tiene una carta existente, proceder con la inserción
+        // Calcular los puntos necesarios antes de la inserción
+        $puntosNecesarios = $this->calcularPuntosNecesarios($opciones);
+    
+        // Proceder con la inserción de la carta
         $sql = "INSERT INTO gutunak_cartas (erab_usuario, urtea, eskatutakoak_pedidos) VALUES (?, ?, ?)";
         $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param('sss', $usuarioID, $anoActual, $opcionesStr);
-        $stmt->execute();
-   
-        // Cierra la declaración preparada
-        $stmt->close();
+    
+        // Verificar si la preparación de la consulta fue exitosa
+        if ($stmt) {
+            $stmt->bind_param('sss', $usuarioID, $anoActual, $opcionesStr);
+            $stmt->execute();
+            $stmt->close();
+    
+            // Restar los puntos al usuario solo si $puntosNecesarios está definido
+            if (isset($puntosNecesarios)) {
+                $this->restarPuntosUsuario($usuarioID, $puntosNecesarios);
+            }
+        } else {
+            // Si hay un error en la preparación de la consulta, lanzar una excepción
+            throw new Exception('Error: No se pudo preparar la consulta para completar la carta.');
+        }
     }
     
-}    
+    
+    private function restarPuntosUsuario($usuarioID, $puntos) {
+        $sql = "UPDATE erabiltzaileak_usuarios SET puntuazioa_puntuacion = puntuazioa_puntuacion - ? WHERE erab_usuario = ?";
+        $stmt = $this->mysqli->prepare($sql);
+    
+        if ($stmt) {
+            $stmt->bind_param('ss', $puntos, $usuarioID);
+            $stmt->execute();
+            $stmt->close();
+        } else {
+            throw new Exception('Error: No se pudo preparar la consulta para restar puntos al usuario.');
+        }
+    }
+    
+    public function calcularPuntosNecesarios($opciones) {
+        // Inicializar la suma de puntos
+        $totalPuntos = 0;
+    
+        // Consultar la base de datos para obtener los puntos de cada regalo seleccionado
+        foreach ($opciones as $regalo) {
+            $sql = "SELECT puntuazioa_puntuacion FROM opariak_regalos WHERE izena_nombre = ?";
+            $stmt = $this->mysqli->prepare($sql);
+    
+            if ($stmt) {
+                $stmt->bind_param('s', $regalo);
+                $stmt->execute();
+                $result = $stmt->get_result();
+    
+                if ($result->num_rows > 0) {
+                    $puntosRegalo = $result->fetch_assoc()['puntuazioa_puntuacion'];
+                    $totalPuntos += $puntosRegalo;
+                } else {
+                    // Manejar el caso cuando el regalo no está en la base de datos
+                    throw new Exception('Error: El regalo "' . $regalo . '" no está en la base de datos.');
+                }
+    
+                $stmt->close();
+            } else {
+                // Manejar el caso cuando la preparación de la consulta falla
+                throw new Exception('Error: No se pudo preparar la consulta para obtener los puntos del regalo.');
+            }
+        }
+    
+        return $totalPuntos;
+    }
+    
+}     
