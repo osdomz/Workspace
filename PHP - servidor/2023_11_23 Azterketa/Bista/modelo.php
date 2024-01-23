@@ -291,5 +291,32 @@ class Model
     
         return $totalPuntos;
     }
+
+    // En tu clase de modelo (Model.php)
+
+public function cambiarRegaloCarta($usuarioID, $nuevoRegalo)
+{
+    // Verificar si el usuario tiene una carta existente
+    if ($this->verificarCartaCompletada($usuarioID)) {
+        try {
+            // Actualizar el regalo en la tabla de pedidos
+            $sql = "UPDATE gutunak_cartas SET eskatutakoak_pedidos = ? WHERE erab_usuario = ?";
+            $stmt = $this->mysqli->prepare($sql);
+
+            if ($stmt) {
+                $stmt->bind_param('ss', $nuevoRegalo, $usuarioID);
+                $stmt->execute();
+                $stmt->close();
+            } else {
+                throw new Exception('Error: No se pudo preparar la consulta para cambiar el regalo.');
+            }
+        } catch (Exception $e) {
+            throw new Exception('Error al cambiar el regalo de la carta: ' . $e->getMessage());
+        }
+    } else {
+        throw new Exception('Error: El usuario no tiene una carta existente para cambiar el regalo.');
+    }
+}
+
     
 }     
