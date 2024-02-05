@@ -95,7 +95,7 @@ class Login_Bista
                 <div>
                     <label><b>¿Qué es lo que quieres hacer?</b></label>
                 </div>
-    
+
                 <input type="radio" value="idatzi_escribir" name="opcion" />Gutuna idatzi / Escribir carta
                 <input type="radio" value="aldatu_cambiar" name="opcion" /> Gutuna aldatu / Cambiar carta
                 <br>
@@ -106,7 +106,7 @@ class Login_Bista
         </form>
     <?php
     }
-    
+
 
     public function AukeraEmanOlen_DarOpcionesOlen($ebailtzaileak_usuarios)
     {
@@ -118,7 +118,7 @@ class Login_Bista
                     <label><b>¿A qué usuario quieres le quieres asignar acciones? </b></label>
                 </div>
                 <?php
-                echo '<select name="erab_usuario">';
+                echo '<select name="Erab_usuario">';
                 foreach ($ebailtzaileak_usuarios as $user) {
 
                     echo '<option value="' . $user . '">' . $user . '</option>';
@@ -180,7 +180,7 @@ class Login_Bista
             <input type="submit" value="Ok" name="b_eskariak_peticiones" />
         </form>
 
-    <?php 
-    
+<?php
+
     }
 }
