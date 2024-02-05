@@ -5,7 +5,7 @@ class Model
 
     private $mysqli;
 
-    // Función para realizar la conexión
+
     public function conectar()
     {
         try {
