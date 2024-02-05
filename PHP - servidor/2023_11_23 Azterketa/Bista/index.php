@@ -16,8 +16,9 @@ echo "<p>La direccion del servidor es:  ".$_SERVER['REMOTE_ADDR']."</p>";
 echo "<p>El puerto por el que el servidor transmite la pagina es:  ".$_SERVER['SERVER_PORT']."</p>";
 echo "<p>Cabecera de la peticion actual es:  ".$_SERVER['HTTP_HOST']."</p>";
 
-if (isset($_COOKIE['username'])) {
-    echo "¡Bienvenido, " . $_COOKIE['username'] . "!";
-} else {
-    echo "¡Bienvenido!";
-}
+ // Imprimir el valor de la cookie para depuración
+ echo "Valor de la cookie 'username': " . $_COOKIE['username'];
+ // Aquí puedes agregar el contenido de tu área de usuario
+ echo "¡Adiós, " . $_COOKIE['username'] . "!";
+
+

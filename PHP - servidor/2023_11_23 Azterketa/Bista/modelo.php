@@ -213,38 +213,52 @@ class Model
     public function completarCarta($usuarioID, $opciones) {
         // Verificar si el usuario ya tiene una carta existente
         if ($this->verificarCartaCompletada($usuarioID)) {
-            // El usuario ya ha completado la carta previamente, mostrar un mensaje de error
-            throw new Exception('Error: La carta ya ha sido completada previamente.');
+            // Si el usuario ya ha completado la carta previamente, actualizar la carta existente
+            return $this->actualizarCarta($usuarioID, $opciones);
         }
     
-        // Obtener el año actual
+        // El usuario no ha completado la carta previamente, proceder con la creación de una nueva carta
         $anoActual = date('Y');
-    
-        // Convertir las opciones a una cadena usando implode
         $opcionesStr = implode(', ', $opciones);
-    
-        // Calcular los puntos necesarios antes de la inserción
         $puntosNecesarios = $this->calcularPuntosNecesarios($opciones);
     
-        // Proceder con la inserción de la carta
         $sql = "INSERT INTO gutunak_cartas (erab_usuario, urtea, eskatutakoak_pedidos) VALUES (?, ?, ?)";
         $stmt = $this->mysqli->prepare($sql);
     
-        // Verificar si la preparación de la consulta fue exitosa
         if ($stmt) {
             $stmt->bind_param('sss', $usuarioID, $anoActual, $opcionesStr);
             $stmt->execute();
             $stmt->close();
     
-            // Restar los puntos al usuario solo si $puntosNecesarios está definido
             if (isset($puntosNecesarios)) {
                 $this->restarPuntosUsuario($usuarioID, $puntosNecesarios);
             }
         } else {
-            // Si hay un error en la preparación de la consulta, lanzar una excepción
             throw new Exception('Error: No se pudo preparar la consulta para completar la carta.');
         }
     }
+    
+    // Función para actualizar una carta existente
+    private function actualizarCarta($usuarioID, $opciones) {
+        $opcionesStr = implode(', ', $opciones);
+        $puntosNecesarios = $this->calcularPuntosNecesarios($opciones);
+    
+        $sql = "UPDATE gutunak_cartas SET eskatutakoak_pedidos = ? WHERE erab_usuario = ?";
+        $stmt = $this->mysqli->prepare($sql);
+    
+        if ($stmt) {
+            $stmt->bind_param('ss', $opcionesStr, $usuarioID);
+            $stmt->execute();
+            $stmt->close();
+    
+            if (isset($puntosNecesarios)) {
+                $this->restarPuntosUsuario($usuarioID, $puntosNecesarios);
+            }
+        } else {
+            throw new Exception('Error: No se pudo preparar la consulta para actualizar la carta existente.');
+        }
+    }
+    
     
     
     private function restarPuntosUsuario($usuarioID, $puntos) {

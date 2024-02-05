@@ -17,37 +17,36 @@ if (isset($_POST['accion'])) {
             // Validar el inicio de sesión
             $submittedUsername = $_POST['erab_usuario'];
             $submittedPassword = $_POST['password_usuario'];
-    
-            // Comparar con las credenciales correctas (en este caso, 'nahia' y '111')
+
             if ($modelo->validarInicioSesion($submittedUsername, $submittedPassword)) {
                 $_SESSION["validado"] = true;
                 $_SESSION["Usuario"] = $submittedUsername;
                 echo '<h3 style="color: green;">Bienvenido ' . $submittedUsername . ' </h3>';
-    
+
                 // Comparar las credenciales para establecer la cookie y redirigir
                 if ($submittedUsername === 'Olen' && $submittedPassword === '111') {
                     // Establecer la cookie para el nombre de usuario
-                    setcookie('username', $submittedUsername, time() + 10, "/"); // 10 segundos
+                    setcookie('username', $submittedUsername, time() + 60, "/"); // 3600 segundos = 1 hora
                     echo '<h3 style="color: black;">Bienvenido ' . $submittedUsername . ' cookie activada. </h3>';
-                    
-                    // Redirigir a la vista correspondiente después de 10 segundos
                     header("refresh:10;url=index.php");
+                    
                 } else {
                     echo '<h3 style="color: black;">Usuario ' . $submittedUsername . ' no requiere cookie. </h3>';
                 }
-    
+
                 // Obtener el valor de olentzero_MariDomingi desde la base de datos
                 $olentzero_MariDomingi = $modelo->balioztatuOlentzero($_SESSION['Usuario']);
-    
+
                 // Redirigir a la vista correspondiente
                 if ($olentzero_MariDomingi == 0) {
                     $Vista->AukeraEmanErab_DarOpcionesUsuario();
                     echo 'Estás aquí 1';
-                    echo "¡Bienvenido, " . $_COOKIE['username'] . "!";
+
                     // Mostrar mensaje de bienvenida directamente
                 } elseif ($olentzero_MariDomingi == 1) {
+                    // Verificar si la cookie está presente
                     echo 'Estás aquí 2';
-                    echo "¡Bienvenido, " . $_COOKIE['username'] . "!";
+
                     $Vista->AukeraEmanOlen_DarOpcionesOlen($modelo->filtrarUsuarios());
                 } else {
                     echo '<h3 style="color: red;">Error al obtener la información del usuario.</h3>';
@@ -148,13 +147,50 @@ if (isset($_POST['opcion'])) {
     } elseif ($opcion == 'aldatu_cambiar') {
         // Lógica para "aldatu_cambiar"
         // Puedes agregar aquí el código necesario para cambiar la información
+    
+        // Obtener el usuario actual de la sesión
+        $usuarioActual = $_SESSION['Usuario'];
+    
+        // Verificar si el usuario tiene una carta creada
+        $cartaCompletada = $modelo->verificarCartaCompletada($usuarioActual);
+    
+        if ($cartaCompletada) {
+            // El usuario tiene una carta creada, permitir cambios
+    
+            try {
+                // Obtener la fecha de nacimiento del usuario desde la base de datos
+                $fechaNacimiento = $modelo->obtenerFechaNacimientoDesdeBD($usuarioActual);
+                $fechaNacimientoStr = $fechaNacimiento->format('Y-m-d');
+    
+                // Mostrar los regalos según la edad y el grupo
+                $regalos = $modelo->obtenerRegalosSegunEdadYGrupo($fechaNacimientoStr);
+    
+                // Muestra el formulario de regalos
+                $Vista->erakutsiOpariak_mostrarRegalos($regalos);
+    
+                // Verificar si se han enviado nuevos datos desde el formulario
+                if (isset($_POST['nuevos_datos'])) {
+                    // Obtener los nuevos datos del formulario después de que el usuario selecciona los regalos
+                    $nuevosDatos = $_POST['nuevos_datos'];
+    
+                    // Actualizar la información en la base de datos con los nuevos datos
+                    $modelo->cambiarRegaloCarta($usuarioActual, $nuevosDatos);
+    
+                    echo 'La información de la carta ha sido actualizada correctamente.';
+                } else {
+                    echo 'Por favor, selecciona nuevos regalos antes de actualizar la información.';
+                }
+            } catch (Exception $e) {
+                echo 'Error al actualizar la información de la carta: ' . $e->getMessage();
+            }
+        } else {
+            // El usuario no tiene carta creada, mostrar mensaje
+            echo 'No tienes cartas creadas. Por favor, crea una carta antes de realizar cambios.';
+        }
     } else {
         // Manejar otras opciones si es necesario
     }
-} else {
-    // Manejar el caso en el que $_POST['opcion'] no está definido
-}
-
+}       
 // Antes de cualquier estructura condicional en tu controlador, define $regalosElegidos
 $regalosElegidos = array(); // O inicializa con el valor que necesites
 
@@ -181,8 +217,6 @@ if (!empty($_SESSION['Usuario'])) {
             echo 'Error: Debes seleccionar al menos un regalo.';
         }
     }
-
-    // Resto de tu código...
 } else {
     echo 'Error: La sesión del usuario no está configurada correctamente.';
 }
