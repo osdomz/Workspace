@@ -31,7 +31,7 @@ class vista_Tienda
 
     public function opcionesCliente()
     {
-?>
+    ?>
         <form method="POST" action="controlador.php">
             <div>
                 <label><b>Opciones para Cliente</b></label><br>
@@ -51,38 +51,38 @@ class vista_Tienda
             <br>
             <input type="submit" name="accion" value="opciones_cliente" />
         </form>
-<?php
+    <?php
     }
     public function opcionesAdmin()
-{
-?>
-    <form method="POST" action="controlador.php">
-        <div>
-            <label><b>Opciones para Administrador</b></label><br>
+    {
+    ?>
+        <form method="POST" action="controlador.php">
+            <div>
+                <label><b>Opciones para Administrador</b></label><br>
 
-            <label for="opcion_usuarios"><b>Seleccione la opción para Usuarios:</b></label>
-            <select id="opcion_usuarios" name="opcion_usuarios">
-                <option value="crear_usuario">Crear Usuario</option>
-                <option value="ver_usuarios">Ver Usuarios Clientes</option>
-                <option value="actualizar_usuario">Actualizar Datos de Usuario</option>
-                <option value="eliminar_usuario">Eliminar Usuario</option>
-            </select>
+                <label for="opcion_usuarios"><b>Seleccione la opción para Usuarios:</b></label>
+                <select id="opcion_usuarios" name="opcion_usuarios">
+                    <option value="crear_usuario">Crear Usuario</option>
+                    <option value="ver_usuarios">Ver Usuarios Clientes</option>
+                    <option value="actualizar_usuario">Actualizar Datos de Usuario</option>
+                    <option value="eliminar_usuario">Eliminar Usuario</option>
+                </select>
 
+                <br>
+
+                <label for="opcion_productos"><b>Seleccione la opción para Productos:</b></label>
+                <select id="opcion_productos" name="opcion_productos">
+                    <option value="crear_producto">Crear Producto</option>
+                    <option value="ver_productos">Ver Productos</option>
+                    <option value="actualizar_producto">Actualizar Datos de Producto</option>
+                    <option value="eliminar_producto">Eliminar Producto</option>
+                </select>
+            </div>
             <br>
-
-            <label for="opcion_productos"><b>Seleccione la opción para Productos:</b></label>
-            <select id="opcion_productos" name="opcion_productos">
-                <option value="crear_producto">Crear Producto</option>
-                <option value="ver_productos">Ver Productos</option>
-                <option value="actualizar_producto">Actualizar Datos de Producto</option>
-                <option value="eliminar_producto">Eliminar Producto</option>
-            </select>
-        </div>
-        <br>
-        <input type="submit" name="accion" value="opciones_admin" />
-    </form>
-<?php
-}
+            <input type="submit" name="accion" value="opciones_admin" />
+        </form>
+    <?php
+    }
 
     public function Reponer()
     {
@@ -108,6 +108,26 @@ class vista_Tienda
                 <input type="submit" name="accion" value="reponer" />
             </div>
         </form>
+    <?php
+    }
+
+    public function captcha($imagePath)
+    {
+    ?>
+        <body>
+            <h1>CAPTCHA ausazko irudiak</h1>
+            <img src="<?php echo $imagePath; ?>" alt="CAPTCHA Irudia">
+
+            <!-- Aquí se podría agregar un formulario para que el usuario introduzca el texto de la imagen -->
+            <form method="POST" action="controlador.php" >
+                <label for="captchaInput">Sartu irudiaren testua:</label>
+                <input type="text" name="captchaInput" id="captchaInput" required>
+                <button type="submit" name="captcha" value="validar">Verificar</button>
+            </form>
+        </body>
+
+        </html>
+
 <?php
     }
 }

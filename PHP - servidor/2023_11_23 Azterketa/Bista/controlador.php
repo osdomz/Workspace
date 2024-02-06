@@ -23,15 +23,6 @@ if (isset($_POST['accion'])) {
                 $_SESSION["Usuario"] = $submittedUsername;
                 echo '<h3 style="color: green;">Bienvenido ' . $submittedUsername . ' </h3>';
 
-                // Comparar las credenciales para establecer la cookie y redirigir
-                if ($submittedUsername === 'Olen' && $submittedPassword === '111') {
-                    // Establecer la cookie para el nombre de usuario
-                    setcookie('username', $submittedUsername, time() + 60, "/"); // 3600 segundos = 1 hora
-                    echo '<h3 style="color: black;">Bienvenido ' . $submittedUsername . ' cookie activada. </h3>';
-                    header("refresh:3600;url=index.php");
-                } else {
-                    echo '<h3 style="color: black;">Usuario ' . $submittedUsername . ' no requiere cookie. </h3>';
-                }
 
                 // Obtener el valor de olentzero_MariDomingi desde la base de datos
                 $olentzero_MariDomingi = $modelo->balioztatuOlentzero($_SESSION['Usuario']);

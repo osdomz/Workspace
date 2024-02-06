@@ -46,6 +46,27 @@ class modelo_Tienda
         } else {
             return null;
         }
-    }}
+    }
+    public function obtenerCaptcha(){
+        
+        $query = "SELECT result, image_path FROM captchas ORDER BY RAND() LIMIT 1";
+        $conn = $this->mysqli;
+        $result = $conn->query($query);
+            
+        if ($result && $result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $captchaId = $row["id"];
+            $imagePath = $row['image_path']; // Ajusta la ruta de la imagen aquí
+            $captchaResult = $row['result']; // Ajusta el nombre del campo según tu base de datos
+            $array = array('path' => $imagePath, 'id' => $captchaId);
+            return $array;
+            // Aquí puedes usar $captchaId y $imagePath según sea necesario
+        } else {
+            // Si no se encontraron imágenes CAPTCHA en la base de datos
+            echo "Error: No se encontraron imágenes CAPTCHA en la DB.";
+            exit;
+        }
+    }
+}    
     
 
