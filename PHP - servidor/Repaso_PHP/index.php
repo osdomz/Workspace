@@ -1,15 +1,15 @@
 <?php
 
-include_once './View/vista.php';
-include_once './Model/modelo.php';
+include_once 'vista.php';
+include_once 'modelo.php';
 
 // Guarda el estado del inicio de sesión.
 session_start();
 $_SESSION["validado"] = FALSE;
 
 // Cargar el formulario inicial
-$VistaInicio = new Vista_Tienda();
-$VistaInicio->Login();
+$vistaInicio = new vista_Tienda();
+$vistaInicio->Login();
 
 echo "<p>El nombre del servidor es:  ".$_SERVER['SERVER_NAME']."</p>";
 echo "<p>La direccion del servidor es:  ".$_SERVER['REMOTE_ADDR']."</p>";
