@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/paisaje.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Calisto MT;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo img {
+    width: 100px; 
+    float: left;
+}
+
+.logo span {
+    font-size: 24px;
+
+}
+
+.card {
+    width: 327px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 2);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.card h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.card a {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.botones {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.botones .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.botones .btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+
+
+form label {
+    font-size: 14px;
+}
+
+
+.submit-cnt {
+    text-align: center;
+}
+
+.submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+login-form input,
+#formLogin input,
+#formLogin label,
+#formLogin label {
+  margin: 10px;
+  padding: 10px; 
+width: 90%;
+font-weight: bold;
+
+
+}
+.submit{
+    background-color: #ccc;
+    color: #000000;
+}
+
+
+

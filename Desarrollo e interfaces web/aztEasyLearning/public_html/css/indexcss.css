@@ -1,0 +1,141 @@
+
+body {
+    background-image: url('../images/fondoEstrellas.png');
+    background-size: cover;
+   
+  }
+  
+
+  header.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #ffffff
+    
+  }
+  
+  .nav-izda {
+    display: flex;
+    align-items: center;
+    
+  }
+
+  .nav-dcha {
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo img {
+    width: 125px;
+    height: 75px;
+  }
+  
+  .nav-dcha ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-dcha ul li {
+    display: inline;
+  }
+  
+  .nav-dcha a {
+    text-decoration: none;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 50px;
+  }
+  
+  .nav-dcha ul li a:hover {
+    background-color: #2e518b;
+    color: white;
+  }
+
+  
+  .boton  {
+   
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  .boton a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #2e518b;
+  }
+  
+  .boton a:hover {
+    background-color: white;
+    color: #2e518b;
+  }
+  
+
+  #centro {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+  }
+  
+  .centro-izda img {
+    margin-top : 200px;
+    width: 800px; 
+  }
+  
+  .centro-dcha {
+    margin-left: 20px;
+  }
+
+.centro-dcha h1 {
+  font-size: 24px;
+  color: #ffffff
+}
+
+.centro-dcha #text {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  header.container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav-izda{
+    align-self: self-start;
+  }
+  .nav-dcha {
+      justify-content: center;
+      
+  }
+
+  .nav-dcha ul li {
+      margin-right: 8px;
+  }
+
+  #logo img {
+      width: 80px;
+  }
+
+  #centro {
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .centro-izda img {
+      display: none;
+  }
+
+  .centro-dcha {
+      justify-content: center;
+      text-align: center;
+    
+  }
+  .centro-dcha button{
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  
+}
+
+}
