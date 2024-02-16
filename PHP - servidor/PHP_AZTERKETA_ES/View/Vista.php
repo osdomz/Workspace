@@ -13,9 +13,9 @@ class Vista {
             <br>
             Contraseña: <input type="password" name="password">
             <br>
-            <input type="submit" name="accion" value="Validar">
-            <input type="submit" name="accion" value="Alta">
-            <input type="submit" name="accion" value="Cambiar">
+            <input type="submit" name="validarusuario" value="Validar">
+            <input type="submit" name="daralta" value="Alta">
+            <input type="submit" name="cambiarcontra" value="Cambiar">
         </form>
 
         <?php
