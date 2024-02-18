@@ -9,7 +9,18 @@ app.controller('AnimalController', function ($scope, $http) {
     // Cargar el arreglo de animales desde el archivo JSON
     $http.get('json/animales.json')
         .then(function (response) {
-            $scope.animals = response.data;
+            $scope.animals = response.data.map(function (animal) {
+                return {
+                    id: animal.id,
+                    tipo: animal.tipo,
+                    answered: false, // Aquí cambia de "false" a false
+                    correcto: animal.correcto,
+                    imgAnimal: animal.imgAnimal,
+                    R1: animal.R1,
+                    R2: animal.R2,
+                    R3: animal.R3,
+                };
+            });
 
             $scope.animalsChuleta = $scope.animals.map(function (animal) {
                 var correctDato = "R" + ++animal.correcto;
@@ -57,7 +68,7 @@ app.controller('AnimalController', function ($scope, $http) {
             return elemento.id === id;
         });
 
-        if (elementoDeDatos.answered == "false") {
+        if (!elementoDeDatos.answered) {
             var correctIndex = "R" + elementoDeDatos.correcto++;
             var correctAnimalName = elementoDeDatos[correctIndex];
 
@@ -91,7 +102,7 @@ app.controller('AnimalController', function ($scope, $http) {
 
     $scope.resetGame = function () {
         $scope.animals.forEach(function (animal) {
-            animal.answered = "false";
+            animal.answered = false; // Reinicializa answered a false
         });
         $scope.results = {};
         $scope.gameStarted = false;

@@ -1,40 +1,78 @@
+var nameInput = document.getElementById("nombre");
+var edadInput = document.getElementById("edad");
+var correoInput = document.getElementById("email");
+var estudiosInput = document.getElementById("estudios");
+var checkInput = document.getElementById("acepto");
+var form = document.getElementById("pago");
 
-document.addEventListener("DOMContentLoaded", function() {
-    var nombreInput = document.getElementById("nombre");
-    var edadInput = document.getElementById("edad");
-    var estudiosSelect = document.getElementById("estudios");
-    var aceptoCheckbox = document.getElementById("acepto");
-    var form = document.forms["pago"];
 
-    nombreInput.addEventListener("blur", function() {
-        var nombre = nombreInput.value;
-        if (nombre.length < 2) {
-            alert("El nombre debe contener al menos dos caracteres.");
-        }
-    });
+nameInput.addEventListener("input", function () {
+    var regexNombre = /^[a-zA-Z]{2,15}$/;
+    var regexDigitos = /\d/;
+    var mensaje = "";
 
-    edadInput.addEventListener("blur", function() {
-        var edad = edadInput.value;
-        if (isNaN(edad) || edad < 10 || edad > 100) {
-            alert("La edad debe ser un número entre 10 y 100.");
-        }
-    });
+    if (regexDigitos.test(nameInput.value)) {//el test es para ver si cumple con la expresión regular rexexDigitos
+        console.log("numeros")
+        mensaje = "No puede contener números";
+        nameInput.value = nameInput.value.slice(0, -1); //quita la ultima letra que se haya escrito si es un número
 
-    estudiosSelect.addEventListener("change", function() {
-        var estudios = estudiosSelect.value;
-        if (estudios === "") {
-            alert("Debes seleccionar un elemento en el combo de estudios.");
-        }
-    });
+    } else if (!regexNombre.test(nameInput.value)) {
+        mensaje = "El nombre debe contener un mínimo dos caracteres";
 
-    aceptoCheckbox.addEventListener("change", function() {
-        if (!aceptoCheckbox.checked) {
-            alert("Debes aceptar las condiciones.");
-        }
-    });
+    } else {
+        console.log("Nombre válido");
+    }
 
-    form.addEventListener("submit", function() {
-        alert("Formulario enviado");
-    });
+    nameInput.setCustomValidity(mensaje); // si el mensaje está vacío, el campo es válido, si no, no es válido
 });
 
+edadInput.addEventListener("input", function () {
+    var regexLetras = /[a-zA-Z]/;
+    var regexDigitos = /\d/;
+    var mensaje = "";
+
+    if (regexLetras.test(edadInput.value)) {
+        console.log("letras");
+        edadInput.value = edadInput.value.slice(0, -1);
+
+    } else if (regexDigitos.test(edadInput.value)) {
+        if (edadInput.value >= 10 && edadInput.value <= 100) {
+            console.log("Válido");
+        } else {
+            mensaje = "La edad debe ser mayor o igual que 10 y menor e igual que 100";
+        }
+
+    } else {
+        console.log("Edad no válida");
+    }
+
+    edadInput.setCustomValidity(mensaje);
+});
+
+correoInput.addEventListener("blur", function () {
+    var regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var mensaje = "";
+    if (!regexCorreo.test(correoInput.value)) {
+        mensaje = "El correo no tiene un formato válido";
+    } else {
+        console.log("Correo válido")
+    }
+    correoInput.setCustomValidity(mensaje);
+});
+
+form.addEventListener("submit", function (event) {
+    var mensaje = "";
+
+    if (estudiosInput.value === "") {
+        mensaje += "Debes seleccionar un elemento en el combo estudios.\n";
+    }
+
+    if (!checkInput.checked) {
+        mensaje += "Debes aceptar las condiciones.\n";
+    }
+
+    if (mensaje !== "") {
+        event.preventDefault(); //cancela el envío del formulario si hay errores
+        alert(mensaje);
+    }
+});
