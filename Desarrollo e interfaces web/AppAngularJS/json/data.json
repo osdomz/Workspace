@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Imagen 1",
+        "image": "img/images1.jpg",
+        "description": "Descripción de la imagen 1"
+    },
+    {
+        "name": "Imagen 2",
+        "image": "img/images2.jpg",
+        "description": "Descripción de la imagen 2"
+    },
+    {
+        "name": "Imagen 3",
+        "image": "img/images3.jpg",
+        "description": "Descripción de la imagen 3"
+    }
+]
