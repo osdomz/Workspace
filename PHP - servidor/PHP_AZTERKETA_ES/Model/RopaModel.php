@@ -16,18 +16,6 @@ class RopaModelo
         }
     }
 
-    // Función para validar el inicio de sesión con la base de datos
-    public function validarSesion($usuario, $contrasena)
-    {
-        $sql = "SELECT * FROM usuarios WHERE nombre = ? and contrasenya = ?";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param('si', $usuario, $contrasena);
-        $stmt->execute();
-        $stmt->store_result();
-
-        return $stmt->num_rows == 1;
-    }
-
     public function obtenerTipoUsuario($usuario)
     {
 

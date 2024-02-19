@@ -56,7 +56,7 @@ class Vista {
                     <input type="text" name="contra"/>
                 </div>
                 
-                <input type="submit" name="accion" value="cambiarpass"/> 
+                <input type="submit" name="cambiarp" value="cambiarpass"/> 
             </div>
         </form>
         <?php
@@ -99,7 +99,7 @@ class Vista {
     public function area_usuario_admin(){
         ?>
          <h1>Gestion Tienda</h1>
-        <form method="POST" action="../Controller/Controller.php">
+         <form method="POST" action="../Controller/Controller.php">
             <input type="submit" value="Crear Producto" name="Productos"/>
             <input type="submit" value="Mostrar Pedidos" name="Pedidos"/> 
         </form>
@@ -158,3 +158,4 @@ class Vista {
     }
    
 }
+
