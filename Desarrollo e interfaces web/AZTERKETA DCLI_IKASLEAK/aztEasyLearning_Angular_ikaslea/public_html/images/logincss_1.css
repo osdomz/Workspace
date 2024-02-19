@@ -1,0 +1,210 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px; }
+html, body {
+   height: 100% vh;
+  margin: 0px; }
+body{
+   background-image: url("../images/paisaje.png");
+   background-size: cover;
+   min-height: 100vh;  
+   background-position: center bottom;
+   background-repeat: no-repeat;
+   background-color: #faf9f7;
+   width: 100%;
+   padding-bottom: 10px;
+  }
+ header{
+    max-height:100px;
+    max-width:100%;
+           }
+ 
+/*****7+++++++++++++++ a class logo +++++++++++++****/
+   header .logo{ cursor: pointer;
+       width:350px;
+       height:100px;           
+      text-decoration: none;
+      display:  inline-flex;
+       flex-direction: row;
+       align-items:  center;
+         } 
+  
+   header .logo img{
+        width:150px;
+        height:100px;
+        display: inline-block;
+   }
+   header .logo span{
+        color:white;
+        font-size: 30px;
+       }
+    header a span{  
+    box-sizing: border-box;
+    display: block;
+    text-decoration: none;
+  }
+ 
+/************************card**********************/    
+
+.card{
+    background-color: #fff;
+    margin: 20px auto 0 auto;
+    border-radius: 8px;
+    height: auto;
+    width: 327px;
+    padding: 36px 24px;
+    box-shadow: 0px 0px 26px black;
+   } 
+ 
+ .card h1{ 
+    margin: 0;
+    padding: 0;
+    color: #2b3749;
+    margin-bottom: 24px;
+    font: normal normal 800 24px/36px "Open Sans";
+ }
+ .card h1 span{ 
+    margin: 0;
+    padding: 0;
+    color: black;
+    margin-bottom:24px;
+    font: normal normal 200 18px/16px "Open sans";
+ }
+ .card p{
+    color: #2b3749;
+    box-sizing: border-box;
+    margin-top: 0;
+    font: normal normal normal 14px/21px "Lato";
+    margin-top:-10px;
+}
+.card a{ 
+    color:blue;
+    text-decoration:none;
+    margin-bottom:  20px;
+}
+.card .botones{
+      margin:auto;
+      margin-top: 20px;  
+        }
+    
+.card .botones button{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;   
+    border: 1px solid #d2d8df;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right:10px;
+   overflow: visible;
+    text-transform: none;
+    cursor: pointer;
+    text-align: left;
+    height: 43px;
+    width: 300px;
+    font: normal normal normal 16px/30px "Lato";
+    color: #2b3749;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    background-color: #fff; 
+     }
+     
+ .card div .btn img{
+     width: 30px;
+     height:30px;
+     margin-right: 70px;
+     margin-left: 0px;
+   }
+
+    /***************divider**********************************/
+.card .divider{
+    display: table;
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    font: normal normal normal 14px/24px Lato;
+    letter-spacing: 0px;
+    color: #6a7585;
+}
+   
+.card .divider .filler{
+    letter-spacing: 0px;
+    color: #6a7585;
+    box-sizing: border-box;
+    font: 400 1.8rem/2.8rem "Lato";
+    display: table-cell;
+}  
+    /**********************divider line***********************/
+    
+.card .divider .divider-line{
+    font: normal normal normal 14px/24px "Lato";
+    border-top: 1px solid #d2d8df;
+    display: table-cell;
+    height: 1px;
+    position: relative;
+    top: 16px;
+    width: 120px !important;
+}
+    /************content or*************/
+  .card .divider .content{ 
+    font: normal normal normal 14px/24px "Lato";
+    display: table-cell;
+    text-align: center;
+    padding: 0px 10px;
+  }
+   
+  #formLogin{
+        font: normal normal bold 16px/24px "Lato";
+  }
+/* #formLogin div label{ 
+    margin-bottom: .5rem;
+    font-family: Lato; font-size: 16px;Line-height: 24px.
+    font weight bold font-style: regular;
+    
+   }*/
+    /************form input****************/
+#formLogin div input{
+    margin: 0;
+    overflow: visible;
+    height: 40px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding-left: 13px;
+    padding-right: 20px;
+    font: normal normal normal 16px/24px "Lato";
+    width: 80%;
+}
+   
+ #formLogin .password-lbl-cnt{ 
+    display: flex;
+    justify-content: space-between;
+    align-items:  flex-end;
+        }
+    #formLogin .password-lbl-cnt a{ 
+    margin-bottom: 0px;
+    font: normal normal normal 16px/24px "Lato";
+        }  
+        
+ #formLogin .submit-cnt {
+       width:90%;
+ }
+ #formLogin .submit-cnt input {
+       width:100%;
+ }   
+  
+ #formLogin  p{   
+    margin-top: 0;
+    font: normal normal normal 14px/21px "Lato";
+    margin-bottom: 24px;
+ }
+   
+  #formLogin  p a{  
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0);
+    color: #0666df;
+  }
+  

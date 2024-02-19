@@ -1,0 +1,70 @@
+/*body{
+    background-image: $backgroundadmin-image;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #66999;
+}*/
+.imagen {
+  width: 80%;
+  margin: auto;
+  max-height: 80vh; }
+
+img {
+  width: 100%;
+  max-height: 95vh; }
+
+/*div{
+    display:block;
+}*/
+h1 {
+  width: 50%;
+  margin: auto;
+  border: 2px solid black;
+  text-align: center; }
+
+h2 {
+  text-align: center; }
+
+h1 {
+  text-align: center; }
+
+h2 {
+  text-align: center; }
+
+#zonalista {
+  text-align: center; }
+
+table, tr, td {
+  border: 1px solid black; }
+
+table {
+  margin: auto; }
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 450px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
+
+.styled-table thead tr {
+  background-color: #980081;
+  color: #ffffff;
+  text-align: middle; }
+
+.styled-table th, .styled-table td {
+  padding: 12px 15px; }
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd; }
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3; }
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879; }
+
+/*# sourceMappingURL=administration.css.map */

@@ -1,0 +1,119 @@
+/* colors */
+/* sizes */
+/*fondo*/
+/* images */
+/* enlaces*/
+/*mixins*/
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px; }
+
+html, body {
+  background-color: rgba(0, 0, 255, 0);
+  height: 100vh;
+  margin: 0px; }
+
+body {
+  background-image: url("../images/paisajeAzul.png");
+  background-repeat: repeat;
+  background-size: cover;
+  min-height: 100vh; }
+  body header h1 {
+    background-color: black;
+    color: white;
+    text-align: center; }
+  body #curso #puntos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 5vh;
+    color: #ce1717;
+    margin: 20px 20px 20px 0px;
+    font: normal normal 800 30px/36px "Open Sans"; }
+  body #curso .nivel {
+    margin-left: 20px;
+    font-family: "Montserrat";
+    /*cards*/ }
+    body #curso .nivel h2 {
+      line-height: 1.2;
+      font-weight: 700;
+      font-size: 2em;
+      display: inline-block;
+      color: color-cards;
+      text-shadow: 0px 1px rgba(255, 255, 255, 0.7); }
+    body #curso .nivel .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left: 20px;
+      font-size: 14px;
+      line-height: 1.6;
+      font-weight: 300;
+      letter-spacing: 0px;
+      color: #555555;
+      font-family: "Montserrat";
+      box-sizing: border-box;
+      /*card*/ }
+      body #curso .nivel .cards .card {
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+        margin-right: 20px;
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 300;
+        letter-spacing: 0px;
+        color: #555555;
+        font-family: "Montserrat";
+        box-sizing: border-box;
+        cursor: pointer;
+        position: relative;
+        width: 160px;
+        height: 160px;
+        padding: 10px;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+        transition: box-shadow .28s linear;
+        border-radius: 2px;
+        background-color: whitesmoke;
+        opacity: 1;
+        /*transform: translate3d($border-ini, $border-ini, $border-ini);*/
+        margin-bottom: 20px;
+        /*box*/ }
+        body #curso .nivel .cards .card :hover {
+          /*transform: translate3d($padding_xxs1, $padding_xxs1, $padding_xxs1);*/
+          /*box-shadow: $border-ini $padding_xs2 $padding_xs2 $border-ini graytext;*/ }
+        body #curso .nivel .cards .card .box {
+          opacity: 1;
+          /*transform: translate3d($border-ini, $border-ini, $border-ini);*/ }
+          body #curso .nivel .cards .card .box .box_sup {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; }
+            body #curso .nivel .cards .card .box .box_sup .box_num {
+              font-weight: 700;
+              font-size: 2em;
+              color: #555555;
+              display: inline-block; }
+            body #curso .nivel .cards .card .box .box_sup .box_open {
+              display: flex;
+              flex-direction: row;
+              margin-top: 7px; }
+              body #curso .nivel .cards .card .box .box_sup .box_open img {
+                width: 25px;
+                height: 25px; }
+              body #curso .nivel .cards .card .box .box_sup .box_open #cerrado {
+                display: none; }
+              body #curso .nivel .cards .card .box .box_sup .box_open #abierto {
+                display: block; }
+          body #curso .nivel .cards .card .box .box_theme {
+            text-align: center;
+            margin-bottom: 5px;
+            opacity: 0, 5; }
+            body #curso .nivel .cards .card .box .box_theme img {
+              width: 80px;
+              height: 60px; }
+          body #curso .nivel .cards .card .box hr {
+            border: 1px solid grey; }
+
+/*# sourceMappingURL=getstarted.css.map */

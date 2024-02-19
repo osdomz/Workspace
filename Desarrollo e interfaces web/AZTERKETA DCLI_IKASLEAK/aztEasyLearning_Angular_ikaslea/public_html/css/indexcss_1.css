@@ -1,0 +1,134 @@
+/**************importar************/
+/* colors */
+/* sizes */
+/*fondo*/
+/* images */
+/* enlaces*/
+/*mixins*/
+/*******************valores iniciales********/
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px; }
+
+html, body {
+  background-color: rgba(0, 0, 255, 0);
+  height: 100vh;
+  margin: 0px; }
+
+body {
+  height: 100vh;
+  margin: 0px;
+  background-image: url("../images/fondoEstrellas.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*fin header   */
+  /******************************/ }
+  body header {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    /*fin nav-izda*/ }
+    body header .nav-izda {
+      display: flex;
+      flex-direction: row; }
+      body header .nav-izda a {
+        color: white; }
+        body header .nav-izda a img {
+          width: 125px;
+          height: 75px;
+          display: inline-block; }
+      body header .nav-izda .nav-center {
+        padding-top: 20px;
+        color: white;
+        font-size: 20px; }
+    body header .nav-dcha ul {
+      position: absolute;
+      right: 0px;
+      padding-top: 20px;
+      list-style-type: none;
+      text-align: center; }
+      body header .nav-dcha ul li {
+        display: inline;
+        text-align: right;
+        margin: 0px;
+        margin-right: 10px; }
+        body header .nav-dcha ul li a {
+          text-decoration: none;
+          padding: 2px 7px 2px 7px;
+          color: white;
+          font-size: 20px; }
+          body header .nav-dcha ul li a img {
+            width: 150px;
+            height: 100px; }
+  body .boton {
+    border: 1px solid #2e518b;
+    padding: 10px;
+    background-color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Helvetica", sans-serif;
+    border-radius: 50px;
+    /*bordes redondos*/ }
+    body .boton a {
+      color: #2e518b !important; }
+  body .boton:hover {
+    background-color: #084F8E; }
+  body .boton a:hover {
+    color: #ffffff !important; }
+  body #centro {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    box-sizing: content-box; }
+    body #centro .centro-izda {
+      height: 80vh;
+      width: 60%; }
+      body #centro .centro-izda img {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh; }
+    body #centro .centro-dcha {
+      box-sizing: content-box;
+      height: 80vh;
+      width: 60%;
+      padding-top: 20px;
+      padding-left: 10px;
+      color: white; }
+      body #centro .centro-dcha .boton {
+        border: 1px solid #2e518b;
+        padding: 10px;
+        background-color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Helvetica", sans-serif;
+        border-radius: 50px;
+        /*bordes redondos*/
+        margin-left: 20px; }
+  body footer {
+    height: 10vh; }
+  @media screen and (max-width: 550px) {
+    body header {
+      display: block;
+      height: 20vh; }
+    body .centro {
+      display: block; }
+    body .centro-izda {
+      display: none !important; }
+    body header .nav-dcha ul {
+      position: relative; }
+    body #centro .centro-dcha {
+      width: 100%; }
+    body .centro-dcha h1 {
+      text-align: center; }
+    body .centro-dcha button {
+      width: 80%;
+      margin: auto;
+      margin-top: 10px;
+      border-radius: 0px; }
+    body .centro-dcha button:hover {
+      color: #ffffff !important; } }
+
+/*fin body*/
+
+/*# sourceMappingURL=indexcss_1.css.map */

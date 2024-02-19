@@ -1,0 +1,5 @@
+[{ "idCurso":"1", "tipo":"languages" ,"nombreCurso":"English","level":"basic","puntos":"200"},
+{ "idCurso":"2", "tipo":"languages" ,"nombreCurso":"English","level":"medium","puntos":"400"},
+{ "idCurso":"3", "tipo":"languages" ,"nombreCurso":"English","level":"advanced","puntos":"800"},
+{ "idCurso":"4", "tipo":"languages" ,"nombreCurso":"English","level":"basic","puntos":"400"},
+{ "idCurso":"5", "tipo":"languages" ,"nombreCurso":"English","level":"advanced","puntos":"700"}]

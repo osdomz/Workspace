@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="GetStartedApp">
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/getstarted.css" rel="stylesheet" type="text/css"/>
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/jsgetStarted.js" type="text/javascript"></script>
+</head>
+<body ng-controller="GetStartedController">
+    <header>
+        <h1>{{ cursos.tipo }} {{ actividad.nombreCurso }}</h1>
+    </header>
+    <div id="curso">
+        <div id="puntos">
+            <p>{{ nivelRealizacion }} exercise/s done</p>
+            <p>{{ puntos }} points</p> 
+        </div>
+        <div class="nivel">
+            <h2 role="heading">{{ nivel }}</h2>  
+            <div class="cards">
+                <div class="card" ng-repeat="actividad in actividades">
+                    <div role="button" tabindex="101" class="box-container" ng-class="{ 'is_unlocked': actividad.id <= nivelRealizacion }" ng-click="realizarActividad(actividad)">
+                        <div class="box" style="">
+                            <div class="box_sup">
+                                <div class="box_num">{{ actividad.id }}</div>
+                                <div class="box_open">
+                                    <img id="imgEstado" ng-src="{{ imgEstado }}" alt="">
+                                </div>
+                            </div>
+                            <div class="box_theme">
+                                <img src="{{ actividad.imagen }}" alt=""/>
+                            </div> 
+                            <hr>
+                            <div class="lsn_name">{{ actividad.tipoActiv }}</div>
+                        </div>
+                    </div>
+                </div>   
+                <div style="padding:10px;margin:10px;text-align: center">
+                    <!-- popup -->
+                    <div ng-show="mostrarVentana" class="ventana-emergente">
+                        <p>Do you want to mark this activity as done?</p>
+                        <button ng-click="done()">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>                                                           
+    </div>
+</body>
+</html>
+
+
+
+
+

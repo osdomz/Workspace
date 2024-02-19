@@ -1,0 +1,208 @@
+/*linea de %0 */
+ *{
+  margin: 0px;
+  padding: 0px;
+  border: 0px; }
+
+html, body {
+  background-color: rgba(0, 0, 255, 0);
+  height: 100% vh;
+  margin: 0px; }
+
+body {
+  background-image: url("../images/paisajeAzul.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header h1{
+    background-color: black;
+    color:white;
+    text-align:  center;
+        }
+  #puntos{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 5vh;
+    color: #ce1717;
+/*    color: #2b3749;*/
+    margin: 20px  20px 20px 0;
+    font: normal normal 800 30px/36px "Open Sans";
+      } 
+   .nivel {
+          margin-left:20px;
+          font-family: "Montserrat";
+         }     
+ .nivel h2 {
+    
+    line-height: 1.2;
+    font-weight: 700;
+    font-size: 2em;
+    display: inline-block;
+    color: #555;
+    text-shadow: 0px 1px  rgba(255,255,255,.7);     
+   } 
+ .nivel .cards{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:  flex-start;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #555;
+    font-family: Montserrat;
+    box-sizing: border-box;
+       
+   }
+   .nivel .cards .card{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #555;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transition: box-shadow .28s linear;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  margin-bottom: 20px;
+   }
+   .nivel .cards .card:hover{
+       transform: translate3d(5px, 5px, 5px);
+       box-shadow: 0 9px 9px 0 graytext;
+   }
+   
+   .nivel .cards .card .box{
+       opacity: 1;
+       transform: translate3d(0px, 0px, 0px);
+     }  
+   .nivel .cards .card .box .box_sup{
+       display: flex;
+       flex-direction: row;
+       justify-content:  space-between;
+      
+       
+   }
+   .nivel .cards .card .box .box_num{
+       font-weight: 700;
+       font-size: 2em;
+       color: #555;
+         display: inline-block;
+      }
+      .nivel .cards .card .box .box_open {
+            display: flex;
+            flex-direction: row;
+            margin-top: 8px;
+           }
+      .nivel .cards .card .box .box_open img{
+         width:25px;
+         height:25px;
+           }
+      .nivel .cards .card .box #cerrado{display: none;}
+      .nivel .cards .card .box #abierto{display:block;}
+      .nivel .cards .card .box .box_theme{
+          text-align: center;
+          margin-bottom: 5px;
+          opacity: 0,5;
+      }
+      .nivel .cards .card .box .box_theme img{
+          width:80px;
+          height:60px;
+           }
+           hr{
+               border:1px solid grey;
+           }
+/* center{
+          
+
+      } /*       line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    margin-top: -30px;
+    font-size: 15px;
+    color: #555;
+    background: rgba(255,255,255,.3);
+    padding: 3px 10px 3px 15px;
+    border-radius: 6px;   */    
+
+        
+      
+/*
+  
+#center{
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #555;
+    font-family: Montserrat;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: calc(100% + 150vw);
+    padding-right: 100vw;
+    margin-left: -50vw;
+    padding-left: 50vw;
+    height: 100%;
+    position: relative;
+    
+    
+}*/
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/*    home row  
+      -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    line-height: 1.2;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 2em;
+    display: inline-block;
+    margin: 20px 0 0 10px;
+    border-radius: 4px;
+    color: #555;
+    text-shadow: 0px 1px 
+    rgba(255,255,255,.7);
+    
+    fila cuadros 
+        
+    
+   cuadro 
+       
+    */
