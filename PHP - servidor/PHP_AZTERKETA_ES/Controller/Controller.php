@@ -11,11 +11,13 @@ $Vista = new Vista();
 $modelo = new UsuarioModelo();
 $modelo->conectar();
 
-if ($accion === "Validar") {
+
+
+if (isset($_POST["validarusuario"])) {
     if (!$_SESSION["validado"]) {
         $usuario = $_POST["username"];
         $contrasena = $_POST["password"];
-
+        
         if (!empty($usuario) && !empty($contrasena)) {
             if ($modelo->validarSesion($usuario, $contrasena)) {
                 $_SESSION["validado"] = true;
@@ -24,13 +26,12 @@ if ($accion === "Validar") {
                 $tipo = $modelo->obtenerTipoUsuario($usuario);
 
                 echo 'Bienvenido<br>' . $usuario . '<br>';
-
-                $admin = $modelo->obtenerTipoUsuario($_SESSION['usuarioValidado']);
                 if ($admin == 0) {
+                    // Actualizar la cookie de usuario si el usuario es no administrador
+                    setcookie('cookie', $usuario, time() + 10); // Extendemos la cookie por 10 segundos más
                     echo '<h3 style="color: green;">Área de usuarios.</h3>';
                     $modelo = new RopaModelo();
                     $Vista->area_usuario($modelo->obtenerProductosDesdeBD());
-
                 } elseif ($admin == 1) {
                     echo '<h3 style="color: green;">Área de Admin.</h3>';
                     $Vista->area_usuario_admin();
@@ -43,17 +44,21 @@ if ($accion === "Validar") {
                 $Vista->Login();
             }
         } else {
-            echo '<h3 style="color: red;">Ya estás logueado.</h3>';
+            echo '<h3 style="color: red;">Por favor, ingresa tu usuario y contraseña.</h3>';
             $Vista->Login();
         }
+    } else {
+        echo '<h3 style="color: red;">Ya estás logueado.</h3>';
+        $Vista->Login();
     }
 }
 
-if ($accion === "Alta") {
+
+if (isset($_POST["daralta"])) {
     $Vista->darseDeAlta();
 }
 
-if ($accion === "Darse_de_alta") {
+if (isset($_POST["Darse_de_alta"])) {
     $modelo->agregarUsuario(
         $_POST['id'],
         $_POST['username'],
@@ -64,7 +69,7 @@ if ($accion === "Darse_de_alta") {
     $Vista->Login();
 }
 
-if ($accion === "Cambiar") {
+if (isset($_POST["cambiarcontra"])) {
     if (!$_SESSION["validado"]) {
         $usuario = $_POST["username"];
         $contrasena = $_POST["password"];
@@ -81,9 +86,9 @@ if ($accion === "Cambiar") {
     }
 }
 
-if ($accion === "cambiarpass") {
-    $cambiarpass = true;
-    if ($cambiarpass && isset($_POST['password'])) {
+if (isset($_POST["cambiarpass"])) {
+    $cambiarcontra = true;
+    if ($cambiarcontra && isset($_POST['password'])) {
 
         $contrasena_actualizada = $_POST['password'];
 
@@ -101,5 +106,9 @@ if (!$_SESSION["validado"]) {
     $Vista->Login();
 }
 
-
-
+// Verificar si la cookie de usuario no está establecida
+if (!isset($_COOKIE['cookie'])) {
+    // La cookie no está establecida, redirigir al usuario al inicio de sesión
+    header('Location: /index.php');
+    exit; // Terminar el script para evitar que se procese más código
+}

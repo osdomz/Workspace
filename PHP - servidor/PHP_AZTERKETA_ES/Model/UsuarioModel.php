@@ -27,6 +27,7 @@ class UsuarioModelo
 
         return $stmt->num_rows == 1;
     }
+    
 
     public function obtenerTipoUsuario($usuario)
     {
