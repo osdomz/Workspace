@@ -56,7 +56,7 @@ class Vista {
                     <input type="text" name="contra"/>
                 </div>
                 
-                <input type="submit" name="cambiarp" value="cambiarpass"/> 
+                <input type="submit" name="cambiarpass" value="Cambiar"/> 
             </div>
         </form>
         <?php

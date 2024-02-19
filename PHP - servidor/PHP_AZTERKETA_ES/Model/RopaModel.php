@@ -28,27 +28,41 @@ class RopaModelo
         }
     }
 
-    public function obtenerProductosDesdeBD()
-    {
-        $sql = "SELECT * FROM ropa";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $productos = array();
-        while ($row = $result->fetch_assoc()) {
-            $productos[$row['id']] = $row['nombre'];
+    public function selectproductos(){ 
+        $this->conectar();
+        $sql = "SELECT id, nombre , precio FROM ropa";
+        $resultado = $this->mysqli->query($sql);
+        $filas = array();
+        for ($i = 0; $i < $resultado->num_rows; $i++) {
+            $fila[] = $resultado->fetch_assoc(); //Pongo en este array los datos de la consulta y lo que hace es poner en un array pongo array asociativos
         }
-        $stmt->close();
-        echo 'Productos: ' . print_r($productos, true);
-        return $productos;
+        return $fila;
     }
-    public function crearProducto($id, $nombre, $precio)
+    public function agregarProducto($id, $nombre, $precio)
     {
-        $sql = "INSERT INTO ropa (id, nombre, precio) VALUES (?, ?, ?)";
-        $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param('isi',$id , $nombre, $precio);
+        $this->conectar();
         
-        return $stmt->execute();
+        // Verificar si el producto ya existe en la base de datos
+        $sql = "SELECT nombre FROM ropa WHERE nombre = ?";
+        $stmt = $this->mysqli->prepare($sql);
+        $stmt->bind_param("s", $nombre);
+        $stmt->execute();
+        $stmt->store_result();
+        
+        // Si ya existe un producto con ese nombre, mostrar un mensaje de error
+        if ($stmt->num_rows > 0) {
+            echo "<h1>Producto existente</h1>";
+        } else {
+            // Insertar el nuevo producto en la base de datos
+            $sql = "INSERT INTO ropa (id, nombre, precio) VALUES (?, ?, ?)";
+            $stmt = $this->mysqli->prepare($sql);
+            $stmt->bind_param("sss", $id, $nombre, $precio);
+            $stmt->execute();
+            echo "<h1>Producto creado exitosamente</h1>";
+        }
+        
+        $stmt->close();
+        $this->mysqli->close();
     }
 
 }

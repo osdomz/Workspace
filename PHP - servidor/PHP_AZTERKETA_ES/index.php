@@ -10,3 +10,4 @@ $_SESSION["validado"] = FALSE;
 // Cargar el formulario inicial
 $VistaInicio = new Vista();
 $VistaInicio->Login();
+

@@ -9,14 +9,9 @@ session_start();
 
 $Vista = new Vista();
 $modelo = new UsuarioModelo();
+
 $modelo->conectar();
 
-// Verificar si la cookie de usuario no está establecida
-// if (!isset($_COOKIE['cookie'])) {
-//     La cookie no está establecida, redirigir al usuario al inicio de sesión
-//     header('Location: /index.php');
-//     exit; // Terminar el script para evitar que se procese más código
-// }
 
 if (isset($_POST["validarusuario"])) {
     if (!$_SESSION["validado"]) {
@@ -34,17 +29,17 @@ if (isset($_POST["validarusuario"])) {
                     $tipo = $modelo->obtenerTipoUsuario($usuario);
 
                     if ($tipo == 1) {
-                        setcookie('username', $usuario, time() + 30, "/");
+                        setcookie('cookie', $usuario, time() + 10, "/");
                         echo 'Bienvenido<br>' . $usuario . '<br>';
                         echo '<h3 style="color: green;">Área de Admin.</h3>';
                         $modelo = new UsuarioModelo();
                         $Vista->area_usuario_admin();
                     } else {
-                        setcookie('username', $usuario, time() + 30, "/");
+                        setcookie('username', $usuario, time() + 10, "/");
                         echo 'Bienvenido<br>' . $usuario . '<br>';
                         echo '<h3 style="color: green;">Área de usuarios.</h3>';
                         $modelo = new RopaModelo();
-                        $Vista->area_usuario($modelo->obtenerProductosDesdeBD());
+                        $Vista->area_usuario($modelo->selectproductos());
                     }
                 } else {
                     echo '<h3 style="color: red;">Inténtalo de nuevo, la contraseña no es válida.</h3>';
@@ -63,6 +58,7 @@ if (isset($_POST["validarusuario"])) {
         $Vista->Login();
     }
 }
+
 
 if (isset($_POST["daralta"])) {
     $Vista->darseDeAlta();
@@ -91,17 +87,18 @@ if (isset($_POST["cambiarcontra"])) {
             $_SESSION['usuarioValidado'] = $usuario;
             // Mostrar el formulario para cambiar la contraseña
             $Vista->cambiarContra();
+        } else {
+            // Si el usuario o la contraseña no son válidos, mostrar un mensaje de error
+            echo '<h3 style="color: red;">El usuario o la contraseña no son válidos.</h3>';
+            $Vista->Login();
         }
     } else {
-        // Si el usuario o la contraseña no son válidos, mostrar un mensaje de error
-        echo '<h3 style="color: red;">El usuario o la contraseña no son válidos.</h3>';
+        // Si no se proporcionó el usuario o la contraseña, mostrar un mensaje de error
+        echo '<h3 style="color: red;">Por favor, ingresa tu usuario y contraseña.</h3>';
         $Vista->Login();
     }
-} else {
-    // Si falta el nombre de usuario o la contraseña, mostrar un mensaje de error
-    echo '<h3 style="color: red;">Por favor, ingresa tu usuario y contraseña.</h3>';
-    $Vista->Login();
 }
+
 
 
 if (isset($_POST["cambiarpass"])) {
@@ -114,7 +111,55 @@ if (isset($_POST["cambiarpass"])) {
         $Vista->Login();
     } else {
         // Si no se proporcionó una nueva contraseña, mostrar un mensaje de error
-        echo '<h3 style="color: red;">Por favor, ingresa una nueva contraseña.</h3>';
-        $Vista->Login(); // Mostrar nuevamente el formulario para cambiar la contraseña
+        echo '<h3 style="color: red;">Por favor, ingresa una contraseña valida.</h3>';
+        $Vista->cambiarContra(); // Mostrar nuevamente el formulario para cambiar la contraseña
     }
+}
+
+if (isset($_POST["Productos"])) {
+    // Aquí deberías crear una instancia de RopaModelo
+    $modelo = new RopaModelo();
+    $Vista->crearProducto();
+}
+
+if (isset($_POST["Crear_Producto"])) {
+    // Aquí también necesitas crear una instancia de RopaModelo
+    $modelo = new RopaModelo();
+
+    // Verificar si se enviaron todos los datos del formulario
+    $modelo->agregarProducto(
+        $_POST['id_producto'],
+        $_POST['nombre'],
+        $_POST['precio']
+    );
+    echo '<h3 style="color: green;">Producto añadido correctamente.</h3>';
+    $Vista->Login();
+}
+
+if (isset($_POST["Pedidos"])) {
+    // Aquí deberías crear una instancia de PedidoModelo
+    $modelo = new PedidoModelo();
+    $Vista->generarTablaPedidos($modelo->mostrarPedidosInnerJoin());
+}
+
+if (isset($_POST["Comprar"])) {
+    // Aquí creas una instancia de PedidoModelo
+    $modelo = new PedidoModelo();
+    // Obtener el ID de usuario usando el nombre de usuario
+    $nombre_usuario = $_SESSION['usuarioValidado'];
+    $id_usuario = $modelo->obtenerIdUsuarioPorNombre($nombre_usuario); // Asegúrate de implementar este método en tu modelo
+    $id_producto = $_POST['productos'];
+    $numeros = $_POST['numeros'];
+    // Llamar al método agregarPedido con el ID de usuario obtenido
+    $modelo->agregarPedido(
+        $id_usuario,
+        $id_producto,
+        $numeros
+    );
+
+    echo '<h3 style="color: green;">Pedido añadido correctamente.</h3>';
+    $Vista->Login();
+} else {
+    echo '<h3 style="color: red;">El ID de usuario no es válido.</h3>';
+    // Manejar el caso en que el ID de usuario no es válido
 }
