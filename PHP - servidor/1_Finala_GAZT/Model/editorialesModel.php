@@ -35,9 +35,10 @@ editoriales.Nombre AS NombreEditorial, libros.ISBN AS ISBN
     public function mostrarLibros()
     {
         $this->conectar();
-        $sql = "SELECT personas_trabajadoras.Nombre AS nombre_autor, COALESCE(libros.Titulo, '-') AS nombre_libro
-                FROM personas_trabajadoras 
-                LEFT JOIN libros ON personas_trabajadoras.Nombre = libros.Titulo ";
+        $sql = "SELECT personas_trabajadoras.Nombre AS nombre_autor, libros.Titulo AS titulo_libro
+        FROM personas_trabajadoras 
+        LEFT JOIN libros ON personas_trabajadoras.AutorID = libros.AutorID";
+
 
         $resultado = $this->mysqli->query($sql);
         $filas = array();
