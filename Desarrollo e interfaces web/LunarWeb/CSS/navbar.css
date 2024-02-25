@@ -1,46 +1,31 @@
-:root {
-  --primary-color: #E6E6E9;
-  /* Color principal */
-  --text-color: #232323;
-  /* Color de texto */
-  --background-color: #BDBDBD;
-  /* Fondo gris */
-  --hover-color: #CCAA00;
-  /* Color de botones al hacer hover */
-  --secondary-background: #E6ACEC;
-  /* Segundo color de fondo */
-}
+/* Estilos para la barra de navegación */
 .navbar {
+  position: relative;
+  z-index: 1000;
   margin-left: 5%;
-  margin-right: 5%; /* Establece el margen general de la página */
+  margin-right: 5%;
 }
 
 .navbar-brand {
   font-family: "Cochin", serif;
   font-weight: bold;
-  
 }
+
 .navbar .navbar-brand:hover {
   transform: scale(1.05);
 }
 
-
-
-/* Cambiar el tamaño del texto de los botones (excluyendo el logo) a 14px */
 .navbar-nav .nav-link {
   font-size: 14px;
-  font-family: "Inter",sans-serif; 
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
   position: relative;
-  
 }
 
-/* Estilos para el texto en negrita al hacer hover */
 .navbar a:hover {
   font-weight: bold;
 }
 
-/* Estilo para el formulario de inicio de sesión y registro */
 .login-form,
 .registration-form {
   display: flex;
@@ -48,22 +33,47 @@
 }
 
 .login-form input,
-.registration-form input,
-.login-form button,
-.registration-form button {
+.registration-form input {
   margin: 10px;
-  padding: 10px; /* Mayor espacio entre elementos */
-  border: 0.1px solid var(--primary-color); /* Borde ligero */
-
+  padding: 10px;
+  border: 0.1px solid var(--primary-color);
 }
 
-.login-form button,
-.registration-form button,
 #show-registration-form,
 #return-to-login {
-margin-top: 10px;
+  margin-top: 10px;
   display: block;
 }
+
+/* Estilos personalizados para navbar-collapse */
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+/* Media query para dispositivos móviles y tabletas */
+@media screen and (max-width: 991px) {
+  .navbar-nav .nav-link {
+    display: none; /* Ocultar todos los enlaces de navegación */
+  }
+  
+  #carrito-link {
+    display: inline-block; /* Mostrar el enlace de cesta */
+    margin-left: 10px; /* Modificar el margen izquierdo */
+  }
+
+  #loginDropdown {
+    display: inline-block; /* Mostrar el enlace de login */
+    margin-left: 10px; /* Modificar el margen izquierdo */
+  }
+}
+
+
+
+
+
 
 
 

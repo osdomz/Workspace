@@ -1,0 +1,51 @@
+<form id="filtro-form">
+  <!-- Filtro por tipo de producto -->
+  <div class="filtro">
+    <select name="tipo-producto" id="tipo-producto">
+      <option value="" disabled selected>Producto</option>
+      <option value="sudaderas">Sudaderas</option>
+      <option value="piercings">Piercings</option>
+      <option value="anillos">Anillos</option>
+      <option value="cadenas">Cadenas</option>
+      <option value="ropa">Ropa</option>
+      <!-- Agrega más opciones según sea necesario -->
+    </select>
+  </div>
+
+  <!-- Filtro por género -->
+  <div class="filtro">
+    <select name="genero" id="genero">
+      <option value="" disabled selected>Género</option>
+      <option value="hombre">Hombre</option>
+      <option value="mujer">Mujer</option>
+      <option value="unisex">Unisex</option>
+      <!-- Agrega más opciones según sea necesario -->
+    </select>
+  </div>
+
+ <!-- Filtro por rango de precio mínimo -->
+<div class="filtro">
+  <input type="number" id="precio-minimo" name="precio-minimo" min="0" step="20" placeholder="Precio Mínimo" />
+</div>
+
+<!-- Filtro por rango de precio máximo -->
+<div class="filtro">
+  <input type="number" id="precio-maximo" name="precio-maximo" min="0" step="30" placeholder="Precio Máximo" />
+</div>
+
+
+  <!-- Filtro por calidad -->
+  <div class="filtro">
+    <select name="calidad" id="calidad">
+      <option value="" disabled selected>Calidad</option>
+      <option value="acero-inoxidable">Acero Inoxidable</option>
+      <option value="plata">Plata</option>
+      <option value="oro">Oro</option>
+      <!-- Agrega más opciones según sea necesario -->
+    </select>
+  </div>
+
+  <!-- Botón de buscar -->
+  <button type="submit">Buscar</button>
+</form>
+

@@ -1,0 +1,102 @@
+/* Estilos para los filtros */
+#filtro-form {
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  overflow: hidden; /* Oculta cualquier contenido que exceda el tamaño del formulario */
+}
+
+.contenedor-filtros {
+  flex: 1; /* El contenedor de filtros ocupa todo el espacio disponible */
+  display: flex; /* Alinea los elementos en fila */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.contenedor-filtros .icono-filtro {
+  width: 60px; /* Tamaño del icono */
+  height: 60px; /* Tamaño del icono */
+  margin-right: 30px; /* Espacio entre el icono y el texto */
+}
+
+.contenedor-filtros .contenedor-interno {
+  display: flex; /* Alinea los elementos en fila */
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.contenedor-filtros .contenedor-interno:hover {
+  overflow: visible; /* Muestra el contenido al pasar el cursor por encima */
+}
+
+/* Estilos para los filtros dentro del contenedor */
+.contenedor-filtros .contenedor-interno label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color); /* Utiliza el color de texto definido en las variables */
+}
+
+.contenedor-filtros .contenedor-interno select,
+.contenedor-filtros .contenedor-interno input[type="number"] {
+  padding: 8px;
+  border: 1px solid var(--primary-color); /* Utiliza el color primario definido en las variables */
+  border-radius: 5px;
+  margin-right: 10px; /* Espacio entre los elementos */
+}
+
+.contenedor-filtros .contenedor-interno select {
+  width: 160px;
+}
+
+.contenedor-filtros .contenedor-interno input[type="number"] {
+  width: 160px;
+}
+
+/* Estilos para los filtros dentro del contenedor en pantallas más pequeñas y medianas */
+@media screen and (max-width: 992px) {
+  .contenedor-filtros {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 10px;
+
+  }
+
+  .contenedor-filtros .contenedor-interno select{
+  
+    width: 100px;
+    padding: 8px;
+    margin: 0px; /* Modifica los márgenes */
+    margin-right: 10px; /* Espacio entre los elementos */
+  }
+  .contenedor-filtros button{
+    width: 90px;
+    padding: 8px;
+    margin: 0px; /* Modifica los márgenes */
+  
+  }
+
+  /* Estilo para los inputs ocultos */
+  #precio-minimo,
+  #precio-maximo {
+    display: none;
+    margin: 0; /* Asegúrate de establecer el margen de los inputs ocultos como 0 */
+  }
+
+  .contenedor-filtros .icono-filtro {
+    display: none; /* Opcional: puedes ocultar los íconos en pantallas más pequeñas si lo deseas */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
