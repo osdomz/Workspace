@@ -33,12 +33,14 @@ footer {
 .contenedor-filtros button,
 .login-form button,
 .registration-form button {
-  margin: 10px;
+
   padding: 8px 20px;
   background-color: var(--text-color);
   color: var(--primary-color);
   border: 0.1px solid var(--primary-color);
   cursor: pointer;
+  width: 100%; /* Ajusta el ancho de los elementos */
+  
 }
 
 .contenedor-filtros button:hover,
@@ -48,24 +50,61 @@ footer {
   color: var(--text-color);
 }
 
-/* Media query para ajustar estilos en pantallas más pequeñas */
-@media screen and (max-width: 768px) {
+/* Media query para dispositivos móviles y tabletas pequeñas */
+@media screen and (max-width: 480px) {
   header {
-    height: 50px;
-    font-size: 14px;
+    height: 40px; /* Reducir la altura del encabezado */
+    font-size: 12px; /* Reducir el tamaño del texto del encabezado */
   }
 
   main {
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reducir el margen inferior de main */
   }
 
   footer {
-    font-size: 12px;
+    font-size: 10px; /* Reducir el tamaño del texto del pie de página */
   }
 
   .contenedor-filtros button,
+  .login-form input,
+  .registration-form input,
+  #show-registration-form,
+  #return-to-login,
   .login-form button,
   .registration-form button {
-    padding: 6px 16px;
+    width: 100%; /* Ajustar el ancho de los elementos al 100% */
   }
 }
+
+/* Media query para dispositivos móviles y tabletas */
+@media screen and (max-width: 768px) {
+  header {
+    height: 50px; /* Altura del encabezado */
+    font-size: 14px; /* Tamaño del texto del encabezado */
+  }
+
+  main {
+    margin-bottom: 10px; /* Margen inferior de main */
+  }
+
+  footer {
+    font-size: 12px; /* Tamaño del texto del pie de página */
+  }
+}
+
+/* Media query para dispositivos con una resolución máxima de 991px */
+@media screen and (max-width: 991px) {
+  header {
+    height: 50px; /* Altura del encabezado */
+    font-size: 14px; /* Tamaño del texto del encabezado */
+  }
+
+  main {
+    margin-bottom: 20px; /* Margen inferior de main */
+  }
+
+  footer {
+    font-size: 14px; /* Tamaño del texto del pie de página */
+  }
+}
+

@@ -28,13 +28,12 @@
 
 .login-form,
 .registration-form {
-  display: flex;
-  flex-direction: column;
+  display:flex;
+  flex-wrap: wrap;
 }
 
 .login-form input,
 .registration-form input {
-  margin: 10px;
   padding: 10px;
   border: 0.1px solid var(--primary-color);
 }
@@ -45,30 +44,32 @@
   display: block;
 }
 
-/* Estilos personalizados para navbar-collapse */
-.navbar-collapse {
-  justify-content: flex-end;
-}
-
 .navbar-nav {
   flex-direction: row;
 }
 /* Media query para dispositivos móviles y tabletas */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 768px) {
   .navbar-nav .nav-link {
     display: none; /* Ocultar todos los enlaces de navegación */
   }
   
   #carrito-link {
     display: inline-block; /* Mostrar el enlace de cesta */
-    margin-left: 10px; /* Modificar el margen izquierdo */
   }
 
   #loginDropdown {
     display: inline-block; /* Mostrar el enlace de login */
-    margin-left: 10px; /* Modificar el margen izquierdo */
   }
+
+  .login-form,
+  .registration-form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
 }
+
 
 
 

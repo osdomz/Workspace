@@ -9,9 +9,8 @@
 @media screen and (max-width: 768px) {
   .carousel-item img {
     width: 100%; /* Establece el ancho de la imagen al 100% del contenedor en pantallas más pequeñas */
-    height: 300px; /* Altura automática para mantener la proporción de la imagen */
-    object-fit: cover; /* La imagen se ajusta dentro del contenedor manteniendo su relación de aspecto */
-  }
+    height: 500px; /* Altura automática para mantener la proporción de la imagen */
+    }
 }
 
 
