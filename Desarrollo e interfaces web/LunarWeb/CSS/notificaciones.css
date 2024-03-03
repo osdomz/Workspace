@@ -1,0 +1,15 @@
+.barra-notificaciones {
+  background-color: #232323;
+  color: #E6E6E6; /* Inicialmente blanco */
+  text-align: center;
+  align-content: center;
+  font-weight: bold;
+  animation: cambio-color 2s infinite alternate; /* Animación de cambio de color */
+}
+
+@keyframes cambio-color {
+  0% { color: var(--hover-color) } /* Inicia con rojo */
+  50% { color: #E6E6E6; } /* Cambia a azul a la mitad de la animación */
+  100% { color: var(--hover-color) } /* Termina con rojo */
+}
+

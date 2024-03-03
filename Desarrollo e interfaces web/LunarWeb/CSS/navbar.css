@@ -1,17 +1,20 @@
 /* Estilos para la barra de navegación */
 .navbar {
-  position: relative;
+  display: flex;
   z-index: 1000;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: -20px 10% 0 20%;
 }
 
-.navbar-brand {
+.navbar a:hover {
+  font-weight: bold;
+}
+
+ .navbar-brand {
   font-family: "Cochin", serif;
   font-weight: bold;
 }
 
-.navbar .navbar-brand:hover {
+ .navbar-brand:hover {
   transform: scale(1.05);
 }
 
@@ -19,11 +22,6 @@
   font-size: 14px;
   font-family: "Inter", sans-serif;
   color: var(--text-color);
-  position: relative;
-}
-
-.navbar a:hover {
-  font-weight: bold;
 }
 
 .login-form,
@@ -35,17 +33,7 @@
 .login-form input,
 .registration-form input {
   padding: 10px;
-  border: 0.1px solid var(--primary-color);
-}
-
-#show-registration-form,
-#return-to-login {
-  margin-top: 10px;
-  display: block;
-}
-
-.navbar-nav {
-  flex-direction: row;
+  margin: 0 0 5px 0;
 }
 /* Media query para dispositivos móviles y tabletas */
 @media screen and (max-width: 768px) {
@@ -69,7 +57,6 @@
 
   
 }
-
 
 
 

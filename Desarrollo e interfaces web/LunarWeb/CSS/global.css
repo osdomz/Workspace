@@ -13,9 +13,9 @@
 }
 
 header {
-  height: 50px;
+  height: 10vh;
   border-bottom: 0.1px solid var(--primary-color);
-  margin-bottom: 80px;
+  
 }
 
 main {
